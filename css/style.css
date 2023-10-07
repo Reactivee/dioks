@@ -36,7 +36,7 @@ header {
 .nav_items a {
   margin-left: 35px;
   text-decoration: none;
-  font-style: 14px;
+  font-size: 14px;
   color: white;
 }
 .nav_items a:hover {
@@ -190,7 +190,7 @@ header {
 .check_wrapper_title,
 .check_wrapper_time {
   text-align: center;
-  font-size: 55px;
+  font-size: 50px;
   color: #00165f;
 }
 .check_wrapper_time {
@@ -227,14 +227,19 @@ header {
   font-size: 14px;
   color: #adadad;
 }
-.res_title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #00165f;
+
+.check_response{
+  margin-bottom: 40px;
 }
 .check_response div {
   margin-bottom: 11px;
   padding-left: 15px;
+  color: #7B80A4;
+}
+.res_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00165f!important;
 }
 .status_order,
 .city {
@@ -344,6 +349,9 @@ header {
   -o-border-radius: 15px;
 }
 /* footer */
+footer{
+  margin-top: 60px;
+}
 .title_footer h2 {
   font-size: 60px;
   line-height: 60px;
@@ -404,4 +412,7 @@ footer .card {
   margin-left: 30px;
   color: #00165f;
   font-weight: 600;
+}
+.nav_footer {
+  margin-top:70px;
 }

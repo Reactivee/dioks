@@ -257,6 +257,7 @@ header {
 /* guaranty */
 .guaranty {
   padding: 60px 0;
+  background-repeat: round;
   background-image: url(../images/banner/guar.png);
 }
 .title_guaranty h2 {
@@ -279,10 +280,7 @@ header {
   margin-top: 50px;
   color: white;
 }
-.col-item-gua_border {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-}
+
 .col-item-gua_title {
   font-weight: 600;
   font-size: 24px;
@@ -297,6 +295,17 @@ header {
   justify-content: center;
   align-items: center;
 }
+.col-item-gua_border::after{
+  content: '';
+  background-image: url(../images/icons/Разделитель\ 1.svg);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+}
 .add_icon {
   position: absolute;
 }
@@ -306,8 +315,16 @@ header {
 }
 /* service */
 .service {
-  background-image: url("../images/banner/");
+  padding: 70px 0 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/banner/Rectangle\ 15\ \(1\).png");
 }
+.col-md-service{
+  flex: 20%;
+}
+
+
 /* calculation */
 .calculation {
   padding: 60px 0;

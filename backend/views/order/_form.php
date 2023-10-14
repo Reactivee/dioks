@@ -20,11 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'cargo_to_location')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList([]) ?>
+<!--    --><?//= $form->field($model, 'status')->dropDownList([]) ?>
 
-    <?= $form->field($model, 'currently_location')->textInput(['maxlength' => true]) ?>
+<!--    --><?//= $form->field($model, 'currently_location')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'delivery_time')->textInput(['maxlength' => true]) ?>
+<!--    --><?//= $form->field($model, 'delivery_time')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'whom')->textInput(['maxlength' => true]) ?>
 

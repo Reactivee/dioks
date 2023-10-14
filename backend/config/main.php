@@ -1,7 +1,5 @@
 <?php
 
-use yii\httpclient\JsonParser;
-
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -65,6 +63,7 @@ return [
         ],
         'assetManager' => [
             'bundles' => [
+
                 'kartik\form\ActiveFormAsset' => [
                     'bsDependencyEnabled' => false // do not load bootstrap assets for a specific asset bundle
                 ],

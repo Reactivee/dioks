@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\Country;
 use common\models\Faq;
 use common\models\Order;
+use common\models\OrderAbout;
 use common\models\Steps;
 use common\models\University;
 use frontend\models\ResendVerificationEmailForm;
@@ -79,11 +80,18 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($truck = null)
     {
+        $order = [];
+        if (Yii::$app->request->get()) {
+
+            if ($truck) {
+                $order = OrderAbout::find()->where(['truck_id' => $truck])->one();
+            }
+        }
 
         return $this->render('index', [
-
+            'order' => $order
         ]);
     }
 
@@ -263,7 +271,7 @@ class SiteController extends Controller
 
         if (Yii::$app->request->get()) {
             $req_order = Yii::$app->request->get();
-            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
+//            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
 
             $order = new Order();
             $order->cargo_from_location = $req_order['from'];
@@ -273,7 +281,7 @@ class SiteController extends Controller
             $order->name_ru = $req_order['cargo_name'];
             $order->whom = $req_order['whom'];
             $order->how = $req_order['how'];
-            $order->order_code = $generateDoc_Code;
+//            $order->order_code = $generateDoc_Code;
             if (!$order->save()) {
                 dd($order->errors);
             } else {

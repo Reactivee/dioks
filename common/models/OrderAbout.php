@@ -47,8 +47,10 @@ class OrderAbout extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'delivery_time', 'created_at', 'updated_at'], 'integer'],
-            [['country', 'name_ru', 'name_uz', 'name_en', 'region', 'order_code', 'long', 'lat', 'truck_id'], 'string', 'max' => 255],
+            [['status', 'created_at', 'updated_at'], 'integer'],
+            [['country', 'name_ru', 'name_uz', 'name_en', 'region', 'order_code', 'long', 'lat', 'delivery_time',
+                'truck_id', 'phone', 'email', 'cargo_type', 'cargo_from_location', 'cargo_to_location', 'currently_location'
+            ], 'string', 'max' => 255],
         ];
     }
 
@@ -85,5 +87,14 @@ class OrderAbout extends \yii\db\ActiveRecord
             self::CANCELLED => 'Отменено',
         ];
         return $item ? $status[$item] : $status;
+    }
+
+    public function beforeSave($insert)
+    {
+        $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
+        $this->truck_id = $generateDoc_Conclusion;
+        $mydate = strtotime($this->delivery_time);
+        $this->delivery_time = (int) $mydate;
+        return parent::beforeSave($insert);
     }
 }

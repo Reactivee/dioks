@@ -10,7 +10,8 @@ require_once __DIR__ . '/../../common/helpers/helpers.php';
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', ],
+
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'gridview' => [
@@ -24,12 +25,22 @@ return [
     ],
     'components' => [
         'formatter' => [
-            'class'           => 'yii\i18n\Formatter',
+            'class' => 'yii\i18n\Formatter',
             'defaultTimeZone' => 'Asia/Tashkent',
         ],
+        'response' => [
+            'formatters' => [
+                'json' => [
+                    'class' => 'yii\web\JsonResponseFormatter',
+                    'prettyPrint' => YII_DEBUG,
+                    'encodeOptions' => JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
+                ],
+            ],
+        ],
         'request' => [
-            'csrfParam' => '_csrf-frontend',
+            'csrfParam' => 'dioks-frontend',
             'baseUrl' => '',
+
         ],
 //        'modules' => [
 //            'gridview' => ['class' => 'kartik\grid\Module', 'downloadAction' => 'gridview/export/download'],
@@ -37,8 +48,9 @@ return [
         'assetManager' => [
             'bundles' => [
                 'yii\bootstrap\BootstrapAsset' => [
-//                    'bsDependencyEnabled' => false // do not load bootstrap assets for a specific asset bundle
+                    'bsDependencyEnabled' => false // do not load bootstrap assets for a specific asset bundle
                 ],
+
                 'kartik\form\ActiveFormAsset' => [
                     'bsDependencyEnabled' => false // do not load bootstrap assets for a specific asset bundle
                 ],
@@ -51,7 +63,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
-            'name' => 'yurist-frontend',
+            'name' => 'dioks-frontend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

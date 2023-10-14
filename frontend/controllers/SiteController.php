@@ -4,9 +4,11 @@ namespace frontend\controllers;
 
 use common\models\Country;
 use common\models\Faq;
+use common\models\Order;
 use common\models\Steps;
 use common\models\University;
 use frontend\models\ResendVerificationEmailForm;
+use frontend\models\SearchForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -79,6 +81,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        Yii::$app->session->addFlash('success', 'Order has been sent');
 
         return $this->render('index', [
 
@@ -255,32 +258,35 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionCountries()
+    public function actionGetOrder()
     {
-        return $this->render('country', [
+//        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        ]);
+        if (Yii::$app->request->get()) {
+            $req_order = Yii::$app->request->get();
+            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
+
+            $order = new Order();
+            $order->cargo_from_location = $req_order['from'];
+            $order->cargo_to_location = $req_order['from_to'];
+
+            $order->mass = $req_order['mass'];
+            $order->name_ru = $req_order['cargo_name'];
+            $order->whom = $req_order['whom'];
+            $order->how = $req_order['how'];
+            $order->order_code = $generateDoc_Code;
+            if (!$order->save()) {
+                dd($order->errors);
+            } else {
+                Yii::$app->session->addFlash('success', 'Order has been sent');
+                Yii::$app->session->addFlash('success', 'Number' . $generateDoc_Code);
+                return $this->redirect(Yii::$app->request->referrer);
+            }
+
+
+        }
+
     }
 
-    public function actionUniversities()
-    {
-        $univer = University::find()->all();
-        return $this->render('university', [
-            'univer' => $univer
-        ]);
-    }
 
-    public function actionAbout()
-    {
-        return $this->render('about', [
-
-        ]);
-    }
-
-    public function actionServices()
-    {
-        return $this->render('service', [
-
-        ]);
-    }
 }

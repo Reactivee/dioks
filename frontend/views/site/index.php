@@ -2,6 +2,8 @@
 
 /** @var yii\web\View $this */
 
+use yii\bootstrap4\ActiveForm;
+
 $this->title = 'My Yii Application';
 
 ?>
@@ -102,10 +104,13 @@ $this->title = 'My Yii Application';
                     коммерческое предложение</span>
         </div>
 
+        <!-- form send order-->
+        <? $form = ActiveForm::begin(['method' => 'GET', 'action' => '/site/get-order']) ?>
+
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
-                <label for="" class="form_label">ОТКУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город отправки">
+                <label for="from" class="form_label">ОТКУДА</label>
+                <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">
             </div>
             <div class="col-md-2 text-center">
                 <div class="arrow d-flex flex-column justify-content-center align-items-center">
@@ -114,37 +119,43 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="col-md-5">
-                <label for="" class="form_label">КУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <label for="from_to" class="form_label">КУДА</label>
+                <input type="text" name="from_to" class="form-control form_calculate"
+                       placeholder="Выбрать город получения">
             </div>
             <div class="col-md-5">
-                <label for="" class="form_label">КУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <label for="mass" class="form_label">СКОЛЬКО</label>
+                <input type="text" name="mass" class="form-control form_calculate"
+                       placeholder="Выбрать город получения">
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
-                <label for="" class="form_label">КУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <label for="cargo_name" class="form_label">ЧЕГО</label>
+                <input type="text" name="cargo_name" class="form-control form_calculate"
+                       placeholder="Выбрать город получения">
             </div>
 
             <div class="col-md-5">
-                <label for="" class="form_label">КУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <label for="whom" class="form_label">КОМУ</label>
+                <input type="text" name="whom" class="form-control form_calculate"
+                       placeholder="Выбрать город получения">
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
-                <label for="" class="form_label">КУДА</label>
-                <input type="text" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <label for="how" class="form_label">КАК</label>
+                <input type="text" name="how" class="form-control form_calculate" placeholder="Выбрать город получения">
             </div>
             <div class="send_form d-block mt-4 flex-column">
-                <button class="btn btn-primary">Отправить</button>
+                <button type="submit" class="btn btn-primary">Отправить</button>
             </div>
 
         </div>
+        <? ActiveForm::end() ?>
+
         <div class="d-block text-center">
             <input type="checkbox" class="mt-4">
             <span class="title_guaranty_text text-center color_gray">

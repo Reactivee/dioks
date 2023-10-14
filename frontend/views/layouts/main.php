@@ -4,6 +4,7 @@
 
 /** @var string $content */
 
+use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use yii\bootstrap5\Html;
 
@@ -34,6 +35,8 @@ AppAsset::register($this);
 
 
     <div class="overlay"></div>
+    <?= Alert::widget() ?>
+
     <header class="d-flex align-items-center">
         <div class="back_map">
             <img src="images/banner/map 1.png" alt="">
@@ -103,9 +106,8 @@ AppAsset::register($this);
 
             </div>
         </div>
-
-
     </header>
+
 
     <?= $content ?>
     <footer class="pt-5">

@@ -8,9 +8,15 @@ use Yii;
  * This is the model class for table "application".
  *
  * @property int $id
- * @property string|null $client_name
+ * @property string|null $name_uz
+ * @property string|null $name_ru
+ * @property string|null $name_en
  * @property string|null $phone
- * @property int|null $created_at
+ * @property string|null $cargo_mass
+ * @property string|null $dimension
+ * @property int|null $cargo_to_location
+ * @property int|null $cargo_from_location
+ * @property string|null $order_code
  */
 class Application extends \yii\db\ActiveRecord
 {
@@ -28,8 +34,8 @@ class Application extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at'], 'integer'],
-            [['client_name', 'phone'], 'string', 'max' => 255],
+            [['cargo_to_location', 'cargo_from_location'], 'integer'],
+            [['name_uz', 'name_ru', 'name_en', 'phone', 'cargo_mass', 'dimension', 'order_code'], 'string', 'max' => 255],
         ];
     }
 
@@ -40,9 +46,15 @@ class Application extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'client_name' => 'Client Name',
+            'name_uz' => 'Name Uz',
+            'name_ru' => 'Name Ru',
+            'name_en' => 'Name En',
             'phone' => 'Phone',
-            'created_at' => 'Created At',
+            'cargo_mass' => 'Cargo Mass',
+            'dimension' => 'Dimension',
+            'cargo_to_location' => 'Cargo To Location',
+            'cargo_from_location' => 'Cargo From Location',
+            'order_code' => 'Order Code',
         ];
     }
 }

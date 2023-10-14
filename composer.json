@@ -19,21 +19,20 @@
   },
   "minimum-stability": "stable",
   "require": {
-    "php": ">=7.1.0",
+    "php": ">=7.0.0",
     "yiisoft/yii2": "~2.0.45",
     "yiisoft/yii2-bootstrap4": "~2.0.2",
     "yiisoft/yii2-symfonymailer": "~2.0.3",
     "codemix/yii2-localeurls": "^1.7",
     "kartik-v/yii2-widget-growl": "*",
     "yiister/yii2-gentelella": "*",
-
     "hosannahighertech/yii2-light-bootstrap": "*",
     "deyraka/yii2-material-dashboard": "v1.0.0-beta",
     "almasaeed2010/adminlte": "~3.2",
     "lajax/yii2-translate-manager": "1.*",
     "lajax/yii2-language-picker": "1.*",
     "kartik-v/yii2-widget-select2": "*",
-    "mdmsoft/yii2-admin": "2.12",
+
     "yiisoft/yii2-httpclient": "~2.0.0"
   },
   "require-dev": {

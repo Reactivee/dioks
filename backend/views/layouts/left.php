@@ -19,7 +19,7 @@ use yii\helpers\Html;
         <?= Menu::widget([
             'items' => [
                 ['label' => 'Application', 'icon' => 'dashboard', 'url' => ['/order']],
-                ['label' => 'Status Order', 'icon' => 'dashboard', 'url' => ['/about-order']],
+                ['label' => 'Status Order', 'icon' => 'dashboard', 'url' => ['/order-about']],
               //                ['label' => 'About', 'icon' => 'table_chart', 'url' => ['site/about']],
 //                ['label' => 'Contact', 'icon' => 'web', 'url' => ['site/contact']],
 //                ['label' => 'Javascript', 'icon' => 'code', 'url' => ['/javascript']],

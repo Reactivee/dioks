@@ -1,24 +1,24 @@
 <?php
 
-use common\models\order;
+use common\models\OrderAbout;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /** @var yii\web\View $this */
-/** @var common\models\OrderSearch $searchModel */
+/** @var common\models\OrderAboutSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Orders';
+$this->title = 'Order Abouts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="order-index">
+<div class="order-about-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Order About', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -29,23 +29,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'order_code',
 
-            'name_ru',
-            'cargo_type',
-            'cargo_from_location',
-            'cargo_to_location',
             'status',
-            'currently_location',
-            'delivery_time',
+            'country',
+            'name_ru',
+//            'name_uz',
+//            'name_en',
+            'region',
+            'delivery_time:datetime',
+            'order_code',
             'created_at:datetime',
             'updated_at:datetime',
-            'whom',
-            'how',
-            'mass',
+//            'long',
+//            'lat',
+            'truck_id',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, order $model, $key, $index, $column) {
+                'urlCreator' => function ($action, OrderAbout $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],

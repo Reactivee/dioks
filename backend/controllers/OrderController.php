@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 
-use common\models\order;
+use common\models\Order;
 use common\models\OrderSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -67,7 +67,7 @@ class OrderController extends Controller
      */
     public function actionCreate()
     {
-        $model = new order();
+        $model = new Order();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -125,7 +125,7 @@ class OrderController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = order::findOne(['id' => $id])) !== null) {
+        if (($model = Order::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

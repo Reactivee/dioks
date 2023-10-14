@@ -1,0 +1,72 @@
+<?php
+
+use yii\db\Migration;
+
+/**
+ * Class m231013_195447_add_order
+ */
+class m231013_195447_add_order extends Migration
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function safeUp()
+    {
+        $this->createTable('{{%order}}', [
+            'id' => $this->primaryKey(),
+            'name_uz' => $this->string(),
+            'name_ru' => $this->string(),
+            'name_en' => $this->string(),
+            'cargo_type' => $this->integer(),
+            'cargo_from_location' => $this->integer(),
+            'cargo_to_location' => $this->integer(),
+            'status' => $this->integer(),
+            'currently_location' => $this->integer(),
+            'delivery_time' => $this->string(),
+        ]);
+        $this->createTable('{{%application}}', [
+            'id' => $this->primaryKey(),
+            'name_uz' => $this->string(),
+            'name_ru' => $this->string(),
+            'name_en' => $this->string(),
+            'phone' => $this->string(),
+            'cargo_mass' => $this->string(),
+            'dimension' => $this->string(),
+            'cargo_to_location' => $this->integer(),
+            'cargo_from_location' => $this->integer(),
+            'order_code' => $this->string(),
+        ]);
+        $this->createTable('{{%service}}', [
+            'id' => $this->primaryKey(),
+            'name_uz' => $this->string(),
+            'name_ru' => $this->string(),
+            'name_en' => $this->string(),
+            'image' => $this->string(),
+        ]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function safeDown()
+    {
+        echo "m231013_195447_add_order cannot be reverted.\n";
+
+        return false;
+    }
+
+    /*
+    // Use up()/down() to run migration code without a transaction.
+    public function up()
+    {
+
+    }
+
+    public function down()
+    {
+        echo "m231013_195447_add_order cannot be reverted.\n";
+
+        return false;
+    }
+    */
+}

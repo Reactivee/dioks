@@ -1,0 +1,736 @@
+
+.burger, .mobile_menu {
+    display: none;
+    margin-left: auto;
+    /* padding: 30px 50px; */
+}
+
+.card_slider .swiper-pagination {
+    display: none;
+}
+
+.main-banner__image_mobile, .foto_grid_mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .section {
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .feedback.container, .submission.container, .study-in-country, .list-documents, .header__container, .university-information {
+        padding: 0 20px;
+    }
+
+    .burger, .mobile_menu {
+        display: block;
+        /* padding: 30px 50px; */
+    }
+
+    .mobile_menu.show {
+        /*display: block;*/
+        transform: translateX(0%);
+    }
+
+    .main-banner__image {
+        display: none;
+    }
+
+    .main-banner__image_mobile {
+        display: block;
+    }
+
+    .card_slider .swiper-pagination {
+        display: block;
+    }
+
+    .hystmodal__close {
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+    }
+
+    .header__container {
+        min-height: 87px;
+    }
+
+    .header__logo {
+        width: 175px;
+        margin-bottom: 0;
+    }
+
+    footer .header__logo {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .size_max {
+        font-size: 33px;
+        text-align: center;
+    }
+
+    .size_xx {
+        font-size: 16px;
+    }
+
+    .size_6x {
+        font-size: 24px;
+    }
+
+    .line {
+        padding: 50px 30px;
+    }
+
+    .btn__text {
+        font-weight: 700;
+    }
+
+    /* Main page */
+    .wrapper-page {
+        position: relative;
+        overflow-y: hidden;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        display: none;
+        transition: 0.5s all;
+    }
+
+    .mobile_menu {
+        background-color: white;
+        width: 80%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+
+        padding: 30px 25px;
+
+        z-index: 99999;
+        transform: translateX(100%);
+        transition: 0.4s all;
+    }
+
+    .header__lang_mobile {
+        border-bottom: 1px solid rgba(195, 209, 220, 0.5);
+        border-top: 1px solid rgba(195, 209, 220, 0.5);
+        margin-top: 20px;
+        padding: 15px 0;
+    }
+
+    .lang-toggle {
+        justify-content: left;
+    }
+
+    .header__nav_mobile .nav__block {
+        flex-direction: column;
+        align-items: start;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(195, 209, 220, 0.5);
+        border-top: 1px solid rgba(195, 209, 220, 0.5);
+    }
+
+    .header__nav_mobile .nav__link {
+        font-size: 16px;
+        color: #2C3A5A;
+    }
+
+    .footer__nav .nav__link {
+        font-size: 18px;
+    }
+
+    .footer__company__title, .footer__company__inc {
+        font-size: 14px;
+    }
+
+    .header__nav_mobile .nav__item {
+        margin-bottom: 15px;
+    }
+
+    .mobile_menu .tmp_info__desc {
+        color: black;
+    }
+
+    .mobile_menu .footer__info {
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile_menu .socials {
+        justify-content: start;
+    }
+
+    .mobile_menu .footer__socials__title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #2C3A5A;
+    }
+
+    .mobile_menu .tmp_info {
+        justify-content: start;
+    }
+
+    .mobile_menu .footer__info {
+        border: none;
+    }
+
+    .m-menu {
+        font-weight: 700;
+        font-size: 24px;
+        color: #2C3A5A;
+        text-transform: uppercase;
+    }
+
+    .service {
+        padding: 25px 30px;
+    }
+
+    .service__lists {
+        justify-content: center;
+    }
+
+    .service__icon {
+        margin: 0 auto;
+    }
+
+    .carts__btn .btn {
+        border: none;
+        padding: 0;
+    }
+
+    .carts__title {
+        padding-right: 15px;
+    }
+
+    .progress_bar {
+        padding: 1px 0 100px 0;
+    }
+
+    .step_wrap {
+        padding: 27px 23%;
+    }
+
+    .progress_title h2 {
+        font-size: 24px;
+    }
+
+    .progress_title h6 {
+        line-height: 28px;
+        font-size: 16px;
+
+    }
+
+    .ldBar {
+        margin-bottom: 20px;
+    }
+
+    .section--popular-universities {
+        padding: 30px 0 0 0;
+    }
+
+    .about-company__title,
+    .about-company__desc {
+        text-align: center;
+    }
+
+    .about-company__info__btn .btn {
+        width: 100%;
+    }
+
+    .feedback__item {
+        padding: 30px;
+    }
+
+    .feedback__item__bottom .size_4x {
+        font-size: 16px;
+    }
+
+    .feedback__item__bottom .size_xx {
+        font-size: 14px;
+    }
+
+    .feedback__info,
+    .footer__company__inc {
+        justify-content: center;
+    }
+
+    .footer__nav {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .submission__form .size_7x {
+        font-size: 24px;
+    }
+
+    .form__description {
+        font-size: 14px;
+    }
+
+    .nav__block .nav__item {
+        margin: 0;
+    }
+
+    .header__nav_mobile .nav__block .nav__item {
+        margin-bottom: 20px;
+    }
+
+    .footer__block {
+        padding: 0;
+    }
+
+    .footer__company__logo {
+        /*margin: 11px 25px;*/
+    }
+
+    .footer__right {
+        gap: 35px;
+    }
+
+    .footer__right .nav {
+        margin-top: 30px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(195, 209, 220, 0.5);
+        border-top: 1px solid rgba(195, 209, 220, 0.5);
+    }
+
+    .footer__info {
+        border-bottom: 1px solid rgba(195, 209, 220, 0.5);
+        padding-bottom: 20px;
+    }
+
+    .footer {
+        padding: 0 30px 30px 30px;
+    }
+
+    .faq {
+        padding: 40px 20px 50px 20px;
+    }
+
+    .accordion__block {
+        padding: 4px 19px;
+    }
+
+    .cart__desc.size_xx {
+        font-size: 14px;
+    }
+
+    .cart__desc {
+        margin-bottom: 10px;
+    }
+
+    .carts__header {
+        padding: 0 18px;
+        margin-bottom: 15px;
+    }
+
+    .card_slider {
+        padding: 0 69px 50px 19px;
+        /* padding: 0 30px; */
+    }
+
+    .cart__btn .btn {
+        height: auto;
+    }
+
+
+    .cart__btn {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .about-company__info__btn {
+        display: block;
+    }
+
+    .card_slider .swiper-pagination-bullet-active {
+        width: 11px;
+        height: 11px;
+    }
+
+    .card_slider .swiper-pagination {
+        bottom: 0;
+    }
+
+    .card_slider .swiper-pagination-bullet {
+        width: 11px;
+        height: 11px;
+        border: 1px solid red;
+    }
+
+    .section .popular-countries {
+        padding: 0;
+    }
+
+    .popular-countries {
+        /* padding-top: 20px!important  ; */
+        padding: 30px 0;
+    }
+
+    .numerable::before {
+        display: none;
+    }
+
+    .working__list {
+        margin-bottom: 25px;
+    }
+
+    .working {
+        padding-bottom: 0;
+    }
+
+    .wrap_bars .col-md-3 {
+        margin-bottom: 19px;
+    }
+
+    .section--faq {
+        margin: 50px 0;
+    }
+
+    /* end main */
+    /* country */
+    .about-country {
+        padding: 38px 22px 109px 22px;
+    }
+
+    .general-information__lists {
+        grid-template-columns: auto;
+    }
+
+    .available-countries {
+        padding: 20px 0 0 0;
+    }
+
+    .about-country__content {
+        padding: 30px 24px;
+    }
+
+    .section--available-countries {
+        padding: 0 25px;
+    }
+
+    .about-country__content__item .size_4x {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 41px;
+    }
+
+    .about-country__desc {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .about-country__desc__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-country__desc__info_logo {
+        width: 100%;
+    }
+
+    .general-information__block {
+        gap: 35px;
+    }
+
+    .admission__title p, .country-shortly-info {
+        text-align: center;
+    }
+
+    .admission__requirements__table {
+        overflow-x: auto;
+    }
+
+    .admission__requirements__table th {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .admission__container {
+        margin-top: 20px;
+    }
+
+    .admission__requirements {
+        text-align: center;
+    }
+
+    .admission__foundation, .admission__requirements, .admission__undergraduate {
+        padding: 21px;
+        text-align: center;
+    }
+
+    .admission__requirements__title {
+        font-size: 20px;
+    }
+
+    .study-in-country__option {
+        align-items: center;
+        text-align: center;
+        padding: 40px 22px;
+    }
+
+    .study-in-country__des {
+        margin-top: 26px;
+    }
+
+    .country-shortly-info {
+        margin-top: 40px;
+    }
+
+    .country-shortly-info__title {
+        font-size: 30px;
+    }
+
+    .country-shortly-info__desc {
+        font-size: 16px;
+
+    }
+
+    .btn--theme--gray .btn__text {
+        font-size: 20px;
+    }
+
+    .lh_5xx {
+        line-height: 26px;
+    }
+
+    .general-information__key {
+        font-size: 14px;
+    }
+
+    .study-in-country__container .btn {
+        width: 100%;
+    }
+
+    /* university */
+    .university-intro {
+        padding: 20px;
+    }
+    .gallery.container{
+        padding: 0;
+    }
+
+    .section--university-information {
+        padding: 45px 0;
+    }
+
+    .university-intro__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .university-information__right {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .university-details {
+        margin-bottom: 20px;
+    }
+
+    .foto_grid_mobile {
+        display: block;
+    }
+
+    .foto_grid_mobile .swiper-pagination-bullet {
+        border: 2px solid #C3D1DC;
+        width: 11px;
+        height: 11px;
+    }
+
+    .foto_grid_mobile .swiper-pagination-bullet-active {
+        border: 2px solid transparent;
+        width: 11px;
+        height: 11px;
+    }
+
+    .foto_grid_mobile {
+        padding-right: 30px;
+    }
+
+    .section--undergraduate {
+        padding: 40px 0 200px 0;
+    }
+
+    /* about us */
+    .about_us-page .section--information-banner {
+        margin-bottom: 50px;
+    }
+
+    .about-company__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .section--our-advantages {
+        margin: 40px 0 100px 0;
+    }
+
+    .our-advantages__lists {
+        grid-template-columns: none;
+    }
+
+    .undergraduate__list .size_4x {
+        font-size: 16px;
+    }
+
+    /* Service */
+    .services__item, .services__item:nth-child(2n) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information-banner {
+        min-height: 322px;
+    }
+
+    .services__item:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    .section--services {
+        padding: 100px 0 50px 0;
+    }
+
+    .services__item__number {
+        display: none;
+    }
+
+    .services__item__number_m {
+        display: flex;
+    }
+
+    .services__item:nth-child(2n) .services__item__number_m {
+        background-color: #f87b80;
+    }
+
+    .square--266 {
+        width: 128px;
+        height: 128px;
+    }
+
+    .size_9x {
+        font-size: 65px;
+    }
+
+    .services__item__photo {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .services__item__left {
+        padding: 0;
+        text-align: center;
+    }
+
+    .gallery__pagination {
+        display: none;
+    }
+
+    .gallery__top {
+        justify-content: center;
+    }
+
+    .undergraduate__lists {
+        grid-template-columns: none;
+    }
+
+    .foto_grid {
+        display: none;
+    }
+
+    .undergraduate__info__desc {
+        font-size: 14px;
+        line-height: 25px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .main-banner {
+        align-items: start;
+    }
+
+    .main-banner__container {
+        margin-top: 20px;
+    }
+
+    .main-banner__desc {
+        text-align: center;
+    }
+
+    .main-banner__btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 44%;
+    }
+
+    .hystmodal__window {
+        margin: 0;
+    }
+
+    .service__title {
+        margin-top: 10px;
+    }
+
+    .info,
+    .header__nav,
+    .header__lang {
+        display: none;
+    }
+
+    .service__lists,
+    .feedback__info,
+    .footer__nav .nav__block {
+        grid-template-columns: initial;
+    }
+
+    .service__block,
+    .footer__block,
+    .footer__right {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service__list {
+        text-align: center;
+    }
+
+    .nav__block {
+        margin-top: 20px;
+        justify-content: center;
+        /* border-top: 2px solid red; */
+    }
+
+    .tmp_info,
+    .socials {
+        justify-content: center;
+    }
+}

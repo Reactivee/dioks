@@ -12,17 +12,14 @@ use yii\helpers\Html;
 -->
     <div class="logo">
         <a href="#" class="simple-text logo-normal">
-           UStudent
+           DIOKS
         </a>
     </div>
     <div class="sidebar-wrapper">
         <?= Menu::widget([
             'items' => [
-                ['label' => 'Davlatlar', 'icon' => 'dashboard', 'url' => ['/country']],
-                ['label' => 'UniversityController', 'icon' => 'dashboard', 'url' => ['/university']],
-                ['label' => 'Steps', 'icon' => 'dashboard', 'url' => ['/steps']],
-                ['label' => 'FAQ', 'icon' => 'dashboard', 'url' => ['/faq']],
-                ['label' => 'Faculty', 'icon' => 'dashboard', 'url' => ['/faculty']],
+                ['label' => 'Orders', 'icon' => 'dashboard', 'url' => ['/orders']],
+
 //                ['label' => 'About', 'icon' => 'table_chart', 'url' => ['site/about']],
 //                ['label' => 'Contact', 'icon' => 'web', 'url' => ['site/contact']],
 //                ['label' => 'Javascript', 'icon' => 'code', 'url' => ['/javascript']],

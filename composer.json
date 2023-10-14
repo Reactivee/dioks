@@ -25,6 +25,7 @@
     "yiisoft/yii2-symfonymailer": "~2.0.3",
     "codemix/yii2-localeurls": "^1.7",
     "kartik-v/yii2-widget-growl": "*",
+
     "hosannahighertech/yii2-light-bootstrap": "*",
     "deyraka/yii2-material-dashboard": "v1.0.0-beta",
     "almasaeed2010/adminlte": "~3.2",

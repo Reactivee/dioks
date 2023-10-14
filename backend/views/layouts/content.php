@@ -1,7 +1,7 @@
 <?php
     /** @var string $content */
 
-use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap4\Breadcrumbs;
 
 ?>
 <div class="content">

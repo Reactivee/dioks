@@ -81,7 +81,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        Yii::$app->session->addFlash('success', 'Order has been sent');
 
         return $this->render('index', [
 
@@ -278,8 +277,7 @@ class SiteController extends Controller
             if (!$order->save()) {
                 dd($order->errors);
             } else {
-                Yii::$app->session->addFlash('success', 'Order has been sent');
-                Yii::$app->session->addFlash('success', 'Number' . $generateDoc_Code);
+                Yii::$app->session->addFlash('success', 'Order has been sent. Number- ' . $generateDoc_Code);
                 return $this->redirect(Yii::$app->request->referrer);
             }
 

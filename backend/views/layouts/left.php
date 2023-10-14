@@ -18,9 +18,9 @@ use yii\helpers\Html;
     <div class="sidebar-wrapper">
         <?= Menu::widget([
             'items' => [
-                ['label' => 'Orders', 'icon' => 'dashboard', 'url' => ['/orders']],
-
-//                ['label' => 'About', 'icon' => 'table_chart', 'url' => ['site/about']],
+                ['label' => 'Application', 'icon' => 'dashboard', 'url' => ['/order']],
+                ['label' => 'Status Order', 'icon' => 'dashboard', 'url' => ['/about-order']],
+              //                ['label' => 'About', 'icon' => 'table_chart', 'url' => ['site/about']],
 //                ['label' => 'Contact', 'icon' => 'web', 'url' => ['site/contact']],
 //                ['label' => 'Javascript', 'icon' => 'code', 'url' => ['/javascript']],
 //                ['label' => 'Notifications', 'icon' => 'notifications', 'url' => ['/notifications']],

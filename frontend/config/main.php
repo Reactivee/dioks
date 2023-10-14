@@ -10,7 +10,7 @@ require_once __DIR__ . '/../../common/helpers/helpers.php';
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log', ],
+    'bootstrap' => ['log',],
 
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
@@ -28,18 +28,22 @@ return [
             'class' => 'yii\i18n\Formatter',
             'defaultTimeZone' => 'Asia/Tashkent',
         ],
-        'response' => [
-            'formatters' => [
-                'json' => [
-                    'class' => 'yii\web\JsonResponseFormatter',
-                    'prettyPrint' => YII_DEBUG,
-                    'encodeOptions' => JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
-                ],
-            ],
-        ],
+//        'response' => [
+//            'formatters' => [
+//                'json' => [
+//                    'class' => 'yii\web\JsonResponseFormatter',
+//                    'prettyPrint' => YII_DEBUG,
+//                    'encodeOptions' => JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
+//                ],
+//            ],
+//        ],
         'request' => [
             'csrfParam' => 'dioks-frontend',
             'baseUrl' => '',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+            'enableCsrfValidation' => false,
 
         ],
 //        'modules' => [

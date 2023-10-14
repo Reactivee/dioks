@@ -112,6 +112,7 @@ $this->title = 'My Yii Application';
                 <label for="from" class="form_label">ОТКУДА</label>
                 <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">
             </div>
+
             <div class="col-md-2 text-center">
                 <div class="arrow d-flex flex-column justify-content-center align-items-center">
                     <img src="images/icons/Прво.svg" alt="">

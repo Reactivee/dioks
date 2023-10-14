@@ -40,7 +40,7 @@ class OrderSearch extends Order
      */
     public function search($params)
     {
-        $query = order::find();
+        $query = Order::find();
 
         // add conditions that should always apply here
 

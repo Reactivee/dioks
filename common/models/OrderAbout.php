@@ -75,7 +75,7 @@ class OrderAbout extends \yii\db\ActiveRecord
         ];
     }
 
-    public static function getAllStatus()
+    public static function getAllStatus($item = null)
     {
         $status = [
             self::SENDING => 'Отправляется',
@@ -84,6 +84,6 @@ class OrderAbout extends \yii\db\ActiveRecord
             self::DELIVERED => 'Доставлено',
             self::CANCELLED => 'Отменено',
         ];
-        return $status;
+        return $item ? $status[$item] : $status;
     }
 }

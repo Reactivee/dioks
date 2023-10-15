@@ -91,10 +91,13 @@ class OrderAbout extends \yii\db\ActiveRecord
 
     public function beforeSave($insert)
     {
-        $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
-        $this->truck_id = $generateDoc_Conclusion;
+        if ($this->isNewRecord) {
+            $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
+            $this->truck_id = $generateDoc_Conclusion;
+        }
+
         $mydate = strtotime($this->delivery_time);
-        $this->delivery_time = (int) $mydate;
+        $this->delivery_time = (int)$mydate;
         return parent::beforeSave($insert);
     }
 }

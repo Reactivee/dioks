@@ -32,7 +32,7 @@
     "lajax/yii2-translate-manager": "1.*",
     "lajax/yii2-language-picker": "1.*",
     "kartik-v/yii2-widget-select2": "*",
-
+    "kartik-v/yii2-widget-depdrop": "^1.0",
     "yiisoft/yii2-httpclient": "~2.0.0",
     "kartik-v/yii2-widget-datetimepicker": "dev-master"
   },

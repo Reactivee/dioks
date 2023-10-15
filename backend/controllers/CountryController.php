@@ -3,18 +3,15 @@
 namespace backend\controllers;
 
 use common\models\Country;
-use common\models\OrderAbout;
-use common\models\OrderAboutSearch;
-use Yii;
+use common\models\CountrySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\Response;
 
 /**
- * OrderAboutController implements the CRUD actions for OrderAbout model.
+ * CountryController implements the CRUD actions for Country model.
  */
-class OrderAboutController extends Controller
+class CountryController extends Controller
 {
     /**
      * @inheritDoc
@@ -35,13 +32,13 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Lists all OrderAbout models.
+     * Lists all Country models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new OrderAboutSearch();
+        $searchModel = new CountrySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -51,7 +48,7 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Displays a single OrderAbout model.
+     * Displays a single Country model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -64,13 +61,13 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Creates a new OrderAbout model.
+     * Creates a new Country model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new OrderAbout();
+        $model = new Country();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -86,7 +83,7 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Updates an existing OrderAbout model.
+     * Updates an existing Country model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -106,7 +103,7 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Deletes an existing OrderAbout model.
+     * Deletes an existing Country model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -120,36 +117,18 @@ class OrderAboutController extends Controller
     }
 
     /**
-     * Finds the OrderAbout model based on its primary key value.
+     * Finds the Country model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return OrderAbout the loaded model
+     * @return Country the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = OrderAbout::findOne(['id' => $id])) !== null) {
+        if (($model = Country::findOne(['id' => $id])) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    public function actionRegion()
-    {
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        if (isset($_POST['depdrop_parents'])) {
-            $parents = $_POST['depdrop_parents'];
-            if ($parents) {
-                $cat = $parents[0];
-                $sub = Country::find()
-                    ->select(['id', 'name_ru as name'])
-                    ->andWhere(['parent_id' => $cat])
-                    ->asArray()
-                    ->all();
-                return ['output' => $sub, 'selected' => ''];
-            }
-        }
-        return ['output' => '', 'selected' => ''];
     }
 }

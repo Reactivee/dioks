@@ -60,6 +60,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 'items' => [
                                     ['label' => 'Application', 'icon' => 'dashboard', 'url' => ['/order']],
                                     ['label' => 'Status Order', 'icon' => 'dashboard', 'url' => ['/order-about']],
+                                    ['label' => 'Country', 'icon' => 'dashboard', 'url' => ['/country']],
                                 ]]
                         )
                         ?>

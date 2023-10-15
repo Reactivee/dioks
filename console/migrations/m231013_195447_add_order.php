@@ -24,25 +24,7 @@ class m231013_195447_add_order extends Migration
             'currently_location' => $this->string(),
             'delivery_time' => $this->string(),
         ]);
-//        $this->createTable('{{%application}}', [
-//            'id' => $this->primaryKey(),
-//            'name_uz' => $this->string(),
-//            'name_ru' => $this->string(),
-//            'name_en' => $this->string(),
-//            'phone' => $this->string(),
-//            'cargo_mass' => $this->string(),
-//            'dimension' => $this->string(),
-//            'cargo_to_location' => $this->integer(),
-//            'cargo_from_location' => $this->integer(),
-//            'order_code' => $this->string(),
-//        ]);
-//        $this->createTable('{{%service}}', [
-//            'id' => $this->primaryKey(),
-//            'name_uz' => $this->string(),
-//            'name_ru' => $this->string(),
-//            'name_en' => $this->string(),
-//            'image' => $this->string(),
-//        ]);
+
     }
 
     /**

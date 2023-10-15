@@ -1,7 +1,10 @@
 <?php
 
 use kartik\datetime\DateTimePicker;
+use kartik\depdrop\DepDrop;
+use kartik\select2\Select2;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
@@ -15,25 +18,28 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
+    <? echo $form->field($model, 'country')->widget(Select2::className(), [
+        'data' => \common\models\Country::getALlCountry(),
+        'theme' => Select2::THEME_BOOTSTRAP,
+        'options' => ['placeholder' => 'Country', 'id' => 'country'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
 
-    <!--    --><? //= $form->field($model, 'name_uz')->textInput(['maxlength' => true]) ?>
-
-    <!--    --><? //= $form->field($model, 'name_en')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'region')->textInput(['maxlength' => true]) ?>
+    <? echo $form->field($model, 'region')->widget(DepDrop::classname(), [
+        'data' => \common\models\Country::getALlCountry(),
+        'type' => DepDrop::TYPE_SELECT2,
+        'options' => ['id' => 'region', 'placeholder' => 'Region'],
+        'pluginOptions' => [
+            'depends' => ['country'],
+            'url' => Url::to(['region']),
+        ]
+    ]) ?>
 
 
     <?
-    //    echo $form->field($model, 'delivery_time')->widget(DateTimePicker::classname(), [
-    //        'options' => ['placeholder' => 'Enter delivery time ...'],
-    //        'value' => $model->delivery_time,
-    //        'pluginOptions' => [
-    //            'autoclose' => true,
-    //            'format' => 'mm/dd/yyyy hh:ii:ss'
-    //        ]
-    //    ]);
-
     echo $form->field($model, 'delivery_time')->widget(
         DateTimePicker::className(), [
             'type' => DateTimePicker::TYPE_COMPONENT_PREPEND,

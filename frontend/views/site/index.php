@@ -10,44 +10,52 @@ $this->title = 'My Yii Application';
 ?>
 <section class="check_order ">
     <div class="container">
-        <? Pjax::begin(); ?>
-        <form method="GET">
-            <div class="row">
-                <div class="col-md-6 pr-5">
-                    <div class="check_wrapper overflow-hidden h-100">
-                        <div class="check_wrapper_title">Проверьте локацию груза</div>
-                        <div class="check_wrapper_time font-weight-bold">24/7</div>
-                        <div class="check_form  h-100">
-                            <div class="check_order_label mb-3">Трек-номер груза</div>
-                            <div class=" d-flex align-items-center">
 
-                                <input type="text" name="truck" class="w-100 check_order_input"
-                                       placeholder="Введите трек-номер вашего груза">
-                                <button type="submit" class="btn check_order_btn">Поиск</button>
-                            </div>
-                            <span class="check_info">Актуальная информация о статусе вашего груза и городе его
-                                расположения</span>
+        <? Pjax::begin(); ?>
+
+        <?php $form = ActiveForm::begin(['id' => 'fform', 'method' => 'POST',
+            'options' => ['data' => ['pjax' => 1]]]); ?>
+
+
+        <div class="row">
+            <div class="col-md-6 pr-5">
+                <div class="check_wrapper overflow-hidden h-100">
+                    <div class="check_wrapper_title">Проверьте локацию груза</div>
+                    <div class="check_wrapper_time font-weight-bold">24/7</div>
+                    <div class="check_form  h-100">
+                        <div class="check_order_label mb-3">Трек-номер груза</div>
+                        <div class=" d-flex align-items-center">
+                            <input type="text" name="truck" class="w-100 check_order_input"
+                                   placeholder="Введите трек-номер вашего груза">
+                            <button type="submit" class="btn check_order_btn">Поиск</button>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 pl-5 h-100">
-                    <div class="check_response">
-                        <?  ?>
-                        <div class="res_title">Информация о Вашем перевозке</div>
-                        <div class="status_order">Статус заказа: <?= $order->status ?? '' ?></div>
-                        <div class="country">Страна: <?= $order->country ?? '' ?></div>
-                        <div class="city">Город: <?= $order->region ?? '' ?></div>
-                        <div class="delivery_time">Примерное время доставки: <?= $order->deliver_time ?? "" ?></div>
-                    </div>
-                    <div class="map">
-                        <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"
-                                width="100%" height="321" frameborder="0"></iframe>
+                        <span class="check_info">Актуальная информация о статусе вашего груза и городе его
+                                расположения</span>
                     </div>
                 </div>
             </div>
-        </form>
+            <div class="col-md-6 pl-5 h-100">
+                <div class="check_response">
+
+                    <div class="res_title">Информация о Вашем перевозке</div>
+                    <div class="status_order">Статус заказа: <?= $order->status ?? '' ?></div>
+                    <div class="country">Страна: <?= $order->country ?? '' ?></div>
+                    <div class="city">Город: <?= $order->region ?? '' ?></div>
+                    <div class="delivery_time">Примерное время доставки: <?= $order->deliver_time ?? "" ?></div>
+                </div>
+                <div class="map">
+                    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"
+                            width="100%" height="321" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <?php ActiveForm::end(); ?>
+
 
         <? Pjax::end(); ?>
+
+
 </section>
 <section class="guaranty">
     <div class="container">

@@ -83,7 +83,8 @@ class SiteController extends Controller
     public function actionIndex($truck = null)
     {
         $order = [];
-        if (Yii::$app->request->get()) {
+        if (Yii::$app->request->post()) {
+            $truck = Yii::$app->request->post()['truck'];
 
             if ($truck) {
                 $order = OrderAbout::find()->where(['truck_id' => $truck])->one();

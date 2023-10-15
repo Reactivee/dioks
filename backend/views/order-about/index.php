@@ -6,6 +6,7 @@ use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /** @var yii\web\View $this */
 /** @var common\models\OrderAboutSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
@@ -30,14 +31,34 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'status',
-            'country',
+            [
+                'attribute' => 'status',
+                'value' => function ($model) {
+                    return OrderAbout::getAllStatus($model->status);
+                }
+
+            ],
             'name_ru',
+
+            [
+                'attribute' => 'country',
+                'value' => function ($model) {
+                    return $model->countries->name_ru ?? '';
+                }
+
+            ], [
+                'attribute' =>  'region',
+                'value' => function ($model) {
+                    return $model->regions->name_ru ?? '';
+                }
+
+            ],
+
 //            'name_uz',
 //            'name_en',
-            'region',
+
             'delivery_time:datetime',
-            'order_code',
+//            'order_code',
             'created_at:datetime',
             'updated_at:datetime',
 //            'long',
@@ -47,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, OrderAbout $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                 }
+                }
             ],
         ],
     ]); ?>

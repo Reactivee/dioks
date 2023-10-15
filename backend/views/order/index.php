@@ -29,20 +29,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'order_code',
 
             'name_ru',
             'cargo_type',
             'cargo_from_location',
             'cargo_to_location',
-            'status',
-            'currently_location',
-            'delivery_time',
-            'created_at:datetime',
-            'updated_at:datetime',
+
             'whom',
             'how',
             'mass',
+            'created_at:datetime',
+            'updated_at:datetime',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, order $model, $key, $index, $column) {

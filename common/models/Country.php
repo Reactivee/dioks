@@ -73,9 +73,11 @@ class Country extends \yii\db\ActiveRecord
     public function beforeSave($insert)
     {
 
+        if (!$this->isNewRecord) {
+            if ($this->parent_id == $this->id) {
+                return false;
+            }
 
-        if ($this->parent_id == $this->id) {
-            return false;
         }
 
         return parent::beforeSave($insert);

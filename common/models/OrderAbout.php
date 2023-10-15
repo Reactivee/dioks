@@ -96,6 +96,18 @@ class OrderAbout extends \yii\db\ActiveRecord
         ];
         return $item ? $status[$item] : $status;
     }
+    public  function getStatus()
+    {
+
+        $status = [
+            self::SENDING => 'Отправляется',
+            self::SENT => 'В Пути',
+            self::CUSTOM => 'На Таможенном контроле',
+            self::DELIVERED => 'Доставлено',
+            self::CANCELLED => 'Отменено',
+        ];
+        return $this->status ? $status[$this->status] : $status;
+    }
 
     public function beforeSave($insert)
     {

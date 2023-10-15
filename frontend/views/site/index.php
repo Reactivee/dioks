@@ -36,12 +36,19 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-6 pl-5 h-100">
                 <div class="check_response">
-
-                    <div class="res_title">Информация о Вашем перевозке</div>
-                    <div class="status_order">Статус заказа: <?= $order->status ?? '' ?></div>
-                    <div class="country">Страна: <?= $order->country ?? '' ?></div>
-                    <div class="city">Город: <?= $order->region ?? '' ?></div>
-                    <div class="delivery_time">Примерное время доставки: <?= $order->deliver_time ?? "" ?></div>
+                    <? if ($order) { ?>
+                        <div class="res_title">Информация о Вашем перевозке</div>
+                        <div class="status_order">Статус заказа: <?= $order->getStatus() ?? '' ?></div>
+                        <div class="country">Страна: <?= $order->countries->name_ru ?? '' ?></div>
+                        <div class="city">Город: <?= $order->regions->name_ru ?? '' ?></div>
+                        <div class="delivery_time">Примерное время доставки: <?= date('Y-m-d H:i:s', $order->delivery_time);    ?></div>
+                    <? } else { ?>
+                        <div class="res_title">Информация о Вашем перевозке</div>
+                        <div class="status_order">Статус заказа</div>
+                        <div class="country">Страна</div>
+                        <div class="city">Город</div>
+                        <div class="delivery_time">Примерное время доставки</div>
+                    <? } ?>
                 </div>
                 <div class="map">
                     <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"

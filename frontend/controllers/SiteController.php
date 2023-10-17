@@ -286,10 +286,9 @@ class SiteController extends Controller
             if (!$order->save()) {
                 dd($order->errors);
             } else {
-                Yii::$app->session->addFlash('success', 'Order has been sent. Number- ' . $generateDoc_Code);
+                Yii::$app->session->addFlash('success', 'Order has been sent');
                 return $this->redirect(Yii::$app->request->referrer);
             }
-
 
         }
 

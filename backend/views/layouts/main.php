@@ -58,8 +58,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 'items' => [
-                                    ['label' => 'Application', 'icon' => 'dashboard', 'url' => ['/order']],
-                                    ['label' => 'Status Order', 'icon' => 'dashboard', 'url' => ['/order-about']],
+                                    ['label' => 'Orders', 'icon' => 'dashboard', 'url' => ['/order']],
                                     ['label' => 'Country', 'icon' => 'dashboard', 'url' => ['/country']],
                                 ]]
                         )

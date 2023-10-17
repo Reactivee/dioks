@@ -1,5 +1,7 @@
 <?php
 
+use kartik\datetime\DateTimePicker;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,23 +14,59 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'client_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true])->label('Name Cargo') ?>
 
     <?= $form->field($model, 'cargo_type')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cargo_from_location')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cargo_to_location')->textInput(['maxlength' => true]) ?>
+    <!--    --><? //= $form->field($model, 'cargo_from_location')->textInput(['maxlength' => true]) ?>
 
-<!--    --><?//= $form->field($model, 'status')->dropDownList([]) ?>
+    <? echo $form->field($model, 'cargo_from_location')->widget(Select2::className(), [
+        'data' => \common\models\Country::getALlRegion(),
+        'theme' => Select2::THEME_BOOTSTRAP,
+        'options' => ['placeholder' => 'Country', 'id' => 'country'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
+    <? echo $form->field($model, 'cargo_to_location')->widget(Select2::className(), [
+        'data' => \common\models\Country::getALlRegion(),
+        'theme' => Select2::THEME_BOOTSTRAP,
+        'options' => ['placeholder' => 'Country', 'id' => 'region'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
+    <?
+    echo $form->field($model, 'delivery_time')->widget(
+        DateTimePicker::className(), [
+            'type' => DateTimePicker::TYPE_COMPONENT_PREPEND,
+            'options' => [
+                'value' => !$model->isNewRecord && $model->delivery_time ? date("d-m-Y H:i", $model->delivery_time) : false
+            ],
+            'pluginOptions' => [
+                'autoclose' => true,
+                'format' => 'dd-mm-yyyy hh:ii'
+            ]
+        ]
+    ) ?>
 
-<!--    --><?//= $form->field($model, 'currently_location')->textInput(['maxlength' => true]) ?>
+    <? echo $form->field($model, 'currently_location')->widget(Select2::className(), [
+        'data' => \common\models\Country::getALlRegion(),
+        'theme' => Select2::THEME_BOOTSTRAP,
+        'options' => ['placeholder' => 'Country', 'id' => 'location'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);
+    ?>
 
-<!--    --><?//= $form->field($model, 'delivery_time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'whom')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'how')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'status')->dropDownList(\common\models\OrderAbout::getAllStatus()) ?>
 
     <?= $form->field($model, 'mass')->textInput(['maxlength' => true]) ?>
 

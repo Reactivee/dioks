@@ -64,6 +64,12 @@ class Country extends \yii\db\ActiveRecord
         return ArrayHelper::map($items, 'id', 'name_ru');
     }
 
+    public static function getALlRegion()
+    {
+        $items = self::find()->where(['not', ['parent_id' => null]])->all();
+        return ArrayHelper::map($items, 'id', 'name_ru');
+    }
+
 
     public function getParent()
     {

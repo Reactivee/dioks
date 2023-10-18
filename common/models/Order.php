@@ -23,6 +23,12 @@ use yii\behaviors\TimestampBehavior;
  */
 class Order extends \yii\db\ActiveRecord
 {
+    const SENDING = 1;
+    const SENT = 2;
+    const CUSTOM = 3;
+    const DELIVERED = 4;
+    const CANCELLED = -1;
+
     /**
      * {@inheritdoc}
      */
@@ -71,4 +77,64 @@ class Order extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+
+    public static function getAllStatus($item = null)
+    {
+        $status = [
+            self::SENDING => 'Отправляется',
+            self::SENT => 'В Пути',
+            self::CUSTOM => 'На Таможенном контроле',
+            self::DELIVERED => 'Доставлено',
+            self::CANCELLED => 'Отменено',
+        ];
+        return $item ? $status[$item] : $status;
+    }
+    public  function getStatus()
+    {
+
+        $status = [
+            self::SENDING => 'Отправляется',
+            self::SENT => 'В Пути',
+            self::CUSTOM => 'На Таможенном контроле',
+            self::DELIVERED => 'Доставлено',
+            self::CANCELLED => 'Отменено',
+        ];
+        return $this->status ? $status[$this->status] : $status;
+    }
+
+    public  function getStatusFront()
+    {
+
+        $status = [
+            self::SENDING => 'Отправляется',
+            self::SENT => 'В Пути',
+            self::CUSTOM => 'На Таможенном контроле',
+            self::DELIVERED => 'Доставлено',
+            self::CANCELLED => 'Отменено',
+        ];
+        return $this->status ? $status[$this->status] : '';
+    }
+    public function getCountries()
+    {
+
+        return $this->hasOne(Country::className(), ['id' => 'cargo_from_location']);
+    }
+    public function getRegions()
+    {
+
+        return $this->hasOne(Country::className(), ['id' => 'cargo_to_location']);
+    }
+
+    public function beforeSave($insert)
+    {
+        if ($this->isNewRecord) {
+            $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
+            $this->order_code = $generateDoc_Conclusion;
+        }
+
+        $mydate = strtotime($this->delivery_time);
+        $this->delivery_time = (int)$mydate;
+        return parent::beforeSave($insert);
+    }
+
 }

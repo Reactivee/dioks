@@ -40,7 +40,8 @@ AppAsset::register($this);
 
     <header class="d-flex align-items-center">
         <div class="back_map">
-            <img src="images/banner/map 1.png" alt="">
+            <img class="rus" src="/images/banner/light1.png" alt="">
+            <img class="all_map" src="images/banner/map 1.png" alt="">
         </div>
         <div class="nav">
             <div class="container">

@@ -2,7 +2,8 @@
 
 /** @var yii\web\View $this */
 
-use yii\bootstrap4\ActiveForm;
+use kartik\select2\Select2;
+use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
 $this->title = 'My Yii Application';
@@ -36,12 +37,14 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-6 pl-5 h-100">
                 <div class="check_response">
+
                     <? if ($order) { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
-                        <div class="status_order">Статус заказа: <?= $order->getStatus() ?? '' ?></div>
+                        <div class="status_order">Статус заказа: <?= $order->getStatusFront() ?? '' ?></div>
                         <div class="country">Страна: <?= $order->countries->name_ru ?? '' ?></div>
                         <div class="city">Город: <?= $order->regions->name_ru ?? '' ?></div>
-                        <div class="delivery_time">Примерное время доставки: <?= date('Y-m-d H:i:s', $order->delivery_time);    ?></div>
+                        <div class="delivery_time">Примерное время
+                            доставки: <?= date('Y-m-d H:i:s', $order->delivery_time); ?></div>
                     <? } else { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
                         <div class="status_order">Статус заказа</div>
@@ -128,10 +131,19 @@ $this->title = 'My Yii Application';
         </div>
 
         <!-- form send order-->
-        <? $form = ActiveForm::begin(['method' => 'GET', 'action' => '/site/get-order']) ?>
+        <? $form = ActiveForm::begin(['method' => 'GET', 'action' => '/site/get-order', 'options' => ['autocomplete' => 'off']]) ?>
 
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
+                <!--                --><? // echo $form->field($order, 'cargo_from_location')->widget(Select2::className(), [
+                //                    'data' => \common\models\Country::getALlRegion(),
+                ////                    'theme' => Select2::THEME_MATERIAL,
+                //                    'options' => ['placeholder' => 'Выбрать город отправки', 'id' => 'region', 'class' => 'form_calculate'],
+                //                    'pluginOptions' => [
+                //                        'allowClear' => true
+                //                    ],
+                //                ]);
+                //                ?>
                 <label for="from" class="form_label">ОТКУДА</label>
                 <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">
             </div>
@@ -150,7 +162,7 @@ $this->title = 'My Yii Application';
             <div class="col-md-5">
                 <label for="mass" class="form_label">СКОЛЬКО</label>
                 <input type="text" name="mass" class="form-control form_calculate"
-                       placeholder="Выбрать город получения">
+                       placeholder="Введите количество груза">
             </div>
             <div class="col-md-2 text-center">
 
@@ -158,20 +170,21 @@ $this->title = 'My Yii Application';
             <div class="col-md-5">
                 <label for="cargo_name" class="form_label">ЧЕГО</label>
                 <input type="text" name="cargo_name" class="form-control form_calculate"
-                       placeholder="Выбрать город получения">
+                       placeholder="Выбрать единицу измерения">
             </div>
 
             <div class="col-md-5">
                 <label for="whom" class="form_label">КОМУ</label>
                 <input type="text" name="whom" class="form-control form_calculate"
-                       placeholder="Выбрать город получения">
+                       placeholder="Введите ваше имя">
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
                 <label for="how" class="form_label">КАК</label>
-                <input type="text" name="how" class="form-control form_calculate" placeholder="Выбрать город получения">
+                <input type="text" name="how" class="form-control form_calculate"
+                       placeholder="Введите ваш номер телефона">
             </div>
             <div class="send_form d-block mt-4 flex-column">
                 <button type="submit" class="btn btn-primary">Отправить</button>

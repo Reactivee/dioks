@@ -3,13 +3,9 @@
 namespace frontend\controllers;
 
 use common\models\Country;
-use common\models\Faq;
 use common\models\Order;
 use common\models\OrderAbout;
-use common\models\Steps;
-use common\models\University;
 use frontend\models\ResendVerificationEmailForm;
-use frontend\models\SearchForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -82,12 +78,13 @@ class SiteController extends Controller
      */
     public function actionIndex($truck = null)
     {
-        $order = [];
+
+        $order = new Order();
         if (Yii::$app->request->post()) {
             $truck = Yii::$app->request->post()['truck'];
 
             if ($truck) {
-                $order = OrderAbout::find()->where(['truck_id' => $truck])->one();
+                $order = Order::find()->where(['order_code' => $truck])->one();
             }
         }
 

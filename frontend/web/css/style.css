@@ -27,6 +27,15 @@ header {
   position: absolute;
   right: 0;
 }
+.all_map{
+  filter: opacity(0.3);
+}
+.rus{
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
 .nav {
   position: absolute;
   top: 20px;
@@ -88,16 +97,16 @@ header {
 .stepper-item::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #00ff38;
-  width: 70px;
-  bottom: -8px;
-  left: -26px;
+  border-bottom: 3px solid #00ff38;
+  width: 22px;
+  bottom: 10px;
+  left: -2px;
   z-index: 2;
   height: 0;
   transform: rotate(90deg);
-  opacity: 0.4;
+  opacity: 0.4
 }
-.stepper-item:last-child::after {
+.stepper-item:last-child .step-counter:after {
   display: none;
 }
 
@@ -306,6 +315,23 @@ header {
   top: 0;
   z-index: 100;
 }
+.round_icon{
+  /*width: 300px;*/
+  border-radius: 50%;
+  background-color: rgba(188, 188, 188,0.2);
+
+}
+
+.round_icon:before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  width: 120%;
+  /*height: 100px;*/
+}
+
 .add_icon {
   position: absolute;
 }

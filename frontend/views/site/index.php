@@ -44,7 +44,7 @@ $this->title = 'My Yii Application';
                         <div class="country">Страна: <?= $order->countries->name_ru ?? '' ?></div>
                         <div class="city">Город: <?= $order->regions->name_ru ?? '' ?></div>
                         <div class="delivery_time">Примерное время
-                            доставки: <?= date('Y-m-d H:i:s', $order->delivery_time); ?></div>
+                            доставки: <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?></div>
                     <? } else { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
                         <div class="status_order">Статус заказа</div>
@@ -79,27 +79,28 @@ $this->title = 'My Yii Application';
             <div class="col-md-4">
                 <div class="col-item-gua text-center">
                     <div class="col-item-gua_img">
-
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _truck_.svg" alt="">
-
                     </div>
                     <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Гарантии при перевозке груза</div>
-                    <a class="gua_down color_red mt-5"><img src="images/icons/down 2.svg" alt="">Скачать
+                    <div class="col-item-gua_label  mt-2">15 летний опыт работы и лицензированные услуги</div>
+                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">Скачать
                         презентацию о компании</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="col-item-gua  text-center">
-                    <div class="col-item-gua_img col-item-gua_border">
+                    <div class="col-item-gua_img">
+                        <div class="col-item-gua_border_left"></div>
+                        <div class="col-item-gua_border_right"></div>
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Money Bill_.svg" alt="">
-
                     </div>
                     <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Гарантии при перевозке груза</div>
-                    <a class="gua_down color_red mt-5"><img src="images/icons/down 2.svg" alt="">Скачать
+                    <div class="col-item-gua_label  mt-2">Детальный расчет стоимости услуг в виде коммерческого
+                        предложения
+                    </div>
+                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">Скачать
                         презентацию о компании</a>
                 </div>
             </div>
@@ -110,8 +111,9 @@ $this->title = 'My Yii Application';
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Map Marker_.svg" alt="">
                     </div>
                     <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Гарантии при перевозке груза</div>
-                    <a class="gua_down color_red mt-5"> <img src="images/icons/down 2.svg" alt=""> Скачать
+                    <div class="col-item-gua_label  mt-2">Техническая поддержка при курировании груза и онлайн трекинг
+                    </div>
+                    <a class="gua_down color_red mt-5"> <img class="mr-2" src="images/icons/down 2.svg" alt=""> Скачать
                         презентацию о компании</a>
                 </div>
             </div>

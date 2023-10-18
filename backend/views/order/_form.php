@@ -18,6 +18,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true])->label('Name Cargo') ?>
+    <?= $form->field($model, 'mass')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'cargo_type')->textInput(['maxlength' => true]) ?>
 
@@ -42,6 +43,8 @@ use yii\widgets\ActiveForm;
         ],
     ]);
     ?>
+    <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+
     <?
     echo $form->field($model, 'delivery_time')->widget(
         DateTimePicker::className(), [
@@ -55,7 +58,9 @@ use yii\widgets\ActiveForm;
             ]
         ]
     ) ?>
+    <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
+    <hr>
     <? echo $form->field($model, 'currently_location')->widget(Select2::className(), [
         'data' => \common\models\Country::getALlRegion(),
         'theme' => Select2::THEME_BOOTSTRAP,
@@ -68,7 +73,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'status')->dropDownList(\common\models\OrderAbout::getAllStatus()) ?>
 
-    <?= $form->field($model, 'mass')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php Pjax::begin();  ?>
+    <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -31,11 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+            'order_code',
             'client_name',
             'phone',
 
             'name_ru',
+
             'cargo_type',
             [
                 'attribute' => 'cargo_from_location',
@@ -44,14 +45,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
 
             ], [
-                'attribute' =>  'cargo_to_location',
+                'attribute' => 'cargo_to_location',
                 'value' => function ($model) {
                     return $model->regions->name_ru ?? '';
                 }
 
             ],
 
-            'mass',
             'created_at:datetime',
             'updated_at:datetime',
 

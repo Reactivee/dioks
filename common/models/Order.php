@@ -53,7 +53,8 @@ class Order extends \yii\db\ActiveRecord
             [['status', 'updated_by'], 'integer'],
             [['cargo_type', 'cargo_from_location', 'cargo_to_location',
                 'name_uz', 'name_ru', 'name_en', 'delivery_time', 'created_at', 'currently_location',
-                'updated_at', 'whom', 'how', 'mass', 'order_code', 'phone', 'email', 'doc','client_name'], 'string', 'max' => 255],
+                'updated_at', 'whom', 'how', 'mass', 'order_code',
+                'phone', 'email', 'doc', 'client_name', 'price', 'code'], 'string', 'max' => 255],
         ];
     }
 
@@ -89,7 +90,8 @@ class Order extends \yii\db\ActiveRecord
         ];
         return $item ? $status[$item] : $status;
     }
-    public  function getStatus()
+
+    public function getStatus()
     {
 
         $status = [
@@ -102,7 +104,7 @@ class Order extends \yii\db\ActiveRecord
         return $this->status ? $status[$this->status] : $status;
     }
 
-    public  function getStatusFront()
+    public function getStatusFront()
     {
 
         $status = [
@@ -114,11 +116,13 @@ class Order extends \yii\db\ActiveRecord
         ];
         return $this->status ? $status[$this->status] : '';
     }
+
     public function getCountries()
     {
 
         return $this->hasOne(Country::className(), ['id' => 'cargo_from_location']);
     }
+
     public function getRegions()
     {
 
@@ -130,10 +134,13 @@ class Order extends \yii\db\ActiveRecord
         if ($this->isNewRecord) {
             $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
             $this->order_code = $generateDoc_Conclusion;
+            
+        }
+        if (!$this->isNewRecord) {
+            $mydate = strtotime($this->delivery_time);
+            $this->delivery_time = (int)$mydate;
         }
 
-        $mydate = strtotime($this->delivery_time);
-        $this->delivery_time = (int)$mydate;
         return parent::beforeSave($insert);
     }
 

@@ -276,10 +276,9 @@ class SiteController extends Controller
             $order->cargo_to_location = $req_order['from_to'];
 
             $order->mass = $req_order['mass'];
-            $order->name_ru = $req_order['cargo_name'];
-            $order->whom = $req_order['whom'];
-            $order->how = $req_order['how'];
-//            $order->order_code = $generateDoc_Code;
+            $order->cargo_type = $req_order['cargo_name'];
+            $order->client_name = $req_order['whom'];
+            $order->phone = $req_order['how'];
             if (!$order->save()) {
                 dd($order->errors);
             } else {

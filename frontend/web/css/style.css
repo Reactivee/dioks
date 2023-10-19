@@ -371,6 +371,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.col-md-service .col-item-gua_img {
     background-color: #002996;
     border-radius: 50%;
     width: 220px;
@@ -382,11 +386,11 @@ header {
 
 }
 
-.col-item-gua:hover .col-item-gua_img {
+.col-md-service .col-item-gua:hover .col-item-gua_img {
     background-color: #012270;
 }
 
-.col-item-gua:hover img {
+.col-md-service .col-item-gua:hover img {
     transform: scale(1.1) rotateX(10deg);
 }
 

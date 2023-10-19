@@ -155,7 +155,7 @@ $this->title = 'My Yii Application';
             <div class="col-md-5">
                 <label for="how" class="form_label text-uppercase">Наименование груза</label>
                 <input type="text" name="name_ru" class="form-control form_calculate"
-                       placeholder="Наименование груза">
+                       placeholder="Введите наименование груза">
             </div>
 
             <div class="col-md-2 text-center">
@@ -177,7 +177,7 @@ $this->title = 'My Yii Application';
             <div class="col-md-5">
                 <label for="whom" class="form_label text-uppercase">Код ТНВЭД</label>
                 <input type="text" name="code" class="form-control form_calculate"
-                       placeholder="Код ТНВЭД">
+                       placeholder="Введите код ТНВЭД">
             </div>
 
             <div class="col-md-5">

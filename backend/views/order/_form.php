@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'client_name')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-    <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true])->label('Name Cargo') ?>
+    <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'mass')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'cargo_type')->textInput(['maxlength' => true]) ?>
@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
     ]);
     ?>
     <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
-
+    <hr>
     <?
     echo $form->field($model, 'delivery_time')->widget(
         DateTimePicker::className(), [

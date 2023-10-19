@@ -67,9 +67,9 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name_uz' => 'Имя груза',
-            'name_ru' => 'Имя груза',
-            'name_en' => 'Имя груза',
+            'name_uz' => 'Наименование груза',
+            'name_ru' => 'Наименование груза',
+            'name_en' => 'Наименование груза',
             'cargo_type' => 'Объем/размеры',
             'cargo_from_location' => 'Откуда',
             'cargo_to_location' => 'Куда',

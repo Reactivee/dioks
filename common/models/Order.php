@@ -84,9 +84,10 @@ class Order extends \yii\db\ActiveRecord
     public static function getAllStatus($item = null)
     {
         $status = [
-            self::SENDING => 'Отправляется',
             self::NEW => 'Новый',
             self::REVIEW => 'На рассмотрении',
+            self::SENDING => 'Отправляется',
+
             self::SENT => 'В Пути',
             self::CUSTOM => 'На Таможенном контроле',
             self::DELIVERED => 'Доставлено',
@@ -99,6 +100,8 @@ class Order extends \yii\db\ActiveRecord
     {
 
         $status = [
+            self::NEW => 'Новый',
+            self::REVIEW => 'На рассмотрении',
             self::SENDING => 'Отправляется',
             self::SENT => 'В Пути',
             self::CUSTOM => 'На Таможенном контроле',
@@ -112,6 +115,8 @@ class Order extends \yii\db\ActiveRecord
     {
 
         $status = [
+            self::NEW => 'Новый',
+            self::REVIEW => 'На рассмотрении',
             self::SENDING => 'Отправляется',
             self::SENT => 'В Пути',
             self::CUSTOM => 'На Таможенном контроле',

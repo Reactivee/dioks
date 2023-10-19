@@ -137,19 +137,9 @@ $this->title = 'My Yii Application';
 
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
-                <!--                --><? // echo $form->field($order, 'cargo_from_location')->widget(Select2::className(), [
-                //                    'data' => \common\models\Country::getALlRegion(),
-                ////                    'theme' => Select2::THEME_MATERIAL,
-                //                    'options' => ['placeholder' => 'Выбрать город отправки', 'id' => 'region', 'class' => 'form_calculate'],
-                //                    'pluginOptions' => [
-                //                        'allowClear' => true
-                //                    ],
-                //                ]);
-                //                ?>
-                <label for="from" class="form_label">ОТКУДА</label>
+                <label for="from" class="form_label text-uppercase">ОТКУДА</label>
                 <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">
             </div>
-
             <div class="col-md-2 text-center">
                 <div class="arrow d-flex flex-column justify-content-center align-items-center">
                     <img src="images/icons/Прво.svg" alt="">
@@ -157,12 +147,27 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="col-md-5">
-                <label for="from_to" class="form_label">КУДА</label>
+                <label for="from_to" class="form_label text-uppercase">КУДА</label>
                 <input type="text" name="from_to" class="form-control form_calculate"
                        placeholder="Выбрать город получения">
             </div>
+
             <div class="col-md-5">
-                <label for="mass" class="form_label">СКОЛЬКО</label>
+                <label for="how" class="form_label text-uppercase">Наименование груза</label>
+                <input type="text" name="name_ru" class="form-control form_calculate"
+                       placeholder="Наименование груза">
+            </div>
+
+            <div class="col-md-2 text-center">
+
+            </div>
+            <div class="col-md-5">
+                <label for="cargo_name" class="form_label text-uppercase">Вес</label>
+                <input type="text" name="cargo_name" class="form-control form_calculate"
+                       placeholder="Выбрать единицу измерения">
+            </div>
+            <div class="col-md-5">
+                <label for="mass" class="form_label text-uppercase">Объем/размеры</label>
                 <input type="text" name="mass" class="form-control form_calculate"
                        placeholder="Введите количество груза">
             </div>
@@ -170,24 +175,25 @@ $this->title = 'My Yii Application';
 
             </div>
             <div class="col-md-5">
-                <label for="cargo_name" class="form_label">ЧЕГО</label>
-                <input type="text" name="cargo_name" class="form-control form_calculate"
-                       placeholder="Выбрать единицу измерения">
+                <label for="whom" class="form_label text-uppercase">Код ТНВЭД</label>
+                <input type="text" name="code" class="form-control form_calculate"
+                       placeholder="Код ТНВЭД">
             </div>
 
             <div class="col-md-5">
-                <label for="whom" class="form_label">КОМУ</label>
-                <input type="text" name="whom" class="form-control form_calculate"
+                <label for="whom" class="form_label text-uppercase">Имя</label>
+                <input type="text" name="name" class="form-control form_calculate"
                        placeholder="Введите ваше имя">
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
-                <label for="how" class="form_label">КАК</label>
-                <input type="text" name="how" class="form-control form_calculate"
+                <label for="how" class="form_label text-uppercase">Номер телефона</label>
+                <input type="text" name="phone" class="form-control form_calculate"
                        placeholder="Введите ваш номер телефона">
             </div>
+
             <div class="send_form d-block mt-4 flex-column">
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </div>

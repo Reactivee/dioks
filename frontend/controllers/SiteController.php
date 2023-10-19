@@ -277,8 +277,10 @@ class SiteController extends Controller
 
             $order->mass = $req_order['mass'];
             $order->cargo_type = $req_order['cargo_name'];
-            $order->client_name = $req_order['whom'];
-            $order->phone = $req_order['how'];
+            $order->client_name = $req_order['name'];
+            $order->phone = $req_order['phone'];
+            $order->code = $req_order['code'];
+            $order->name_ru = $req_order['name_ru'];
 //                dd($req_order);
             if ($req_order['email'])
                 $order->email = $req_order['email'];

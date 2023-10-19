@@ -73,17 +73,18 @@ class Order extends \yii\db\ActiveRecord
             'cargo_type' => 'Объем/размеры',
             'cargo_from_location' => 'Откуда',
             'cargo_to_location' => 'Куда',
-            'status' => 'Status',
-            'currently_location' => 'Страна расположения груза',
+            'status' => 'Статус',
+            'currently_location' => 'Город расположения груза',
             'delivery_time' => 'Примерная дата доставки',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => 'Создано',
+            'updated_at' => 'Обновлено',
             'client_name' => 'Ф.И.О. клиента',
             'phone' => 'Номер телефона',
             'code' => 'Код ТНВЭД',
             'mass' => 'Вес',
             'price' => 'Стоимость',
             'order_code' => 'Код заказа',
+
         ];
     }
 
@@ -149,6 +150,8 @@ class Order extends \yii\db\ActiveRecord
         if ($this->isNewRecord) {
             $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
             $this->order_code = $generateDoc_Conclusion;
+            $this->status = Order::NEW;
+
 
         }
         if (!$this->isNewRecord) {

@@ -67,17 +67,23 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name_uz' => 'Name Uz',
-            'name_ru' => 'Name Ru',
-            'name_en' => 'Name En',
-            'cargo_type' => 'Cargo Type',
-            'cargo_from_location' => 'Cargo From Location',
-            'cargo_to_location' => 'Cargo To Location',
+            'name_uz' => 'Имя груза',
+            'name_ru' => 'Имя груза',
+            'name_en' => 'Имя груза',
+            'cargo_type' => 'Объем/размеры',
+            'cargo_from_location' => 'Откуда',
+            'cargo_to_location' => 'Куда',
             'status' => 'Status',
-            'currently_location' => 'Currently Location',
-            'delivery_time' => 'Delivery Time',
+            'currently_location' => 'Страна расположения груза',
+            'delivery_time' => 'Примерная дата доставки',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'client_name' => 'Ф.И.О. клиента',
+            'phone' => 'Номер телефона',
+            'code' => 'Код ТНВЭД',
+            'mass' => 'Вес',
+            'price' => 'Стоимость',
+            'order_code' => 'Код заказа',
         ];
     }
 

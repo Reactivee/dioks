@@ -54,7 +54,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'created_at:datetime',
             'updated_at:datetime',
+            [
+                'attribute' => 'status',
+                'value' => function ($model) {
+                    return $model->getStatusFront();
+                }
 
+            ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, order $model, $key, $index, $column) {

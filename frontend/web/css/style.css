@@ -329,13 +329,14 @@ header {
 }
 
 
-
 .col-item-gua_title {
     font-size: 16px;
     color: white;
 }
-.gua_down{
+
+.gua_down {
 }
+
 .col-item-gua {
     margin-top: 10px;
     color: white;
@@ -359,12 +360,41 @@ header {
 
 }
 
+.title_service {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: 0.3s all;
+}
+
 .col-item-gua_img {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #002996;
+    border-radius: 50%;
+    width: 220px;
+    height: 200px;
 }
+
+.col-item-gua_img img {
+    transition: 0.3s all;
+
+}
+
+.col-item-gua:hover .col-item-gua_img {
+    background-color: #012270;
+}
+
+.col-item-gua:hover img {
+    transform: scale(1.1) rotateX(10deg);
+}
+
+.col-item-gua:hover .title_service {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .col-item-gua_border_left {
     content: "";
@@ -376,6 +406,7 @@ header {
     top: 0;
     z-index: 100;
 }
+
 .col-item-gua_border_right {
     content: "";
     background-image: url('../images/icons/Разделитель 1.svg');
@@ -413,11 +444,11 @@ header {
 .gua_down {
     text-decoration: none !important;
     cursor: pointer;
-    color: red!important;
+    color: red !important;
 
 }
 
-.col-item-gua:hover .add_icon{
+.col-item-gua:hover .add_icon {
     opacity: 1;
     transform: scale(1.1);
 }
@@ -437,6 +468,7 @@ header {
 
 .col-md-service {
     flex: 20%;
+    margin-bottom: 30px;
 }
 
 /* calculation */

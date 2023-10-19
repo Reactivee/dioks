@@ -201,8 +201,9 @@ $this->title = 'My Yii Application';
             <div class="row mt-3">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
-                    <input   type="text" name="email" id="email_input" style="display: none" class=" form-control form_calculate"
-                             placeholder="Введите ваш email">
+                    <input type="text" name="email" id="email_input" style="display: none"
+                           class=" form-control form_calculate"
+                           placeholder="Введите ваш email">
                 </div>
                 <div class="col-md-4"></div>
             </div>
@@ -225,95 +226,88 @@ $this->title = 'My Yii Application';
                     погрузке</span>
         </div>
         <div class="row justify-content-between mt-5 flex-wrap">
+
             <div class="col-md-service">
-                <div class="col-item-gua text-center">
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
-                        <img class="" src="images/icons/Component 10.svg" alt="">
+                        <img class="" src="/images/icons/Vector%20(6).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Жидкий груз</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 11.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(7).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Опасный груз</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 12.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(8).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Горючее</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 13.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(9).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Растения</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 14.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(10).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Хрупкий груз</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 15.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(11).svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Сыпучий груз</h3>
                 </div>
             </div>
             <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 16.svg" alt="">
-                        </div>
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/🦆%20icon%20_Carrot_.svg" alt="">
                     </div>
+                    <h3 class="title_service color_blue font-weight-bold">Овощи и фрукты</h3>
+                </div>
+            </div>
+            <div class="col-md-service">
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(13).svg" alt="">
+                    </div>
+                    <h3 class="title_service color_blue font-weight-bold">Пищевой груз</h3>
+                </div>
+            </div>
+            <div class="col-md-service">
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(14).svg" alt="">
+                    </div>
+                    <h3 class="title_service color_blue font-weight-bold">Жидкость</h3>
+                </div>
+            </div>
+            <div class="col-md-service">
+                <div class="col-item-gua text-center d-flex flex-column align-items-center">
+                    <div class="col-item-gua_img">
+                        <img class="" src="/images/icons/Vector%20(15).svg" alt="">
+                    </div>
+                    <h3 class="title_service color_blue font-weight-bold">Технический груз</h3>
                 </div>
             </div>
 
-            <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 17.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 8 (1).svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-service">
-                <div class="col-item-gua  text-center">
-                    <div class="col-item-gua text-center">
-                        <div class="col-item-gua_img">
-                            <img class="" src="images/icons/Component 9 (1).svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>

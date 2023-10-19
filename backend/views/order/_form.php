@@ -71,7 +71,7 @@ use yii\widgets\ActiveForm;
     ]);
     ?>
 
-    <?= $form->field($model, 'status')->dropDownList(\common\models\OrderAbout::getAllStatus()) ?>
+    <?= $form->field($model, 'status')->dropDownList(\common\models\Order::getAllStatus()) ?>
 
 
     <div class="form-group">

@@ -137,8 +137,17 @@ $this->title = 'My Yii Application';
 
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
+
                 <label for="from" class="form_label text-uppercase">ОТКУДА</label>
-                <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">
+
+                <select name="city" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">
+                    <? foreach ($city as $key => $item) { ?>
+                        <option class="form_calculate_option" value="<?= $key ?>"><?= $item ?></option>
+
+                    <? } ?>
+                </select>
+
+                <!--                <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">-->
             </div>
             <div class="col-md-2 text-center">
                 <div class="arrow d-flex flex-column justify-content-center align-items-center">
@@ -148,8 +157,14 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-5">
                 <label for="from_to" class="form_label text-uppercase">КУДА</label>
-                <input type="text" name="from_to" class="form-control form_calculate"
-                       placeholder="Выбрать город получения">
+                <select name="city" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">
+                    <? foreach ($city as $key => $item) { ?>
+                        <option class="form_calculate_option" value="<?= $key ?>"><?= $item ?></option>
+
+                    <? } ?>
+                </select>
+<!--                <input type="text" name="from_to" class="form-control form_calculate"-->
+<!--                       placeholder="Выбрать город получения">-->
             </div>
 
             <div class="col-md-5">
@@ -162,14 +177,14 @@ $this->title = 'My Yii Application';
 
             </div>
             <div class="col-md-5">
-                <label for="cargo_name" class="form_label text-uppercase">Вес</label>
+                <label for="cargo_name" class="form_label text-uppercase">вид транспорта</label>
                 <input type="text" name="cargo_name" class="form-control form_calculate"
-                       placeholder="Выбрать единицу измерения">
+                       placeholder="Выбрать вид транспорта">
             </div>
             <div class="col-md-5">
-                <label for="mass" class="form_label text-uppercase">Объем/размеры</label>
+                <label for="mass" class="form_label text-uppercase">Объем/размеры </label>
                 <input type="text" name="mass" class="form-control form_calculate"
-                       placeholder="Введите количество груза">
+                       placeholder="Введите  Объем/размеры">
             </div>
             <div class="col-md-2 text-center">
 

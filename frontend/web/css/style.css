@@ -390,8 +390,8 @@ header {
     background-color: #012270;
 }
 
-.col-md-service .col-item-gua:hover img {
-    transform: scale(1.1) rotateX(10deg);
+.col-md-service .col-item-gua:hover .col-md-service img {
+    transform: rotateX(10deg);
 }
 
 .col-item-gua:hover .title_service {
@@ -501,13 +501,18 @@ header {
 
 .form_calculate {
     margin-bottom: 29px;
-    padding: 26px 16px;
-    border: 1px solid rgb(228, 228, 228);
+    padding: 25px 16px;
+    /*border: 1px solid rgb(228, 228, 228);*/
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+.form_calculate_drop{
+    margin-bottom: 29px;
+
+    height: calc(1.5em + 0.75rem + 12px);
 }
 
 .send_form button {

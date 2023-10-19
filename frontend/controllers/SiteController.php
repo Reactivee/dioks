@@ -9,6 +9,7 @@ use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\helpers\ArrayHelper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -80,6 +81,9 @@ class SiteController extends Controller
     {
 
         $order = new Order();
+        $city = Country::find()->where(['not', ['parent_id' => null]])->all();
+        $city = ArrayHelper::map($city, 'id', 'name_ru');
+
         if (Yii::$app->request->post()) {
             $truck = Yii::$app->request->post()['truck'];
 
@@ -89,7 +93,8 @@ class SiteController extends Controller
         }
 
         return $this->render('index', [
-            'order' => $order
+            'order' => $order,
+            'city' => $city
         ]);
     }
 

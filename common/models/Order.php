@@ -24,6 +24,8 @@ use yii\behaviors\TimestampBehavior;
 class Order extends \yii\db\ActiveRecord
 {
     const SENDING = 1;
+    const NEW = 5;
+    const REVIEW = 6;
     const SENT = 2;
     const CUSTOM = 3;
     const DELIVERED = 4;
@@ -83,6 +85,8 @@ class Order extends \yii\db\ActiveRecord
     {
         $status = [
             self::SENDING => 'Отправляется',
+            self::NEW => 'Новый',
+            self::REVIEW => 'На рассмотрении',
             self::SENT => 'В Пути',
             self::CUSTOM => 'На Таможенном контроле',
             self::DELIVERED => 'Доставлено',
@@ -134,7 +138,7 @@ class Order extends \yii\db\ActiveRecord
         if ($this->isNewRecord) {
             $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
             $this->order_code = $generateDoc_Conclusion;
-            
+
         }
         if (!$this->isNewRecord) {
             $mydate = strtotime($this->delivery_time);

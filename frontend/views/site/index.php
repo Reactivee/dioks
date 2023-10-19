@@ -193,14 +193,23 @@ $this->title = 'My Yii Application';
             </div>
 
         </div>
-        <? ActiveForm::end() ?>
-
         <div class="d-block text-center">
-            <input type="checkbox" class="mt-4">
+            <input onclick="myEmail()" type="checkbox" id="myCheck" class="mt-4">
             <span class="title_guaranty_text text-center color_gray">
                     Отправить коммерческое предложение
                 </span>
+            <div class="row mt-3">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
+                    <input   type="text" name="email" id="email_input" style="display: none" class=" form-control form_calculate"
+                             placeholder="Введите ваш email">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
+        <? ActiveForm::end() ?>
+
+
     </div>
 </section>
 <section class="gallary">

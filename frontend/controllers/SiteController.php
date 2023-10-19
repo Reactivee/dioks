@@ -279,6 +279,9 @@ class SiteController extends Controller
             $order->cargo_type = $req_order['cargo_name'];
             $order->client_name = $req_order['whom'];
             $order->phone = $req_order['how'];
+//                dd($req_order);
+            if ($req_order['email'])
+                $order->email = $req_order['email'];
             if (!$order->save()) {
                 dd($order->errors);
             } else {

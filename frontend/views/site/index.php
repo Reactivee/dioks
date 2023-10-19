@@ -41,8 +41,8 @@ $this->title = 'My Yii Application';
                     <? if ($order) { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
                         <div class="status_order">Статус заказа: <?= $order->getStatusFront() ?? '' ?></div>
-                        <div class="country">Страна: <?= $order->countries->name_ru ?? '' ?></div>
-                        <div class="city">Город: <?= $order->regions->name_ru ?? '' ?></div>
+                        <div class="country">Страна: <?= $order->countries->parent->name_ru ?? '' ?></div>
+                        <div class="city">Город: <?= $order->countries->name_ru ?? '' ?></div>
                         <div class="delivery_time">Примерное время
                             доставки: <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?></div>
                     <? } else { ?>
@@ -133,19 +133,18 @@ $this->title = 'My Yii Application';
         </div>
 
         <!-- form send order-->
-        <? $form = ActiveForm::begin(['method' => 'GET', 'action' => '/site/get-order', 'options' => ['autocomplete' => 'off']]) ?>
+        <? $form = ActiveForm::begin([
+            'method' => 'POST',
+            'action' => '/site/get-order',
+            'options' => ['autocomplete' => 'off']]) ?>
 
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
 
                 <label for="from" class="form_label text-uppercase">ОТКУДА</label>
 
-                <select name="city" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">
-                    <? foreach ($city as $key => $item) { ?>
-                        <option class="form_calculate_option" value="<?= $key ?>"><?= $item ?></option>
+                <?= $form->field($order, 'cargo_from_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
 
-                    <? } ?>
-                </select>
 
                 <!--                <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">-->
             </div>
@@ -157,20 +156,25 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-5">
                 <label for="from_to" class="form_label text-uppercase">КУДА</label>
-                <select name="city" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">
-                    <? foreach ($city as $key => $item) { ?>
-                        <option class="form_calculate_option" value="<?= $key ?>"><?= $item ?></option>
-
-                    <? } ?>
-                </select>
-<!--                <input type="text" name="from_to" class="form-control form_calculate"-->
-<!--                       placeholder="Выбрать город получения">-->
+                <?= $form->field($order, 'cargo_to_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
+                <!---->
+                <!--                <select name="from_to" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">-->
+                <!--                    --><? // foreach ($city as $key => $item) { ?>
+                <!--                        <option class="form_calculate_option" value="--><? //= $key ?><!--">-->
+                <? //= $item ?><!--</option>-->
+                <!---->
+                <!--                    --><? // } ?>
+                <!--                </select>-->
+                <!--                <input type="text" name="from_to" class="form-control form_calculate"-->
+                <!--                       placeholder="Выбрать город получения">-->
             </div>
 
             <div class="col-md-5">
                 <label for="how" class="form_label text-uppercase">Наименование груза</label>
-                <input type="text" name="name_ru" class="form-control form_calculate"
-                       placeholder="Введите наименование груза">
+                <?= $form->field($order, 'name_ru')->textInput(['maxlength' => true,
+                    'class' => 'form-control form_calculate',
+                    'placeholder' => 'Введите наименование груза'])->label(false) ?>
+
             </div>
 
             <div class="col-md-2 text-center">
@@ -178,35 +182,48 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-5">
                 <label for="cargo_name" class="form_label text-uppercase">вид транспорта</label>
-                <input type="text" name="cargo_name" class="form-control form_calculate"
-                       placeholder="Выбрать вид транспорта">
+                <?= $form->field($order, 'cargo_type')->textInput(['maxlength' => true,
+                    'class' => 'form-control form_calculate',
+                    'placeholder' => 'Выбрать вид транспорта'])->label(false) ?>
+
             </div>
             <div class="col-md-5">
                 <label for="mass" class="form_label text-uppercase">Объем/размеры </label>
-                <input type="text" name="mass" class="form-control form_calculate"
-                       placeholder="Введите  Объем/размеры">
+                <?= $form->field($order, 'mass')->textInput(['maxlength' => true,
+                    'class' => 'form-control form_calculate',
+                    'placeholder' => 'Введите объем/размеры'])->label(false) ?>
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
                 <label for="whom" class="form_label text-uppercase">Код ТНВЭД</label>
-                <input type="text" name="code" class="form-control form_calculate"
-                       placeholder="Введите код ТНВЭД">
+                <?= $form->field($order, 'code')->textInput(['maxlength' => true,
+                    'class' => 'form-control form_calculate',
+                    'placeholder' => 'Введите код ТНВЭД'])->label(false) ?>
+                <!--                <input type="text" name="code" class="form-control form_calculate"-->
+                <!--                       placeholder="Введите код ТНВЭД">-->
             </div>
 
             <div class="col-md-5">
                 <label for="whom" class="form_label text-uppercase">Имя</label>
-                <input type="text" name="name" class="form-control form_calculate"
-                       placeholder="Введите ваше имя">
+
+                <?= $form->field($order, 'client_name')->textInput(['maxlength' => true, 'class' => 'form-control form_calculate', 'placeholder' => 'Введите ваше имя'])->label(false) ?>
+
+                <!--                <input type="text" name="name" class="form-control form_calculate"-->
+                <!--                       placeholder="Введите ваше имя">-->
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
                 <label for="how" class="form_label text-uppercase">Номер телефона</label>
-                <input type="text" name="phone" class="form-control form_calculate"
-                       placeholder="Введите ваш номер телефона">
+                <?= $form->field($order, 'phone')->textInput(['maxlength' => true,
+                    'class' => 'form-control form_calculate',
+                    'placeholder' => 'Введите ваш номер телефона'])->label(false) ?>
+
+                <!--                <input type="text" name="phone" class="form-control form_calculate"-->
+                <!--                       placeholder="Введите ваш номер телефона">-->
             </div>
 
             <div class="send_form d-block mt-4 flex-column">
@@ -222,9 +239,14 @@ $this->title = 'My Yii Application';
             <div class="row mt-3">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
-                    <input type="text" name="email" id="email_input" style="display: none"
-                           class=" form-control form_calculate"
-                           placeholder="Введите ваш email">
+                    <div id="email_input" style="display: none">
+
+                        <?= $form->field($order, 'email')->textInput(['maxlength' => true,
+                            'id' => '',
+                            'class' => 'form-control form_calculate',
+                            'placeholder' => 'Введите ваш email'])->label(false) ?>
+                    </div>
+
                 </div>
                 <div class="col-md-4"></div>
             </div>

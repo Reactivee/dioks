@@ -41,7 +41,7 @@ AppAsset::register($this);
     <header class="d-flex align-items-center">
         <div class="back_map">
             <div class="rus">
-<!--                <img src="/images/banner/light1.png" alt="">-->
+                <!--                <img src="/images/banner/light1.png" alt="">-->
             </div>
             <img class="all_map" src="images/banner/map 1.png" alt="">
         </div>
@@ -222,18 +222,16 @@ AppAsset::register($this);
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-5 logo d-flex justify-content-between align-items-center">
                         <span class="color_red">Copyright ©2023 Dioks Dream Logistics</span>
-                        <a href="#">
+                        <a href="#" class="px-4">
                             <img class="invert" src="images/banner/logo.svg" alt="">
                         </a>
                     </div>
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">
-                        <ul
-                                class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
+                        <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
                             <li><a class="nav_items_footer_link" href="#">Гарантии</a></li>
                             <li><a class="nav_items_footer_link" href="#">Услуги</a></li>
                             <li><a class="nav_items_footer_link" href="#">FAQ</a></li>
                             <li><a class="nav_items_footer_link" href="#">Контакты </a></li>
-
                         </ul>
                         <div class="social d-flex align-items-center">
                             <img src="images/icons/Button (1).svg" alt="">

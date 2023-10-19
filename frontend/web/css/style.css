@@ -299,7 +299,7 @@ header {
 
 .status_order,
 .city {
-    font-size: 14px;
+    font-size: 16px;
     color: #7b80a4;
     background-color: #e5e8ef;
     padding: 8px;
@@ -390,8 +390,12 @@ header {
     background-color: #012270;
 }
 
-.col-md-service .col-item-gua:hover .col-md-service img {
-    transform: rotateX(10deg);
+.col-md-service .col-item-gua:hover img {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.col-md-service .col-item-gua:hover img {
+    /*transform: scale(1.2);*/
 }
 
 .col-item-gua:hover .title_service {
@@ -509,7 +513,8 @@ header {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-.form_calculate_drop{
+
+.form_calculate_drop {
     margin-bottom: 29px;
 
     height: calc(1.5em + 0.75rem + 12px);
@@ -606,16 +611,12 @@ footer .card {
 .nav_items_footer_link {
     margin-left: 30px;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 16px;
 }
 
-.nav_items_footer_link:last-child {
+.nav_items_footer li:last-child {
     border: none;
-}
-
-.nav_items_footer li a:nth-last-child(2) {
-    border-right: none;
-    padding: 0 25px 0 0;
 }
 
 .nav_footer {

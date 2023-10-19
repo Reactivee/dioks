@@ -89,6 +89,7 @@ class SiteController extends Controller
 
             if ($truck) {
                 $order = Order::find()->where(['order_code' => $truck])->one();
+
             }
         }
 
@@ -271,24 +272,28 @@ class SiteController extends Controller
     public function actionGetOrder()
     {
 //        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+//        dd(Yii::$app->request->post());
+        $order = new Order();
 
-        if (Yii::$app->request->get()) {
-            $req_order = Yii::$app->request->get();
-//            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
+        if (Yii::$app->request->post() && $order->load(Yii::$app->request->post())) {
 
-            $order = new Order();
-            $order->cargo_from_location = $req_order['from'];
-            $order->cargo_to_location = $req_order['from_to'];
 
-            $order->mass = $req_order['mass'];
-            $order->cargo_type = $req_order['cargo_name'];
-            $order->client_name = $req_order['name'];
-            $order->phone = $req_order['phone'];
-            $order->code = $req_order['code'];
-            $order->name_ru = $req_order['name_ru'];
+//            $req_order = Yii::$app->request->post();
+////            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
+//
+//            $order->cargo_from_location = $req_order['from'];
+//            $order->cargo_to_location = $req_order['from_to'];
+//
+//            $order->mass = $req_order['mass'];
+//            $order->cargo_type = $req_order['cargo_name'];
+//            $order->client_name = $req_order['name'];
+//            $order->phone = $req_order['phone'];
+//            $order->code = $req_order['code'];
+//            $order->name_ru = $req_order['name_ru'];
 //                dd($req_order);
-            if ($req_order['email'])
-                $order->email = $req_order['email'];
+//            if ($req_order['email'])
+//                $order->email = $req_order['email'];
+
             if (!$order->save()) {
                 dd($order->errors);
             } else {

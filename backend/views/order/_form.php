@@ -16,6 +16,7 @@ use yii\widgets\ActiveForm;
         <?= Html::a('Создать предложения', ['order-doc', 'id' => $model->id], ['class' => 'btn btn-success']);
     } ?>
     <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($model, 'order_code')->textInput(['disabled' => true]) ?>
 
     <?= $form->field($model, 'client_name')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
@@ -23,7 +24,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'mass')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cargo_type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'cargo_type')->dropDownList($model->getAllType()) ?>
 
 
     <!--    --><? //= $form->field($model, 'cargo_from_location')->textInput(['maxlength' => true]) ?>

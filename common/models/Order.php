@@ -6,6 +6,7 @@ use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\TemplateProcessor;
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 
 /**
@@ -155,6 +156,18 @@ class Order extends \yii\db\ActiveRecord
         return $this->hasOne(TypeTransport::className(), ['id' => 'cargo_type']);
     }
 
+    public function getAllType()
+    {
+
+        $transport = TypeTransport::find()->all();
+        if ($transport) {
+
+            $transport = ArrayHelper::map($transport, 'id', 'name_ru');
+            return $transport;
+        }
+    }
+
+
     public function getCurrently()
     {
         if ($this->currently_location) {
@@ -169,20 +182,20 @@ class Order extends \yii\db\ActiveRecord
 
     public function beforeSave($insert)
     {
+
+
         if ($this->isNewRecord) {
             $generateDoc_Conclusion = Yii::$app->security->generateRandomString(5);
             $this->order_code = $generateDoc_Conclusion;
             $this->status = Order::NEW;
 
-
         }
-        if (!$this->isNewRecord) {
-            if (!$this->delivery_time) {
 
-                $mydate = strtotime($this->delivery_time);
-                $this->delivery_time = (int)$mydate;
+        $mydate = strtotime($this->delivery_time);
+        $this->delivery_time = (int)$mydate;
 
-            }
+        if ($this->status == Order::NEW && $this->price && $this->delivery_time) {
+            $this->status = Order::REVIEW;
         }
 
         return parent::beforeSave($insert);
@@ -195,7 +208,7 @@ class Order extends \yii\db\ActiveRecord
                 'id' => $this->id
             ])
             ->one();
-//        dd($item);
+
         $phpWord = new PHPWord();
         $folder = '/web/uploads/temp/';
         $uploads_folder = Yii::getAlias('@frontend') . $folder;
@@ -206,7 +219,12 @@ class Order extends \yii\db\ActiveRecord
         \PhpOffice\PhpWord\Settings::setTempDir($uploads_folder);
 
         $templateProcessor = new TemplateProcessor(Yii::getAlias('@frontend') . '/web/uploads/word/order.docx');
-        $templateProcessor->setValue('город', 'asdasdsa');
+        $templateProcessor->setValue('from', $item->countries->name_ru);
+        $templateProcessor->setValue('to', $item->regions->name_ru);
+        $templateProcessor->setValue('price', $item->price);
+        $templateProcessor->setValue('type', $item->type->name_ru);
+        $templateProcessor->setValue('код', $item->code);
+        $templateProcessor->setValue('длительность', $item->delivery_time);
 
         $filename = Yii::getAlias('@frontend') . '/web/uploads/word/' . $item->order_code . '.docx';
         $this->doc = 'uploads/word/' . $item->order_code . '.docx';
@@ -218,6 +236,13 @@ class Order extends \yii\db\ActiveRecord
         if ($filename)
             chmod($filename, 0644);
 
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+//        dd($changedAttributes);
 
     }
 

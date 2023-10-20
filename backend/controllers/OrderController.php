@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use common\models\Order;
 use common\models\OrderSearch;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -139,5 +140,7 @@ class OrderController extends Controller
     {
         $order = $this->findModel($id);
         $order->generateCheckOrder();
+//        Yii::$app->session->addFlash('success','asd');
+        return $this->redirect(Yii::$app->request->referrer);
     }
 }

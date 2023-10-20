@@ -53,7 +53,7 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             [['status', 'updated_by'], 'integer'],
-            [['cargo_type', 'cargo_from_location', 'cargo_to_location', 'client_name', 'phone', 'code', 'mass',  'name_ru',], 'required', 'message' => 'Поля пустой !'],
+            [['cargo_type', 'cargo_from_location', 'cargo_to_location', 'client_name', 'phone', 'code', 'mass', 'name_ru',], 'required', 'message' => 'Поля пустой !'],
             [['cargo_type', 'cargo_from_location', 'cargo_to_location',
                 'name_uz', 'name_ru', 'name_en', 'delivery_time', 'created_at', 'currently_location',
                 'updated_at', 'whom', 'how', 'mass', 'order_code',
@@ -145,6 +145,23 @@ class Order extends \yii\db\ActiveRecord
 
         return $this->hasOne(Country::className(), ['id' => 'cargo_to_location']);
     }
+    public function getType()
+    {
+
+        return $this->hasOne(TypeTransport::className(), ['id' => 'cargo_type']);
+    }
+
+    public function getCurrently()
+    {
+        if ($this->currently_location) {
+            $res = Country::find()->where(['id' => $this->currently_location])->one();
+        } else {
+            $res = Country::find()->where(['id' => $this->cargo_to_location])->one();
+
+        }
+
+        return [$res->parent->name_ru ?? '', $res->name_ru ?? ''];
+    }
 
     public function beforeSave($insert)
     {
@@ -162,5 +179,6 @@ class Order extends \yii\db\ActiveRecord
 
         return parent::beforeSave($insert);
     }
+
 
 }

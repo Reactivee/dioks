@@ -6,7 +6,7 @@ use kartik\select2\Select2;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
-$this->title = 'My Yii Application';
+$this->title = 'DIOKS';
 
 ?>
 <section class="check_order ">
@@ -40,11 +40,20 @@ $this->title = 'My Yii Application';
 
                     <? if ($order) { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
-                        <div class="status_order">Статус заказа: <?= $order->getStatusFront() ?? '' ?></div>
-                        <div class="country">Страна: <?= $order->countries->parent->name_ru ?? '' ?></div>
-                        <div class="city">Город: <?= $order->countries->name_ru ?? '' ?></div>
+                        <div class="status_order">Статус заказа: <span
+                                    class="font-weight-bold"> <?= $order->getStatusFront() ?? '' ?></span></div>
+                        <div class="country">
+                            Страна: <span
+                                    class="font-weight-bold">  <?= $order->getCurrently()[0] ?></span></div>
+                        <div class="city">
+                            Город: <span
+                                    class="font-weight-bold">  <?= $order->getCurrently()[1] ?> </span>
+                        </div>
                         <div class="delivery_time">Примерное время
-                            доставки: <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?></div>
+                            доставки:  <span
+                                    class="font-weight-bold">  <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?>
+                            </span>
+                        </div>
                     <? } else { ?>
                         <div class="res_title">Информация о Вашем перевозке</div>
                         <div class="status_order">Статус заказа</div>
@@ -64,7 +73,6 @@ $this->title = 'My Yii Application';
 
 
         <? Pjax::end(); ?>
-
 
 </section>
 <section class="guaranty">
@@ -182,9 +190,11 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-md-5">
                 <label for="cargo_name" class="form_label text-uppercase">вид транспорта</label>
-                <?= $form->field($order, 'cargo_type')->textInput(['maxlength' => true,
-                    'class' => 'form-control form_calculate',
-                    'placeholder' => 'Выбрать вид транспорта'])->label(false) ?>
+                <?= $form->field($order, 'cargo_type')->dropDownList($transport, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
+
+                <!--                --><? //= $form->field($order, 'cargo_type')->textInput(['maxlength' => true,
+                //                    'class' => 'form-control form_calculate',
+                //                    'placeholder' => 'Выбрать вид транспорта'])->label(false) ?>
 
             </div>
             <div class="col-md-5">

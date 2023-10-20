@@ -33,7 +33,7 @@ class Country extends \yii\db\ActiveRecord
     {
         return [
             [['parent_id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'image'], 'string', 'max' => 255],
+            [['name_uz', 'name_ru', 'name_en', 'image', 'long', 'lat'], 'string', 'max' => 255],
         ];
     }
 

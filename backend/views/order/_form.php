@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 
 <div class="order-form">
 
+    <?= Html::a('Создать предложения', '/', ['class' => 'btn btn-success']);
+    ?>
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'client_name')->textInput(['maxlength' => true]) ?>

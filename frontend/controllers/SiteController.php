@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\Country;
 use common\models\Order;
 use common\models\OrderAbout;
+use common\models\TypeTransport;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -84,6 +85,10 @@ class SiteController extends Controller
         $city = Country::find()->where(['not', ['parent_id' => null]])->all();
         $city = ArrayHelper::map($city, 'id', 'name_ru');
 
+        $transport = TypeTransport::find()->all();
+        if ($transport)
+            $transport = ArrayHelper::map($transport, 'id', 'name_ru');
+
         if (Yii::$app->request->post()) {
             $truck = Yii::$app->request->post()['truck'];
 
@@ -91,11 +96,13 @@ class SiteController extends Controller
                 $order = Order::find()->where(['order_code' => $truck])->one();
 
             }
-        }
 
+
+        }
         return $this->render('index', [
             'order' => $order,
-            'city' => $city
+            'city' => $city,
+            'transport' => $transport
         ]);
     }
 

@@ -12,7 +12,7 @@ use yii\widgets\Pjax;
 /** @var common\models\OrderSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Orders';
+$this->title = 'Заказы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать заказы', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -38,14 +38,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'name_ru',
 
-            'cargo_type',
+
+            [
+                'attribute' => 'cargo_type',
+                'value' => function ($model) {
+                    return $model->type->name_ru ?? '';
+                }
+
+            ],
             [
                 'attribute' => 'cargo_from_location',
                 'value' => function ($model) {
                     return $model->countries->name_ru ?? '';
                 }
 
-            ], [
+            ],
+            [
                 'attribute' => 'cargo_to_location',
                 'value' => function ($model) {
                     return $model->regions->name_ru ?? '';
@@ -59,6 +67,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'status',
                 'value' => function ($model) {
                     return $model->getStatusFront();
+                }
+            ],
+            [
+                'attribute' => 'doc',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    if ($model->doc) {
+
+                        $btn = Html::a('Скачать', '/', ['class' => 'btn btn-primary']);
+                        return $btn;
+                    }
+                    return '';
                 }
 
             ],

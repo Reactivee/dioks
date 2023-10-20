@@ -1,5 +1,6 @@
 * {
     font-family: "Actay Regular";
+    scroll-behavior: smooth;
 }
 
 .color_hover {
@@ -264,6 +265,11 @@ header {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+.check_order_btn:hover{
+    color: white;
+    background-color: #042799;
+
+}
 
 .check_order_input {
     padding: 15px 40px;
@@ -483,7 +489,10 @@ header {
 .calculation {
     padding: 60px 0;
 }
-
+.help-block{
+    /*margin-top: -20px;*/
+    color: red;
+}
 .arrow img {
     width: 50px;
 }
@@ -504,7 +513,7 @@ header {
 }
 
 .form_calculate {
-    margin-bottom: 29px;
+    margin-bottom: 35px;
     padding: 25px 16px;
     /*border: 1px solid rgb(228, 228, 228);*/
     border-radius: 10px;

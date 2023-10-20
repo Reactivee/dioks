@@ -50,7 +50,7 @@ $this->title = 'DIOKS';
                                     class="font-weight-bold">  <?= $order->getCurrently()[1] ?> </span>
                         </div>
                         <div class="delivery_time">Примерное время
-                            доставки:  <span
+                            доставки: <span
                                     class="font-weight-bold">  <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?>
                             </span>
                         </div>
@@ -75,7 +75,7 @@ $this->title = 'DIOKS';
         <? Pjax::end(); ?>
 
 </section>
-<section class="guaranty">
+<section id="guaranty" class="guaranty">
     <div class="container">
         <div class="title_guaranty text-center">
             <h2>Наши Гарантии</h2>
@@ -129,7 +129,7 @@ $this->title = 'DIOKS';
         </div>
     </div>
 </section>
-<section class="calculation">
+<section id="order" class="calculation">
     <div class="container">
         <div class="title_guaranty text-center ">
             <h2 class="color_blue">Стоимость отправки груза</h2>
@@ -269,7 +269,7 @@ $this->title = 'DIOKS';
 <section class="gallary">
     <img class="w-100" src="images/banner/Frame 94.png" alt="">
 </section>
-<section class="service">
+<section id="service" class="service">
     <div class="container">
         <div class="title_guaranty text-center">
             <h2 class="color_blue">Наши Услуги</h2>

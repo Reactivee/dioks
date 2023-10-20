@@ -62,11 +62,11 @@ AppAsset::register($this);
                     </div>
                     <div class="col-md-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
-                            <li><a href="#">ГЛАВНАЯ</a></li>
-                            <li><a href="#">УСЛУГИ</a></li>
-                            <li><a href="#">ГАРАНТИИ</a></li>
-                            <li><a href="#">КОНТАКТЫ </a></li>
-                            <li><a href="#">ОСТАВИТЬ ЗАЯВКУ</a></li>
+                            <li><a href="/">ГЛАВНАЯ</a></li>
+                            <li><a href="#service">УСЛУГИ</a></li>
+                            <li><a href="#guaranty">ГАРАНТИИ</a></li>
+                            <li><a href="#contact">КОНТАКТЫ </a></li>
+                            <li><a href="#order">ОСТАВИТЬ ЗАЯВКУ</a></li>
                             <li><a href="#">RU | UZ | EN</a></li>
                         </ul>
                     </div>
@@ -121,10 +121,10 @@ AppAsset::register($this);
 
 
     <?= $content ?>
-    <footer class="pt-5">
+    <footer  class="pt-5">
         <div class="container">
 
-            <div class="row">
+            <div id="contact" class="row">
                 <div class="col-md-7">
                     <div class="title_footer ">
                         <h2 class="color_blue font-weight-bold">Часто задаваемые
@@ -235,10 +235,10 @@ AppAsset::register($this);
                     </div>
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
-                            <li><a class="nav_items_footer_link" href="#">Гарантии</a></li>
-                            <li><a class="nav_items_footer_link" href="#">Услуги</a></li>
-                            <li><a class="nav_items_footer_link" href="#">FAQ</a></li>
-                            <li><a class="nav_items_footer_link" href="#">Контакты </a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#guaranty">Гарантии</a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#service">Услуги</a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#contact">FAQ</a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#contact">Контакты </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
                             <img src="images/icons/Button (1).svg" alt="">

@@ -156,7 +156,7 @@ class Order extends \yii\db\ActiveRecord
         if ($this->currently_location) {
             $res = Country::find()->where(['id' => $this->currently_location])->one();
         } else {
-            $res = Country::find()->where(['id' => $this->cargo_to_location])->one();
+            $res = Country::find()->where(['id' => $this->cargo_from_location])->one();
 
         }
 

@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /** @var common\models\TypeTransportSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Type Transports';
+$this->title = 'Вид транспорта';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="type-transport-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Type Transport', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать Вид транспорта', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>

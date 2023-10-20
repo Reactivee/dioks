@@ -60,7 +60,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 'items' => [
                                     ['label' => 'Заказы', 'icon' => 'dashboard', 'url' => ['/order']],
                                     ['label' => 'Страны', 'icon' => 'dashboard', 'url' => ['/country']],
-                                    ['label' => 'Вид Транспорт', 'icon' => 'car', 'url' => ['/type-transport']],
+                                    ['label' => 'Вид Транспорта', 'icon' => 'car', 'url' => ['/type-transport']],
                                 ]]
                         )
                         ?>

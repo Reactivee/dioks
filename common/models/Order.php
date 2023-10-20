@@ -2,8 +2,11 @@
 
 namespace common\models;
 
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\TemplateProcessor;
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "order".
@@ -145,6 +148,7 @@ class Order extends \yii\db\ActiveRecord
 
         return $this->hasOne(Country::className(), ['id' => 'cargo_to_location']);
     }
+
     public function getType()
     {
 
@@ -178,6 +182,39 @@ class Order extends \yii\db\ActiveRecord
         }
 
         return parent::beforeSave($insert);
+    }
+
+    public function generateCheckOrder()
+    {
+        $item = Order::find()
+            ->where([
+                'id' => $this->id
+            ])
+            ->one();
+//        dd($item);
+        $phpWord = new PHPWord();
+        $folder = '/web/uploads/temp/';
+        $uploads_folder = Yii::getAlias('@frontend') . $folder;
+        if (!file_exists($uploads_folder)) {
+            mkdir($uploads_folder, 0777, true);
+        }
+
+        \PhpOffice\PhpWord\Settings::setTempDir($uploads_folder);
+
+        $templateProcessor = new TemplateProcessor(Yii::getAlias('@frontend') . '/web/uploads/word/order.docx');
+        $templateProcessor->setValue('город', 'asdasdsa');
+
+        $filename = Yii::getAlias('@frontend') . '/web/uploads/word/' . $item->order_code . '.docx';
+        $this->doc = 'uploads/word/' . $item->order_code . '.docx';
+
+        $this->save();
+
+        $templateProcessor->saveAs($filename);
+
+        if ($filename)
+            chmod($filename, 0644);
+
+
     }
 
 

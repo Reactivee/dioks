@@ -134,4 +134,10 @@ class OrderController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionOrderDoc($id)
+    {
+        $order = $this->findModel($id);
+        $order->generateCheckOrder();
+    }
 }

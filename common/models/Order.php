@@ -177,8 +177,12 @@ class Order extends \yii\db\ActiveRecord
 
         }
         if (!$this->isNewRecord) {
-            $mydate = strtotime($this->delivery_time);
-            $this->delivery_time = (int)$mydate;
+            if (!$this->delivery_time) {
+
+                $mydate = strtotime($this->delivery_time);
+                $this->delivery_time = (int)$mydate;
+
+            }
         }
 
         return parent::beforeSave($insert);

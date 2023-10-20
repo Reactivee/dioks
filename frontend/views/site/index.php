@@ -228,7 +228,9 @@ $this->title = 'DIOKS';
             </div>
             <div class="col-md-5">
                 <label for="how" class="form_label text-uppercase">Номер телефона</label>
+
                 <?= $form->field($order, 'phone')->textInput(['maxlength' => true,
+                    'id'=>'phone',
                     'class' => 'form-control form_calculate',
                     'placeholder' => 'Введите ваш номер телефона'])->label(false) ?>
 

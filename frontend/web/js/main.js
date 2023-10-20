@@ -5,11 +5,13 @@ function myEmail() {
     var text = document.getElementById("email_input");
 
     // If the checkbox is checked, display the output text
-    if (checkBox.checked == true){
+    if (checkBox.checked == true) {
         text.style.display = "block";
     } else {
         text.style.display = "none";
     }
-    console.log('asd')
 }
-console.log('asaasdd')
+
+jQuery(function ($) {
+    $("#phone").mask("(99) 999-9999");
+});

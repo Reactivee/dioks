@@ -18,6 +18,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js',
+
+        'js/mask.js',
         'js/main.js',
     ];
     public $depends = [

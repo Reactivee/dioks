@@ -38,8 +38,8 @@
     "tugmaks/yii2-google-maps": "@dev",
     "phpoffice/phpword": "dev-master",
     "google/apiclient": "^2.0",
-    "kartik-v/yii2-widget-datepicker": "*"
-
+    "kartik-v/yii2-widget-datepicker": "*",
+    "yiisoft/yii2-maskedinput": "*"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

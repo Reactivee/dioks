@@ -180,6 +180,15 @@ class Order extends \yii\db\ActiveRecord
         return [$res->parent->name_ru ?? '', $res->name_ru ?? ''];
     }
 
+    public function getLocations()
+    {
+        $res = Country::findOne($this->currently_location);
+        if ($res)
+            return [$res->long, $res->lat];
+
+        return [];
+    }
+
     public function beforeSave($insert)
     {
 

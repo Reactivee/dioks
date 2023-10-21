@@ -26,8 +26,8 @@ AppAsset::register($this);
         <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.png">
         <!--        <link rel="mask-icon" href="/images/favicon.png">-->
-        <meta property="og:site_name" content="Ustudent">
-        <meta property="og:title" content="Ustudent">
+        <meta property="og:site_name" content="DIOKS">
+        <meta property="og:title" content="DIOKS">
         <meta property="og:locale" content="uz">
         <?php $this->head() ?>
     </head>
@@ -57,7 +57,7 @@ AppAsset::register($this);
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-4 logo">
                         <a href="#">
-                            <img src="images/banner/logo.svg" alt="">
+                            <img style="width: 160px"  src="images/icons/logo.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-8 text-right">
@@ -230,7 +230,7 @@ AppAsset::register($this);
                     <div class="col-md-5 logo d-flex justify-content-between align-items-center">
                         <span class="color_red">Copyright ©2023 Dioks Dream Logistics</span>
                         <a href="#" class="px-4">
-                            <img class="invert" src="images/banner/logo.svg" alt="">
+                            <img style="width: 162px" class="invert" src="images/icons/logo_footer.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">

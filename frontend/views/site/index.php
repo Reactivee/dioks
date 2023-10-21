@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use kartik\select2\Select2;
+use voime\GoogleMaps\Map;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
@@ -63,8 +64,25 @@ $this->title = 'DIOKS';
                     <? } ?>
                 </div>
                 <div class="map">
-                    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"
-                            width="100%" height="321" frameborder="0"></iframe>
+                    <?
+//                    dd($order->locations[0]);
+                    if ($order->locations) {
+                        echo Map::widget([
+                            'apiKey' => 'AIzaSyC4HKfavBAaIgIGJCQ_zhly1V1yfjehW_E',
+                            'zoom' => 16,
+                            'center' => [$order->locations[0] ?? '', $order->locations[1] ?? ''],
+                            'markers' => [
+                                ['position' => 'Tartu', 'title' => 'marker title', 'content' => 'InfoWindow content', 'options' => ["icon" => "'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"]],
+                                ['position' => [$order->locations[0] ?? '', $order->locations[1] ?? '']],
+                            ],
+
+                            'height' => '350px',
+                            'mapType' => Map::MAP_TYPE_ROADMAP,
+                        ]);
+                    }
+                    ?>
+                    <!--                    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"-->
+                    <!--                            width="100%" height="321" frameborder="0"></iframe>-->
                 </div>
             </div>
         </div>
@@ -230,7 +248,7 @@ $this->title = 'DIOKS';
                 <label for="how" class="form_label text-uppercase">Номер телефона</label>
 
                 <?= $form->field($order, 'phone')->textInput(['maxlength' => true,
-                    'id'=>'phone',
+                    'id' => 'phone',
                     'class' => 'form-control form_calculate',
                     'placeholder' => 'Введите ваш номер телефона'])->label(false) ?>
 

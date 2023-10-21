@@ -89,6 +89,7 @@ class SiteController extends Controller
         if ($transport)
             $transport = ArrayHelper::map($transport, 'id', 'name_ru');
 
+
         if (Yii::$app->request->post()) {
             $truck = Yii::$app->request->post()['truck'];
 
@@ -96,7 +97,6 @@ class SiteController extends Controller
                 $order = Order::find()->where(['order_code' => $truck])->one();
 
             }
-
 
         }
         return $this->render('index', [

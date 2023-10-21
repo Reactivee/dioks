@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use DateTime;
 use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\TemplateProcessor;
 use Yii;
@@ -201,7 +202,10 @@ class Order extends \yii\db\ActiveRecord
         }
 
         $mydate = strtotime($this->delivery_time);
-        $this->delivery_time = (int)$mydate;
+
+        if ($mydate) {
+            $this->delivery_time = $mydate;
+        }
 
         if ($this->status == Order::NEW && $this->price && $this->delivery_time) {
             $this->status = Order::REVIEW;
@@ -233,8 +237,14 @@ class Order extends \yii\db\ActiveRecord
         $templateProcessor->setValue('price', $item->price);
         $templateProcessor->setValue('type', $item->type->name_ru);
         $templateProcessor->setValue('код', $item->order_code);
-        $templateProcessor->setValue('длительность', $item->delivery_time);
         $templateProcessor->setValue('name', $item->name_ru);
+
+        if ($item->delivery_time) {
+            $time1 = new DateTime(date("d-m-Y"));
+            $time2 = new DateTime(date('d-m-Y', $item->delivery_time));
+            $interval = $time1->diff($time2);
+            $templateProcessor->setValue('длительность', $interval->format('%d день'));;
+        }
 
         $filename = Yii::getAlias('@frontend') . '/web/uploads/word/' . $item->order_code . '.docx';
         $this->doc = 'uploads/word/' . $item->order_code . '.docx';
@@ -248,13 +258,13 @@ class Order extends \yii\db\ActiveRecord
 
     }
 
-    public function afterSave($insert, $changedAttributes)
-    {
-        parent::afterSave($insert, $changedAttributes);
-
+//    public function afterSave($insert, $changedAttributes)
+//    {
+//        parent::afterSave($insert, $changedAttributes);
+//
 //        dd($changedAttributes);
-
-    }
+//
+//    }
 
 
 }

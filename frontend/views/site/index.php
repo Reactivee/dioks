@@ -64,8 +64,8 @@ $this->title = 'DIOKS';
 
                     //                    dd($order->locations[0]);
                     if ($order->locations) { ?>
-                        <span  id="long"><?= $order->locations[0] ?></span>
-                        <span  id="lat"><?= $order->locations[1] ?></span>
+                        <span class="d-none"  id="long"><?= $order->locations[0] ?></span>
+                        <span  class="d-none" id="lat"><?= $order->locations[1] ?></span>
 
                         <div style="height: 450px" id="map"></div>
                         <?php

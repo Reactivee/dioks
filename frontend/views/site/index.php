@@ -55,35 +55,54 @@ $this->title = 'DIOKS';
                                     class="font-weight-bold">  <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?>
                             </span>
                         </div>
-                    <? } else { ?>
-                        <div class="res_title">Информация о Вашем перевозке</div>
-                        <div class="status_order">Статус заказа</div>
-                        <div class="country">Страна</div>
-                        <div class="city">Город</div>
-                        <div class="delivery_time">Примерное время доставки</div>
                     <? } ?>
                 </div>
+
+
                 <div class="map">
                     <?
-//                    dd($order->locations[0]);
-                    if ($order->locations) {
-                        echo Map::widget([
-                            'apiKey' => 'AIzaSyC4HKfavBAaIgIGJCQ_zhly1V1yfjehW_E',
-                            'zoom' => 16,
-                            'center' => [$order->locations[0] ?? '', $order->locations[1] ?? ''],
-                            'markers' => [
-                                ['position' => 'Tartu', 'title' => 'marker title', 'content' => 'InfoWindow content', 'options' => ["icon" => "'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"]],
-                                ['position' => [$order->locations[0] ?? '', $order->locations[1] ?? '']],
-                            ],
 
-                            'height' => '350px',
-                            'mapType' => Map::MAP_TYPE_ROADMAP,
-                        ]);
+                    //                    dd($order->locations[0]);
+                    if ($order->locations) { ?>
+                        <span  id="long"><?= $order->locations[0] ?></span>
+                        <span  id="lat"><?= $order->locations[1] ?></span>
+
+                        <div style="height: 450px" id="map"></div>
+                        <?php
+                        $script = <<<JS
+                 let long = document.querySelector('#long').innerHTML;
+                 let lat = document.querySelector('#lat').innerHTML;
+
+                var map = L.map('map').setView([long, lat], 14);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 20
+                }).addTo(map);
+                   var marker = L.marker([long, lat]).addTo(map);
+                   marker.bindPopup("DIOKS").openPopup();
+                JS;
+                        $this->registerJs($script); ?>
+
+                        <?
+
+//                        echo Map::widget([
+//                            'apiKey' => 'AIzaSyC4HKfavBAaIgIGJCQ_zhly1V1yfjehW_E',
+//                            'zoom' => 16,
+//                            'center' => $order->locations,
+//                            'markers' => [
+//                                ['position' => 'Tartu', 'title' => 'marker title', 'content' => 'InfoWindow content', 'options' => ["icon" => "'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"]],
+//                                ['position' => $order->locations],
+//                            ],
+//
+//                            'height' => '350px',
+//                            'mapType' => Map::MAP_TYPE_ROADMAP,
+//                        ]);
+
                     }
                     ?>
                     <!--                    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"-->
                     <!--                            width="100%" height="321" frameborder="0"></iframe>-->
                 </div>
+
             </div>
         </div>
 
@@ -137,9 +156,11 @@ $this->title = 'DIOKS';
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Map Marker_.svg" alt="">
                     </div>
                     <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Техническая поддержка при курировании груза и онлайн трекинг
+                    <div class="col-item-gua_label  mt-2">Техническая поддержка при курировании груза и онлайн
+                        трекинг
                     </div>
-                    <a class="gua_down color_red mt-5"> <img class="mr-2" src="images/icons/down 2.svg" alt=""> Скачать
+                    <a class="gua_down color_red mt-5"> <img class="mr-2" src="images/icons/down 2.svg" alt="">
+                        Скачать
                         презентацию о компании</a>
                 </div>
             </div>
@@ -385,3 +406,5 @@ $this->title = 'DIOKS';
         </div>
     </div>
 </section>
+
+

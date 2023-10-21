@@ -8,6 +8,7 @@ use common\models\OrderAbout;
 use common\models\TypeTransport;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
+use voime\GoogleMaps\Map;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\helpers\ArrayHelper;
@@ -95,14 +96,26 @@ class SiteController extends Controller
 
             if ($truck) {
                 $order = Order::find()->where(['order_code' => $truck])->one();
+                $map = Map::widget([
+                    'apiKey' => 'AIzaSyC4HKfavBAaIgIGJCQ_zhly1V1yfjehW_E',
+                    'zoom' => 16,
+                    'center' => $order->locations,
+                    'markers' => [
+                        ['position' => 'Tartu', 'title' => 'marker title', 'content' => 'InfoWindow content', 'options' => ["icon" => "'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'"]],
+                        ['position' => $order->locations],
+                    ],
 
+                    'height' => '350px',
+                    'mapType' => Map::MAP_TYPE_ROADMAP,
+                ]);
             }
 
         }
         return $this->render('index', [
             'order' => $order,
             'city' => $city,
-            'transport' => $transport
+            'transport' => $transport,
+            'map' => $map ?? ''
         ]);
     }
 

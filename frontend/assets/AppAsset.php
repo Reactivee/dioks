@@ -13,10 +13,13 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'fonts/stylesheet.css',
+        'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css',
+
         'css/style.css',
         'css/site.css',
     ];
     public $js = [
+        'https://unpkg.com/leaflet@1.9.3/dist/leaflet.js',
         'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js',
 
         'js/mask.js',

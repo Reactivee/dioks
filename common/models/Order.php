@@ -223,8 +223,9 @@ class Order extends \yii\db\ActiveRecord
         $templateProcessor->setValue('to', $item->regions->name_ru);
         $templateProcessor->setValue('price', $item->price);
         $templateProcessor->setValue('type', $item->type->name_ru);
-        $templateProcessor->setValue('код', $item->code);
+        $templateProcessor->setValue('код', $item->order_code);
         $templateProcessor->setValue('длительность', $item->delivery_time);
+        $templateProcessor->setValue('name', $item->name_ru);
 
         $filename = Yii::getAlias('@frontend') . '/web/uploads/word/' . $item->order_code . '.docx';
         $this->doc = 'uploads/word/' . $item->order_code . '.docx';

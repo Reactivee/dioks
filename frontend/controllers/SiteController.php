@@ -4,10 +4,10 @@ namespace frontend\controllers;
 
 use common\models\Country;
 use common\models\Order;
-use common\models\OrderAbout;
 use common\models\TypeTransport;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
+use kartik\growl\Growl;
 use voime\GoogleMaps\Map;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -81,6 +81,14 @@ class SiteController extends Controller
      */
     public function actionIndex($truck = null)
     {
+
+//        echo Growl::widget([
+//            'type' => Growl::TYPE_SUCCESS,
+//            'icon' => 'glyphicon glyphicon-ok-sign',
+//            'title' => 'Note',
+//            'showSeparator' => true,
+//            'body' => 'This is a successful growling alert.'
+//        ]);
 
         $order = new Order();
         $city = Country::find()->where(['not', ['parent_id' => null]])->all();

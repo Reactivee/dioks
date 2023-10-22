@@ -70,15 +70,15 @@ $this->title = 'DIOKS';
                         <div style="height: 450px" id="map"></div>
                         <?php
                         $script = <<<JS
-                 let long = document.querySelector('#long').innerHTML;
-                 let lat = document.querySelector('#lat').innerHTML;
-
-                var map = L.map('map').setView([long, lat], 14);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 20
-                }).addTo(map);
-                   var marker = L.marker([long, lat]).addTo(map);
-                   marker.bindPopup("DIOKS").openPopup();
+                             let long = document.querySelector('#long').innerHTML;
+                             let lat = document.querySelector('#lat').innerHTML;
+                             
+                            var map = L.map('map').setView([long, lat], 14);
+                            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                maxZoom: 20
+                            }).addTo(map);
+                               var marker = L.marker([long, lat]).addTo(map);
+                               marker.bindPopup("DIOKS").openPopup();
                 JS;
                         $this->registerJs($script); ?>
 

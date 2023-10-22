@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var common\models\TypeTransport $model */
 
-$this->title = 'Update Type Transport: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Type Transports', 'url' => ['index']];
+$this->title = 'Изменить вид транспорта: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Вид транспорта', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

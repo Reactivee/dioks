@@ -11,7 +11,7 @@ use yii\widgets\Pjax;
 /** @var common\models\CountrySearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Countries';
+$this->title = 'Страны';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="country-index">
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Country', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать Страны', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>

@@ -58,7 +58,7 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             [['status', 'updated_by'], 'integer'],
-            [['cargo_type', 'cargo_from_location', 'cargo_to_location', 'client_name', 'phone', 'code', 'mass', 'name_ru',], 'required', 'message' => 'Поля пустой !'],
+            [['cargo_type', 'cargo_from_location', 'cargo_to_location', 'client_name', 'phone', 'code', 'mass', 'name_ru',], 'required', 'message' => 'Обязательное поле !'],
             [['cargo_type', 'cargo_from_location', 'cargo_to_location',
                 'name_uz', 'name_ru', 'name_en', 'delivery_time', 'created_at', 'currently_location',
                 'updated_at', 'whom', 'how', 'mass', 'order_code',

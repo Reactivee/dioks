@@ -17,34 +17,38 @@ class LanguagePicker extends Widget
     public function run()
     {
         $lang = [
-            'uz' => 'Oʻz',
-            'ru' => 'Рус',
-            'en' => 'Eng'
+            'uz' => 'Uzbek',
+            'ru' => 'Russian',
+            'en' => 'English'
         ];
         $currentLang = $lang[Yii::$app->language];
-//        dd($currentLang);
+//    dd(Yii::$app->language);
         unset($lang[Yii::$app->language]);
         $params = Yii::$app->request->queryParams;
         $items = [];
 
         foreach ($lang as $code => $language) {
-            $params[0] = '';
+            $params[0] = '/';
             $params['language'] = $code;
-            $items[] = Html::a($language, $params);
+            $items[] = Html::a('<i class=' . $code . '></i>' . $language, $params);
+//            dd($items);
         }
 
         return Html::ul(
             [
-                Html::a($currentLang, 'Rus', ['class' => 'ibtn_outline_yellow px-4 py-3 text-decoration-none  dropdown-toggle color_black', 'id' => "dropdownMenuButton", 'data-toggle' => 'dropdown', 'aria-expanded' => "false", 'role' => 'button']) .
+                Html::a('<i class=' . Yii::$app->language . '></i>' . $currentLang, 'Rus',
+                    ['class' => ' ibtn_outline_yellow py-3 text-decoration-none  dropdown-toggle color_black',
+                        'id' => "dropdownMenuButton", 'data-toggle' => 'dropdown',
+                        'aria-expanded' => "false", 'role' => 'button']) .
                 Html::ul($items,
                     [
-                        'class' => 'dropdown-menu list-unstyled border-0',
+                        'class' => 'dropdown-menu list-unstyled border-0 language-picker  inner  small',
                         'aria-labelledby' => "dropdownMenuButton",
                         'encode' => false
                     ])
             ],
             [
-                'class' => 'my-lang-picker list-unstyled text-uppercase m-0',
+                'class' => 'my-lang-picker list-unstyled text-uppercase m-0 p-0 language-picker outer  small',
                 'encode' => false,
                 'itemOptions' => [
 
@@ -55,12 +59,3 @@ class LanguagePicker extends Widget
 }
 
 ?>
-<!--<a class=" ibtn_outline_yellow px-4 py-3 text-decoration-none  dropdown-toggle color_black"-->
-<!--   type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">-->
-<!--    Русский-->
-<!--</a>-->
-<!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--    <a class="dropdown-item" href="#">Узбек</a>-->
-<!--    <a class="dropdown-item" href="#">Русский</a>-->
-<!--    <a class="dropdown-item" href="#">Английский</a>-->
-<!--</div>-->

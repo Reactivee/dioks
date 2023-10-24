@@ -221,6 +221,13 @@ header {
     background-color: #9fcbee;
 }
 
+.dropdown-menu {
+    background-color: #9FCBEE;
+}
+.dropdown-menu  a {
+    color: black;;
+}
+
 /* Check wrapper */
 .check_order {
     padding: 70px 0;
@@ -265,7 +272,8 @@ header {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
-.check_order_btn:hover{
+
+.check_order_btn:hover {
     color: white;
     background-color: #042799;
 
@@ -489,10 +497,12 @@ header {
 .calculation {
     padding: 60px 0;
 }
-.help-block{
+
+.help-block {
     /*margin-top: -20px;*/
     color: red;
 }
+
 .arrow img {
     width: 50px;
 }

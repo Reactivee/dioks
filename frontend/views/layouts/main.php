@@ -4,9 +4,9 @@
 
 /** @var string $content */
 
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use lajax\languagepicker\widgets\LanguagePicker;
+
+use frontend\widgets\LanguagePicker;
 use yii\bootstrap4\Html;
 
 AppAsset::register($this);
@@ -23,11 +23,11 @@ AppAsset::register($this);
         <!--        <link rel="preconnect" href="https://fonts.googleapis.com">-->
         <!--        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
         <title>DIOKS</title>
-                <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-s">
+        <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-s">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.png">
-                <link rel="mask-icon" href="images/icons/favicon.svg">
+        <link rel="mask-icon" href="images/icons/favicon.svg">
         <meta property="og:site_name" content="DIOKS">
         <meta property="og:title" content="DIOKS">
         <meta property="og:locale" content="uz">
@@ -38,7 +38,7 @@ AppAsset::register($this);
 
 
     <div class="overlay"></div>
-    <?= Alert::widget() ?>
+    <!--    --><?//= Alert::widget() ?>
 
     <header class="d-flex align-items-center">
         <div class="back_map">
@@ -64,15 +64,20 @@ AppAsset::register($this);
                     </div>
                     <div class="col-md-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
-<!--                            <li><a href="/" class="text-uppercase">--><?//= Yii::t('main', 'main') ?><!-- </a></li>-->
+                            <!--                            <li><a href="/" class="text-uppercase">-->
+                            <?//= Yii::t('main', 'main') ?><!-- </a></li>-->
                             <li><a href="#service" class="text-uppercase"><?= Yii::t('main', 'Service') ?></a></li>
                             <li><a href="#guaranty" class="text-uppercase"><?= Yii::t('main', 'Guarantees') ?></a></li>
                             <li><a href="#contact" class="text-uppercase"><?= Yii::t('main', 'Address') ?> </a></li>
                             <li><a href="#order" class="text-uppercase"><?= Yii::t('main', 'submit') ?></a></li>
                             <li>
-                                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
-                                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
-                                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
+                                <!--                                --><? //= \lajax\languagepicker\widgets\LanguagePicker::widget([
+                                //                                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
+                                //                                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
+                                //                                ]); ?>
+
+                                <?= LanguagePicker::widget([
+
                                 ]); ?>
 
                             </li>
@@ -131,9 +136,9 @@ AppAsset::register($this);
             </div>
         </div>
     </header>
-
-
-    <?= $content ?>
+    <div>
+        <?= $content ?>
+    </div>
     <footer class="pt-5">
         <div class="container">
 
@@ -221,7 +226,7 @@ AppAsset::register($this);
                         <p class="color_gray text-right"><?= Yii::t('main', 'address_info') ?></p>
                         <p class="color_blue font-weight-bold text-right">
                             <?= Yii::t('main', 'text_address') ?>
-                          </p>
+                        </p>
                     </div>
                     <div class="phones text-right">
                         <a class="color_blue" href="">(+99899) <span class="font-weight-bold"> 880-03-45</span> </a>
@@ -247,10 +252,13 @@ AppAsset::register($this);
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
 
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#guaranty"><?= Yii::t('main', 'Guarantees') ?></a></li>
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#service"><?= Yii::t('main', 'Service') ?></a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none"
+                                   href="#guaranty"><?= Yii::t('main', 'Guarantees') ?></a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none"
+                                   href="#service"><?= Yii::t('main', 'Service') ?></a></li>
                             <li><a class="nav_items_footer_link text-decoration-none" href="#contact">FAQ</a></li>
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none"
+                                   href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
                             <img src="images/icons/Button (1).svg" alt="">

@@ -82,6 +82,7 @@ class SiteController extends Controller
     public function actionIndex($truck = null)
     {
 
+
 //        echo Growl::widget([
 //            'type' => Growl::TYPE_SUCCESS,
 //            'icon' => 'glyphicon glyphicon-ok-sign',

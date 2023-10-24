@@ -38,6 +38,41 @@ AppAsset::register($this);
 
 
     <div class="overlay"></div>
+    <div class="mobile_menu">
+        <div class="row justify-content-between">
+            <div class="col-9">
+                <!--                <span class="color_logo_blue m-menu">Меню</span>-->
+            </div>
+            <div class="col-3 close_btn">
+                <img src="images/icons/x.svg" alt="">
+            </div>
+            <hr>
+        </div>
+        <div class="col-md-12 text-right d-flex align-items-center justify-content-end footer_nav_social">
+            <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
+
+                <li><a class="nav_items_footer_link color_black text-decoration-none"
+                       href="#guaranty"><?= Yii::t('main', 'Guarantees') ?></a></li>
+                <li><a class="nav_items_footer_link text-decoration-none color_black"
+                       href="#service"><?= Yii::t('main', 'Service') ?></a></li>
+                <li><a class="nav_items_footer_link text-decoration-none color_black" href="#contact">FAQ</a></li>
+                <li><a class="nav_items_footer_link text-decoration-none color_black"
+                       href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
+
+            </ul>
+            <?= LanguagePicker::widget([
+
+            ]); ?>
+            <div class="social d-flex align-items-center">
+                <img src="images/icons/Button (1).svg" alt="">
+                <img class="mx-3" src="images/icons/Button (2).svg" alt="">
+                <img src="images/icons/Button.svg" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
     <!--    --><?//= Alert::widget() ?>
 
     <header class="d-flex align-items-center">
@@ -59,8 +94,11 @@ AppAsset::register($this);
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-4 logo">
                         <a href="/">
-                            <img style="width: 160px" src="images/icons/logo_footer.svg" alt="">
+                            <img src="images/icons/logo_footer.svg" alt="">
                         </a>
+                        <div class="burger">
+                            <img src="images/icons/menu.svg" alt="">
+                        </div>
                     </div>
                     <div class="col-md-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
@@ -82,8 +120,8 @@ AppAsset::register($this);
 
                             </li>
                         </ul>
-
                     </div>
+
                 </div>
             </div>
         </div>
@@ -136,7 +174,7 @@ AppAsset::register($this);
             </div>
         </div>
     </header>
-    <div>
+    <div class="position-relative">
         <?= $content ?>
     </div>
     <footer class="pt-5">
@@ -243,13 +281,13 @@ AppAsset::register($this);
         <div class="nav_footer py-4">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-5 logo d-flex justify-content-between align-items-center">
-                        <span class="color_red">Copyright ©2023 Dioks Dream Logistics</span>
+                    <div class="col-md-5 logo_footer d-flex justify-content-between align-items-center">
+                        <span class="color_red mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics</span>
                         <a href="#" class="px-4">
                             <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
                         </a>
                     </div>
-                    <div class="col-md-7 text-right d-flex align-items-center justify-content-end">
+                    <div class="col-md-7 text-right d-flex align-items-center justify-content-end footer_nav_social">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
 
                             <li><a class="nav_items_footer_link text-decoration-none"

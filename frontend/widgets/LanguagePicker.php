@@ -37,18 +37,18 @@ class LanguagePicker extends Widget
         return Html::ul(
             [
                 Html::a('<i class=' . Yii::$app->language . '></i>' . $currentLang, 'Rus',
-                    ['class' => ' ibtn_outline_yellow py-3 text-decoration-none  dropdown-toggle color_black',
+                    ['class' => 'py-3  text-decoration-none  dropdown-toggle',
                         'id' => "dropdownMenuButton", 'data-toggle' => 'dropdown',
                         'aria-expanded' => "false", 'role' => 'button']) .
                 Html::ul($items,
                     [
-                        'class' => 'dropdown-menu list-unstyled border-0 language-picker  inner  small',
+                        'class' => 'dropdown-menu list-unstyled border-0 lang_link language-picker',
                         'aria-labelledby' => "dropdownMenuButton",
                         'encode' => false
                     ])
             ],
             [
-                'class' => 'my-lang-picker list-unstyled text-uppercase m-0 p-0 language-picker outer  small',
+                'class' => 'my-lang-picker list-unstyled text-uppercase m-0 p-0 language-picker',
                 'encode' => false,
                 'itemOptions' => [
 

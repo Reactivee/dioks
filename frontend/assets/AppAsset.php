@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css',
 
         'css/style.css',
+        'css/mobile.css',
         'css/site.css',
     ];
     public $js = [

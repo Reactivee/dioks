@@ -20,13 +20,13 @@ $this->title = 'DIOKS';
 
 
         <div class="row">
-            <div class="col-md-6 pr-5">
+            <div class="col-md-6 pr-0 pr-md-5">
                 <div class="check_wrapper overflow-hidden h-100">
                     <div class="check_wrapper_title"><?= Yii::t('main', 'check_cargo') ?> </div>
                     <div class="check_wrapper_time font-weight-bold">24/7</div>
-                    <div class="check_form  h-100">
+                    <div class="check_form  ">
                         <div class="check_order_label mb-3"><?= Yii::t('main', 'cargo_id') ?></div>
-                        <div class=" d-flex align-items-center">
+                        <div class="  d-flex align-items-center">
                             <input type="text" name="truck" class="w-100 check_order_input"
                                    placeholder="Введите трек-номер вашего груза">
                             <button type="submit" class="btn check_order_btn"> Поиск</button>
@@ -36,7 +36,7 @@ $this->title = 'DIOKS';
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 pl-5 h-100">
+            <div class="col-md-6 pl-0 pl-md-5 h-100">
                 <div class="check_response">
 
                     <? if ($order) { ?>

@@ -14,12 +14,15 @@
 .color_gray {
     color: #b6b9ce !important;
 }
+.color_black {
+    color: black !important;
+}
 
 .color_red {
     color: #ff0000 !important;
 }
 
-.color_red {
+.color_white {
     color: white !important;
 }
 
@@ -71,11 +74,17 @@ header {
     font-size: 14px;
     color: white;
 }
+.lang_link{
+    margin-left: 35px;
+}
+
 
 .nav_items a:hover {
     color: #9fcbee;
 }
-
+.lang_link:hover{
+    color: black;
+}
 .main_recommends {
     margin-top: 140px;
 }
@@ -227,7 +236,9 @@ header {
 .dropdown-menu  a {
     color: black;;
 }
-
+.logo img{
+    width: 160px;
+}
 /* Check wrapper */
 .check_order {
     padding: 70px 0;

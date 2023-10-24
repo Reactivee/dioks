@@ -59,7 +59,7 @@ AppAsset::register($this);
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-4 logo">
                         <a href="#">
-                            <img style="width: 160px" src="images/icons/logo.png" alt="">
+                            <img style="width: 160px" src="images/icons/logo_footer.svg" alt="">
                         </a>
                     </div>
                     <div class="col-md-8 text-right">

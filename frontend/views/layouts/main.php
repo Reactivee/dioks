@@ -6,9 +6,11 @@
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
+use lajax\languagepicker\widgets\LanguagePicker;
 use yii\bootstrap4\Html;
 
 AppAsset::register($this);
+//dd(Yii::$app->language);
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -41,13 +43,13 @@ AppAsset::register($this);
     <header class="d-flex align-items-center">
         <div class="back_map">
             <div class="rus">
-<!--                <img src="/images/icons/dot1.svg" alt="">-->
-<!--                <img src="/images/icons/dot2.svg" alt="">-->
-<!--                <img src="/images/icons/dot3.svg" alt="">-->
-<!--                <img src="/images/icons/dot4.svg" alt="">-->
-<!--                <img src="/images/icons/dot5.svg" alt="">-->
-<!--                <img src="/images/icons/dot6.svg" alt="">-->
-<!--                <img style="color: red" src="/images/icons/light1.svg" alt="">-->
+                <!--                <img src="/images/icons/dot1.svg" alt="">-->
+                <!--                <img src="/images/icons/dot2.svg" alt="">-->
+                <!--                <img src="/images/icons/dot3.svg" alt="">-->
+                <!--                <img src="/images/icons/dot4.svg" alt="">-->
+                <!--                <img src="/images/icons/dot5.svg" alt="">-->
+                <!--                <img src="/images/icons/dot6.svg" alt="">-->
+                <!--                <img style="color: red" src="/images/icons/light1.svg" alt="">-->
 
             </div>
             <img class="all_map" src="images/banner/map 1.png" alt="">
@@ -57,18 +59,26 @@ AppAsset::register($this);
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-4 logo">
                         <a href="#">
-                            <img style="width: 160px"  src="images/icons/logo.png" alt="">
+                            <img style="width: 160px" src="images/icons/logo.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
-                            <li><a href="/">ГЛАВНАЯ</a></li>
-                            <li><a href="#service">УСЛУГИ</a></li>
-                            <li><a href="#guaranty">ГАРАНТИИ</a></li>
-                            <li><a href="#contact">КОНТАКТЫ </a></li>
-                            <li><a href="#order">ОСТАВИТЬ ЗАЯВКУ</a></li>
+                            <li><a href="/" class="text-uppercase"><?= Yii::t('main', 'main') ?> </a></li>
+                            <li><a href="#service" class="text-uppercase"><?= Yii::t('main', 'Service') ?></a></li>
+                            <li><a href="#guaranty" class="text-uppercase"><?= Yii::t('main', 'Guarantees') ?></a></li>
+                            <li><a href="#contact" class="text-uppercase"><?= Yii::t('main', 'Address') ?> </a></li>
+                            <li><a href="#order" class="text-uppercase"><?= Yii::t('main', 'submit') ?></a></li>
                             <li><a href="#">RU | UZ | EN</a></li>
                         </ul>
+<!--                        <div class="lang">-->
+<!--                            <div class="dropdown">-->
+<!--                                --><?//= \lajax\languagepicker\widgets\LanguagePicker::widget([
+//                                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
+//                                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
+//                                ]); ?>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -78,38 +88,42 @@ AppAsset::register($this);
                 <div class="row">
                     <div class="col-md-6">
                         <div class="main_recommends_title">
-                            <h2>DIOKS DREAM LOGISTICS</h2>
+                            <h2> <?= Yii::t('main', 'slogan') ?></h2>
                         </div>
                         <div class="main_recommends_text">
-                            <h3>предлагает услуги по транспортировке грузов разных видов</h3>
+                            <h3>
+                                <?= Yii::t('main', 'slogan') ?>
+                                <?= Yii::t('main', 'slogan_text') ?>
+                            </h3>
                         </div>
                         <div class="main_recommends_items">
                             <div class="stepper-wrapper">
                                 <div class="stepper-item ">
                                     <div class="step-counter"></div>
-                                    <div class="step-name">авиа</div>
+                                    <div class="step-name"><?= Yii::t('main', 'air') ?></div>
                                 </div>
                                 <div class="stepper-item">
                                     <div class="step-counter"></div>
-                                    <div class="step-name">автомобилем</div>
+                                    <div class="step-name"><?= Yii::t('main', 'road') ?></div>
                                 </div>
                                 <div class="stepper-item active">
                                     <div class="step-counter"></div>
-                                    <div class="step-name">железнодорожный</div>
+                                    <div class="step-name"><?= Yii::t('main', 'rail') ?></div>
                                 </div>
                                 <div class="stepper-item">
                                     <div class="step-counter"></div>
-                                    <div class="step-name">мультитраспортными путями.</div>
+                                    <div class="step-name"><?= Yii::t('main', 'multi') ?></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="main_text">
-                            <h2>Грузовые перевозки <span class="font-weight-bold">по всему миру </span></h2>
+                            <h2><?= Yii::t('main', 'cargo') ?><span class="font-weight-bold"> </span>
+                            </h2>
                         </div>
                         <div class="header_btns d-flex">
-                            <a class="btn font-weight-bold">Проверить груз</a>
-                            <a class="btn font-weight-bold">Проверить город</a>
+                            <a class="btn font-weight-bold"><?= Yii::t('main', 'check') ?></a>
+                            <a class="btn font-weight-bold"><?= Yii::t('main', 'submit') ?></a>
                         </div>
 
                     </div>
@@ -121,14 +135,13 @@ AppAsset::register($this);
 
 
     <?= $content ?>
-    <footer  class="pt-5">
+    <footer class="pt-5">
         <div class="container">
 
             <div id="contact" class="row">
                 <div class="col-md-7">
                     <div class="title_footer ">
-                        <h2 class="color_blue font-weight-bold">Часто задаваемые
-                            вопросы</h2>
+                        <h2 class="color_blue font-weight-bold"><?= Yii::t('main', 'faq') ?></h2>
                     </div>
                     <div class="accordion_wrapper mt-5">
                         <div class="" id="accordionExample">
@@ -203,14 +216,13 @@ AppAsset::register($this);
                                 width="100%" height="421" frameborder="0"></iframe>
                     </div>
                     <div class="address text-center mt-4">
-                        <h3 class="color_blue font-weight-bold">Адрес и Время работы</h3>
+                        <h3 class="color_blue font-weight-bold"><?= Yii::t('main', 'full_address') ?></h3>
                     </div>
                     <div class="add_address">
-                        <p class="color_gray text-right">DIOKS DREAM LOGISTICS готов помочь вам при транспортировке
-                            вашего груза по адресу:</p>
-                        <p class="color_blue font-weight-bold text-right">г. Ташкент Мирабадский район, ул. А.
-                            Фитрат
-                            дом-2/1 с 9:00 до 18:00 с Понедельника по Пятницу</p>
+                        <p class="color_gray text-right"><?= Yii::t('main', 'address_info') ?></p>
+                        <p class="color_blue font-weight-bold text-right">
+                            <?= Yii::t('main', 'text_address') ?>
+                          </p>
                     </div>
                     <div class="phones text-right">
                         <a class="color_blue" href="">(+99899) <span class="font-weight-bold"> 880-03-45</span> </a>

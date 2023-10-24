@@ -23,11 +23,35 @@ return [
             // 'i18n' => []
         ]
     ],
+    'language' => 'en',
     'components' => [
         'formatter' => [
             'class' => 'yii\i18n\Formatter',
             'defaultTimeZone' => 'Asia/Tashkent',
         ],
+        'languagepicker' => [
+            'class' => 'lajax\languagepicker\Component',        // List of available languages (icons and text)
+            'languages' => ['en' => 'English', 'uz' => 'Uzbek', 'ru' => 'Русский'],
+            'cookieName' => 'language',                         // Name of the cookie.
+            'expireDays' => 64,                                 // The expiration time of the cookie is 64 days.
+            'callback' => function () {
+                if (!\Yii::$app->user->isGuest) {
+                    $user = \Yii::$app->user->identity;
+                    $user->language = \Yii::$app->language;
+                    $user->save();
+                }
+            }
+        ],
+        'i18n' => [
+            'translations' => [
+                'main*' => [
+                    'sourceLanguage' => 'sr',  // EDIT  THE  LINE
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@frontend/messages',
+                ],
+            ],
+        ],
+
 //        'response' => [
 //            'formatters' => [
 //                'json' => [
@@ -85,14 +109,24 @@ return [
 
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
-//            'enableDefaultLanguageUrlCode' => true,
-//            'enableLanguagePersistence' => false,
-            'languages' => ['uz', 'ru', 'en'],
-            'enableLanguageDetection' => false,
+            'enableDefaultLanguageUrlCode' => false,
+//            'enableLanguagePersistence' => true,
+            'languages' => ['ru', 'en', 'fas'],
+            'enableLanguageDetection' => true,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'enableStrictParsing' => false,
+            'rules' => [
 
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'site'],
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'api'],
+
+                'locations' => 'site/locations',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<slug:\w+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
+            ],
         ],
 
     ],

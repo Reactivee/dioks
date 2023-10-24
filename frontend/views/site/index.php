@@ -22,17 +22,17 @@ $this->title = 'DIOKS';
         <div class="row">
             <div class="col-md-6 pr-5">
                 <div class="check_wrapper overflow-hidden h-100">
-                    <div class="check_wrapper_title">Проверьте локацию груза</div>
+                    <div class="check_wrapper_title"><?= Yii::t('main', 'check_cargo') ?> </div>
                     <div class="check_wrapper_time font-weight-bold">24/7</div>
                     <div class="check_form  h-100">
-                        <div class="check_order_label mb-3">Трек-номер груза</div>
+                        <div class="check_order_label mb-3"><?= Yii::t('main', 'cargo_id') ?></div>
                         <div class=" d-flex align-items-center">
                             <input type="text" name="truck" class="w-100 check_order_input"
                                    placeholder="Введите трек-номер вашего груза">
-                            <button type="submit" class="btn check_order_btn">Поиск</button>
+                            <button type="submit" class="btn check_order_btn"> Поиск</button>
                         </div>
-                        <span class="check_info">Актуальная информация о статусе вашего груза и городе его
-                                расположения</span>
+                        <!--                        <span class="check_info">Актуальная информация о статусе вашего груза и городе его-->
+                        <!--                                расположения</span>-->
                     </div>
                 </div>
             </div>
@@ -40,18 +40,18 @@ $this->title = 'DIOKS';
                 <div class="check_response">
 
                     <? if ($order) { ?>
-                        <div class="res_title">Информация о Вашем перевозке</div>
-                        <div class="status_order">Статус заказа: <span
+                        <div class="res_title"><?= Yii::t('main', 'Infromation') ?> </div>
+                        <div class="status_order"><?= Yii::t('main', 'status') ?> <span
                                     class="font-weight-bold"> <?= $order->getStatusFront() ?? '' ?></span></div>
                         <div class="country">
-                            Страна: <span
+                            <?= Yii::t('main', 'Сountry') ?> <span
                                     class="font-weight-bold">  <?= $order->getCurrently()[0] ?></span></div>
                         <div class="city">
-                            Город: <span
+                            <?= Yii::t('main', 'City') ?> <span
                                     class="font-weight-bold">  <?= $order->getCurrently()[1] ?> </span>
                         </div>
-                        <div class="delivery_time">Примерное время
-                            доставки: <span
+                        <div class="delivery_time">
+                            <?= Yii::t('main', 'time') ?> <span
                                     class="font-weight-bold">  <?= $order->delivery_time ? date('Y-m-d H:i:s', $order->delivery_time) : ''; ?>
                             </span>
                         </div>
@@ -64,8 +64,8 @@ $this->title = 'DIOKS';
 
                     //                    dd($order->locations[0]);
                     if ($order->locations) { ?>
-                        <span class="d-none"  id="long"><?= $order->locations[0] ?></span>
-                        <span  class="d-none" id="lat"><?= $order->locations[1] ?></span>
+                        <span class="d-none" id="long"><?= $order->locations[0] ?></span>
+                        <span class="d-none" id="lat"><?= $order->locations[1] ?></span>
 
                         <div style="height: 450px" id="map"></div>
                         <?php
@@ -115,10 +115,10 @@ $this->title = 'DIOKS';
 <section id="guaranty" class="guaranty">
     <div class="container">
         <div class="title_guaranty text-center">
-            <h2>Наши Гарантии</h2>
+            <h2>  <?= Yii::t('main', 'guaranty') ?></h2>
         </div>
         <div class="title_guaranty_text text-center ">
-            <span>Мы предоставляем лицензированные услуги перевозок по всему миру</span>
+            <span> <?= Yii::t('main', 'provide') ?></span>
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-md-4">
@@ -127,10 +127,13 @@ $this->title = 'DIOKS';
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _truck_.svg" alt="">
                     </div>
-                    <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">15 летний опыт работы и лицензированные услуги</div>
-                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">Скачать
-                        презентацию о компании</a>
+                    <div class="col-item-gua_title  mt-4"> <?= Yii::t('main', 'transportation_guarantees') ?>
+                    </div>
+                    <div class="col-item-gua_label  mt-2"> <?= Yii::t('main', 'years') ?>
+                    </div>
+                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">
+                        <?= Yii::t('main', 'present') ?>
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -141,12 +144,13 @@ $this->title = 'DIOKS';
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Money Bill_.svg" alt="">
                     </div>
-                    <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Детальный расчет стоимости услуг в виде коммерческого
-                        предложения
+                    <div class="col-item-gua_title  mt-4"> <?= Yii::t('main', 'ser_guaranty') ?>
                     </div>
-                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">Скачать
-                        презентацию о компании</a>
+                    <div class="col-item-gua_label  mt-2"> <?= Yii::t('main', 'detail') ?>
+                    </div>
+                    <a class="gua_down color_red mt-5"><img class="mr-2" src="images/icons/down 2.svg" alt="">
+                        <?= Yii::t('main', 'offer') ?>
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -155,13 +159,12 @@ $this->title = 'DIOKS';
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Map Marker_.svg" alt="">
                     </div>
-                    <div class="col-item-gua_title  mt-4">Гарантии при перевозке груза</div>
-                    <div class="col-item-gua_label  mt-2">Техническая поддержка при курировании груза и онлайн
-                        трекинг
+                    <div class="col-item-gua_title  mt-4"> <?= Yii::t('main', 'ser_guaranty') ?>
+                    </div>
+                    <div class="col-item-gua_label  mt-2"> <?= Yii::t('main', 'tech_support') ?>
                     </div>
                     <a class="gua_down color_red mt-5"> <img class="mr-2" src="images/icons/down 2.svg" alt="">
-                        Скачать
-                        презентацию о компании</a>
+                        <?= Yii::t('main', 'location') ?></a>
                 </div>
             </div>
 
@@ -171,12 +174,10 @@ $this->title = 'DIOKS';
 <section id="order" class="calculation">
     <div class="container">
         <div class="title_guaranty text-center ">
-            <h2 class="color_blue">Стоимость отправки груза</h2>
+            <h2 class="color_blue"><?= Yii::t('main', 'cost') ?></h2>
         </div>
         <div class="title_guaranty_text text-center ">
-                <span class="color_blue">Мы рассчитаем Вам стоимость груза исходя из ваших данных и отправим на вашу
-                    почту готовое
-                    коммерческое предложение</span>
+            <span class="color_blue"><?= Yii::t('main', 'cost_text') ?></span>
         </div>
 
         <!-- form send order-->
@@ -188,7 +189,7 @@ $this->title = 'DIOKS';
         <div class="row mt-5 justify-content-center align-items-center">
             <div class="col-md-5">
 
-                <label for="from" class="form_label text-uppercase">ОТКУДА</label>
+                <label for="from" class="form_label text-uppercase"><?= Yii::t('main', 'from') ?></label>
 
                 <?= $form->field($order, 'cargo_from_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
 
@@ -202,7 +203,7 @@ $this->title = 'DIOKS';
                 </div>
             </div>
             <div class="col-md-5">
-                <label for="from_to" class="form_label text-uppercase">КУДА</label>
+                <label for="from_to" class="form_label text-uppercase"><?= Yii::t('main', 'to') ?></label>
                 <?= $form->field($order, 'cargo_to_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
                 <!---->
                 <!--                <select name="from_to" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">-->
@@ -217,7 +218,7 @@ $this->title = 'DIOKS';
             </div>
 
             <div class="col-md-5">
-                <label for="how" class="form_label text-uppercase">Наименование груза</label>
+                <label for="how" class="form_label text-uppercase"><?= Yii::t('main', 'cargo_name') ?></label>
                 <?= $form->field($order, 'name_ru')->textInput(['maxlength' => true,
                     'class' => 'form-control form_calculate',
                     'placeholder' => 'Введите наименование груза'])->label(false) ?>
@@ -228,7 +229,7 @@ $this->title = 'DIOKS';
 
             </div>
             <div class="col-md-5">
-                <label for="cargo_name" class="form_label text-uppercase">вид транспорта</label>
+                <label for="cargo_name" class="form_label text-uppercase"><?= Yii::t('main', 'type') ?></label>
                 <?= $form->field($order, 'cargo_type')->dropDownList($transport, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
 
                 <!--                --><? //= $form->field($order, 'cargo_type')->textInput(['maxlength' => true,
@@ -237,27 +238,27 @@ $this->title = 'DIOKS';
 
             </div>
             <div class="col-md-5">
-                <label for="mass" class="form_label text-uppercase">Объем/размеры </label>
+                <label for="mass" class="form_label text-uppercase"><?= Yii::t('main', 'size') ?></label>
                 <?= $form->field($order, 'mass')->textInput(['maxlength' => true,
                     'class' => 'form-control form_calculate',
-                    'placeholder' => 'Введите объем/размеры'])->label(false) ?>
+                    'placeholder' => Yii::t('main', 'enter_size')])->label(false) ?>
             </div>
             <div class="col-md-2 text-center">
 
             </div>
             <div class="col-md-5">
-                <label for="whom" class="form_label text-uppercase">Код ТНВЭД</label>
+                <label for="whom" class="form_label text-uppercase"><?= Yii::t('main', 'hscode') ?></label>
                 <?= $form->field($order, 'code')->textInput(['maxlength' => true,
                     'class' => 'form-control form_calculate',
-                    'placeholder' => 'Введите код ТНВЭД'])->label(false) ?>
-                <!--                <input type="text" name="code" class="form-control form_calculate"-->
-                <!--                       placeholder="Введите код ТНВЭД">-->
+                    'placeholder' => Yii::t('main', 'hscode_enter')])->label(false) ?>
             </div>
 
             <div class="col-md-5">
-                <label for="whom" class="form_label text-uppercase">Имя</label>
+                <label for="whom" class="form_label text-uppercase"><?= Yii::t('main', 'name') ?></label>
 
-                <?= $form->field($order, 'client_name')->textInput(['maxlength' => true, 'class' => 'form-control form_calculate', 'placeholder' => 'Введите ваше имя'])->label(false) ?>
+                <?= $form->field($order, 'client_name')->textInput(['maxlength' => true, '
+                class' => 'form-control form_calculate',
+                    'placeholder' => Yii::t('main', 'name_enter')])->label(false) ?>
 
                 <!--                <input type="text" name="name" class="form-control form_calculate"-->
                 <!--                       placeholder="Введите ваше имя">-->
@@ -266,27 +267,26 @@ $this->title = 'DIOKS';
 
             </div>
             <div class="col-md-5">
-                <label for="how" class="form_label text-uppercase">Номер телефона</label>
+                <label for="how" class="form_label text-uppercase"><?= Yii::t('main', 'phone') ?></label>
 
                 <?= $form->field($order, 'phone')->textInput(['maxlength' => true,
                     'id' => 'phone',
                     'class' => 'form-control form_calculate',
-                    'placeholder' => 'Введите ваш номер телефона'])->label(false) ?>
+                    'placeholder' => Yii::t('main', 'phone_enter')])->label(false) ?>
 
                 <!--                <input type="text" name="phone" class="form-control form_calculate"-->
                 <!--                       placeholder="Введите ваш номер телефона">-->
             </div>
 
             <div class="send_form d-block mt-4 flex-column">
-                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="submit" class="btn btn-primary"><?= Yii::t('main', 'send') ?></button>
             </div>
 
         </div>
         <div class="d-block text-center">
             <input onclick="myEmail()" type="checkbox" id="myCheck" class="mt-4">
             <span class="title_guaranty_text text-center color_gray">
-                    Отправить коммерческое предложение
-                </span>
+                 <?= Yii::t('main', 'send_offer') ?> </span>
             <div class="row mt-3">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
@@ -313,11 +313,10 @@ $this->title = 'DIOKS';
 <section id="service" class="service">
     <div class="container">
         <div class="title_guaranty text-center">
-            <h2 class="color_blue">Наши Услуги</h2>
+            <h2 class="color_blue"><?= Yii::t('main', 'Services') ?></h2>
         </div>
         <div class="title_guaranty_text text-center ">
-                <span class="color_gray">Обеспечиваем безопасность перевозимого груза и консультируем при
-                    погрузке</span>
+                <span class="color_gray"><?= Yii::t('main', 'Services_text') ?></span>
         </div>
         <div class="row justify-content-between mt-5 flex-wrap">
 

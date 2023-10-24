@@ -74,4 +74,5 @@ return [
     'address_info' => 'DIOKS DREAM LOGISTICS готов помочь вам при транспортировке
                             вашего груза по адресу:',
 
+
 ];

@@ -23,11 +23,11 @@ AppAsset::register($this);
         <!--        <link rel="preconnect" href="https://fonts.googleapis.com">-->
         <!--        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
         <title>DIOKS</title>
-        <!--        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-s">-->
+                <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-s">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.png">
-        <!--        <link rel="mask-icon" href="/images/favicon.png">-->
+                <link rel="mask-icon" href="images/icons/favicon.svg">
         <meta property="og:site_name" content="DIOKS">
         <meta property="og:title" content="DIOKS">
         <meta property="og:locale" content="uz">
@@ -208,7 +208,7 @@ AppAsset::register($this);
                             </div>
                         </div>
                     </div>
-                    <img class="w-100 px-5 mt-5 gray_logo" src="images/banner/foot.png" alt="">
+                    <img class="w-100 px-5 mt-5" src="images/icons/logo_footer.svg" alt="">
                 </div>
                 <div class="col-md-5">
                     <div class="map">
@@ -242,7 +242,7 @@ AppAsset::register($this);
                     <div class="col-md-5 logo d-flex justify-content-between align-items-center">
                         <span class="color_red">Copyright ©2023 Dioks Dream Logistics</span>
                         <a href="#" class="px-4">
-                            <img style="width: 162px" class="invert" src="images/icons/logo_footer.png" alt="">
+                            <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">

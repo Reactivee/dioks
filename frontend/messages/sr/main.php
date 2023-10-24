@@ -67,12 +67,20 @@ return [
     'Services' => 'Services',
     'Services_text' => 'We ensure the safety of the transported cargo and  loading support',
     'faq' => 'Frequently Asked Questions',
-    'full_address' => 'Адрес и Время работы',
-    'text_address' => '  г. Ташкент Мирабадский район, ул. А.
-                            Фитрат
-                            дом-2/1 с 9:00 до 18:00 с Понедельника по Пятницу',
-    'address_info' => 'DIOKS DREAM LOGISTICS готов помочь вам при транспортировке
-                            вашего груза по адресу:',
+    'full_address' => 'Address and Opening hours',
+    'text_address' => 'Tashkent, Mirabad district, A. Fitrat str. 2/1 from 9:00 to 18:00 Monday to Friday',
+    'address_info' => 'DIOKS DREAM LOGISTICS is ready to help you with the transportation of your cargo in:',
+
+    'Liquid cargo' => 'Liquid cargo',
+    'Dangerous cargo' => 'Dangerous cargo',
+    'Flammable cargo' => 'Flammable cargo',
+    'Plants' => 'Plants',
+    'Fragile cargo' => 'Fragile cargo',
+    'Bulk cargo' => 'Bulk cargo',
+    'Fruit and vegetables' => 'Fruit and vegetables',
+    'Food ' => 'Food',
+    'Gaseous substances' => 'Gaseous substances',
+    'Metal' => 'Metal',
 
 
 ];

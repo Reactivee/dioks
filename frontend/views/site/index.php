@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 $this->title = 'DIOKS';
 
 ?>
-<section class="check_order ">
+<section id="check_order" class="check_order ">
     <div class="container">
 
         <? Pjax::begin(); ?>
@@ -241,7 +241,7 @@ $this->title = 'DIOKS';
                 <label for="mass" class="form_label text-uppercase"><?= Yii::t('main', 'size') ?></label>
                 <?= $form->field($order, 'mass')->textInput(['maxlength' => true,
                     'class' => 'form-control form_calculate',
-                    'placeholder' => Yii::t('main', 'enter_size')])->label(false) ?>
+                    'placeholder' => Yii::t('main', 'size_enter')])->label(false) ?>
             </div>
             <div class="col-md-2 text-center">
 
@@ -325,7 +325,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(6).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Жидкий груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Liquid cargo') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -333,7 +333,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(7).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Опасный груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Dangerous cargo') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -341,7 +341,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(8).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Горючее</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Flammable cargo') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -349,7 +349,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(9).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Растения</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Plants') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -357,7 +357,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(10).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Хрупкий груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Fragile cargo') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -365,7 +365,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(11).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Сыпучий груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Bulk cargo') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -373,7 +373,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/🦆%20icon%20_Carrot_.svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Овощи и фрукты</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Fruit and vegetables') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -381,7 +381,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(13).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Пищевой груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Food') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -389,7 +389,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(14).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Жидкость</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Gaseous substances') ?></h3>
                 </div>
             </div>
             <div class="col-md-service">
@@ -397,7 +397,7 @@ $this->title = 'DIOKS';
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(15).svg" alt="">
                     </div>
-                    <h3 class="title_service color_blue font-weight-bold">Технический груз</h3>
+                    <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Metal') ?></h3>
                 </div>
             </div>
 

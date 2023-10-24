@@ -58,13 +58,13 @@ AppAsset::register($this);
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-4 logo">
-                        <a href="#">
+                        <a href="/">
                             <img style="width: 160px" src="images/icons/logo_footer.svg" alt="">
                         </a>
                     </div>
                     <div class="col-md-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
-                            <li><a href="/" class="text-uppercase"><?= Yii::t('main', 'main') ?> </a></li>
+<!--                            <li><a href="/" class="text-uppercase">--><?//= Yii::t('main', 'main') ?><!-- </a></li>-->
                             <li><a href="#service" class="text-uppercase"><?= Yii::t('main', 'Service') ?></a></li>
                             <li><a href="#guaranty" class="text-uppercase"><?= Yii::t('main', 'Guarantees') ?></a></li>
                             <li><a href="#contact" class="text-uppercase"><?= Yii::t('main', 'Address') ?> </a></li>
@@ -122,8 +122,8 @@ AppAsset::register($this);
                             </h2>
                         </div>
                         <div class="header_btns d-flex">
-                            <a class="btn font-weight-bold"><?= Yii::t('main', 'check') ?></a>
-                            <a class="btn font-weight-bold"><?= Yii::t('main', 'submit') ?></a>
+                            <a href="#check_order" class="btn font-weight-bold"><?= Yii::t('main', 'check') ?></a>
+                            <a href="#order" class="btn font-weight-bold"><?= Yii::t('main', 'submit') ?></a>
                         </div>
 
                     </div>

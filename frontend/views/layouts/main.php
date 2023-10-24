@@ -247,10 +247,11 @@ AppAsset::register($this);
                     </div>
                     <div class="col-md-7 text-right d-flex align-items-center justify-content-end">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#guaranty">Гарантии</a></li>
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#service">Услуги</a></li>
+
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#guaranty"><?= Yii::t('main', 'Guarantees') ?></a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#service"><?= Yii::t('main', 'Service') ?></a></li>
                             <li><a class="nav_items_footer_link text-decoration-none" href="#contact">FAQ</a></li>
-                            <li><a class="nav_items_footer_link text-decoration-none" href="#contact">Контакты </a></li>
+                            <li><a class="nav_items_footer_link text-decoration-none" href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
                             <img src="images/icons/Button (1).svg" alt="">

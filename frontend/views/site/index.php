@@ -144,7 +144,7 @@ $this->title = 'DIOKS';
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
                         <img class="add_icon" src="images/icons/🦆 icon _Alternate Money Bill_.svg" alt="">
                     </div>
-                    <div class="col-item-gua_title  mt-4"> <?= Yii::t('main', 'ser_guaranty') ?>
+                    <div class="col-item-gua_title  mt-4"> <?= Yii::t('main', 'payment') ?>
                     </div>
                     <div class="col-item-gua_label  mt-2"> <?= Yii::t('main', 'detail') ?>
                     </div>

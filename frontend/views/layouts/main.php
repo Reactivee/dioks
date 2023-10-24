@@ -282,7 +282,7 @@ AppAsset::register($this);
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-5 logo_footer d-flex justify-content-between align-items-center">
-                        <span class="color_red mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics</span>
+                        <span class="color_white mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics</span>
                         <a href="#" class="px-4">
                             <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
                         </a>

@@ -69,16 +69,15 @@ AppAsset::register($this);
                             <li><a href="#guaranty" class="text-uppercase"><?= Yii::t('main', 'Guarantees') ?></a></li>
                             <li><a href="#contact" class="text-uppercase"><?= Yii::t('main', 'Address') ?> </a></li>
                             <li><a href="#order" class="text-uppercase"><?= Yii::t('main', 'submit') ?></a></li>
-                            <li><a href="#">RU | UZ | EN</a></li>
+                            <li>
+                                <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
+                                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
+                                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
+                                ]); ?>
+
+                            </li>
                         </ul>
-<!--                        <div class="lang">-->
-<!--                            <div class="dropdown">-->
-<!--                                --><?//= \lajax\languagepicker\widgets\LanguagePicker::widget([
-//                                    'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_BUTTON,
-//                                    'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_SMALL
-//                                ]); ?>
-<!--                            </div>-->
-<!--                        </div>-->
+
                     </div>
                 </div>
             </div>

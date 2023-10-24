@@ -109,9 +109,9 @@ return [
 
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
-            'enableDefaultLanguageUrlCode' => false,
-//            'enableLanguagePersistence' => true,
-            'languages' => ['ru', 'en', 'fas'],
+//            'enableDefaultLanguageUrlCode' => true,
+//            'enableLanguagePersistence' => false,
+            'languages' => ['uz', 'ru', 'en'],
             'enableLanguageDetection' => true,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -125,7 +125,7 @@ return [
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>/<slug:\w+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
+
             ],
         ],
 

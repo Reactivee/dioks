@@ -256,8 +256,7 @@ $this->title = 'DIOKS';
             <div class="col-md-5">
                 <label for="whom" class="form_label text-uppercase"><?= Yii::t('main', 'name') ?></label>
 
-                <?= $form->field($order, 'client_name')->textInput(['maxlength' => true, '
-                class' => 'form-control form_calculate',
+                <?= $form->field($order, 'client_name')->textInput(['maxlength' => true, 'class' => 'form-control form_calculate',
                     'placeholder' => Yii::t('main', 'name_enter')])->label(false) ?>
 
                 <!--                <input type="text" name="name" class="form-control form_calculate"-->

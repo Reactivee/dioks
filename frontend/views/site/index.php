@@ -404,5 +404,38 @@ $this->title = 'DIOKS';
         </div>
     </div>
 </section>
+<section id="about" class=" about">
+    <div class="container">
+        <div class="title_guaranty text-center">
+            <h2>  <?= Yii::t('main', 'about') ?></h2>
+        </div>
+        <div class="title_guaranty_text text-center ">
+            <span> <?= Yii::t('main', 'about_text') ?></span>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4">
+                <div class="col-item-about text-center">
+                        <div class="about_figure">15+</div>
+                        <div class="about_figure_text"><?= Yii::t('main', 'about_year') ?></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-item-about text-center">
+                    <div class="about_figure">100+</div>
+                    <div class="about_figure_text"><?= Yii::t('main', 'about_country') ?></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-item-about text-center">
+                    <div class="about_figure">15+</div>
+                    <div class="about_figure_text"><?= Yii::t('main', 'miles') ?></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 
 

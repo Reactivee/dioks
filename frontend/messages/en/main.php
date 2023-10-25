@@ -29,7 +29,7 @@ return [
     'time' => 'Approximate delivery time:',
     'cargo_id' => 'Cargo ID',
     'cargo_id_type' => 'Please, type in Cargo-ID',
-    'search'=>'Search',
+    'search' => 'Search',
 
 
     //    guaranty
@@ -84,5 +84,20 @@ return [
     'Food' => 'Food',
     'Gaseous substances' => 'Gaseous substances',
     'Metal' => 'Metal',
+    //    about
+    'about' => 'About us',
+    'about_text' => 'DIOKS-DREAM LOGISTICS is a guarantee of safe and on-time cargo transportation, which is provided by a combination of years of experience,
+high qualified and skilled specialists and high technologies. ',
+    'about_year' => 'years of experience',
+    'about_country' => 'countries of transportation',
+    'miles' => 'transportations',
+
+    // faq
+    'type_cargo' => 'What type of cargo can you transport?',
+    'type_cargo_ans' => 'We transport most of the popular types of cargo, including dangerous cargo. To clarify the possibility of transportation, you can call our office by the number indicated on the website.',
+    'type_trans' => 'What types of transport do you use when transporting goods?',
+    'type_trans_ans' => 'Currently, air, auto, railway and multimodal transportation are available',
+    'locate_cargo' => 'How can I find out the current location of my cargo?',
+    'locate_cargo_ans' => 'Online tracking of your cargo is available on our website',
 
 ];

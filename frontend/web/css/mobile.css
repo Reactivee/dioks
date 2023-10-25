@@ -111,6 +111,20 @@
         margin: 0 0 26px 0 !important;
     }
 
+    .col-item-about {
+        margin-bottom: 20px;
+    }
+
+    .about_figure {
+        font-size: 60px;
+    }
+
+    .about_figure_text {
+        margin-top: -29px;
+        font-size: 32px;
+
+    }
+
     footer {
         margin: 0 !important;
     }

@@ -83,4 +83,19 @@ return [
     'Gaseous substances' => 'Gaz holatidagi yuk',
     'Metal' => 'Metallar',
 
+    //    about
+    'about' => 'Kompaniya haqida',
+    'about_text' => "DIOKS-DREAM LOGISTICS — bu malakali mutaxassislar, ko'p yillik tajriba va yuqori texnologiyalar birligi asosida kafolatlangan sifatli yetkazish xizmati.  ",
+    'about_year' => 'yillik tajriba',
+    'about_country' => 'yetkazish mamlakatlari',
+    'miles' => 'yetkazishlar',
+
+    //    faq
+    'type_cargo' => 'Qaysi turdagi yuklarni yetkazib berishingiz mumkin? ',
+    'type_cargo_ans' => "Biz hozirgi paytda ommabop barcha yuk turlarini, shu jumladan xavfli yuklarni ham tashiymiz. Siz bizning ofisimizga veb-saytda ko'rsatilgan raqamga qo'ng'iroq qilib, tashish imkoniyatini aniqlab olishingiz mumkin.",
+    'type_trans' => 'Yuklarni tashishda qanday transport turlaridan foydalanasiz?',
+    'type_trans_ans' => "Hozirgi vaqtda avia, avtomobil, temir yo'l va multimodal transport mavjud",
+    'locate_cargo' => 'Mening yukim hozir qayerdaligini qanday bilib olishim mumkin?',
+    'locate_cargo_ans' => 'Saytimizda yukning holatini onlayn treking yordamida bilib olishingiz mumkin',
+
 ];

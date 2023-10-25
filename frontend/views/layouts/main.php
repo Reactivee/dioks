@@ -190,10 +190,10 @@ AppAsset::register($this);
                             <div class="card" id="headingOne">
                                 <div class="card-header">
                                     <h2 class="mb-0">
-                                        <a class="btn color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
                                            data-target="#collapseOne" aria-expanded="true"
                                            aria-controls="collapseOne">
-                                            Add commonly asked questions here
+                                            <?= Yii::t('main', 'type_cargo') ?>
                                         </a>
                                     </h2>
                                 </div>
@@ -201,50 +201,47 @@ AppAsset::register($this);
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Some placeholder content for the first accordion panel. This panel is shown
-                                        by
-                                        default,
-                                        thanks to the
-                                        <code>.show</code> class.
+                                        <?= Yii::t('main', 'type_cargo_ans') ?>
+
                                     </div>
                                 </div>
                             </div>
+
                             <div class="card">
                                 <div class="card-header" id="headingTwo">
                                     <h2 class="mb-0">
-                                        <a class="btn color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
                                            data-target="#collapseTwo" aria-expanded="false"
                                            aria-controls="collapseTwo">
-                                            Add commonly asked questions here
+                                            <?= Yii::t('main', 'type_trans') ?>
+
                                         </a>
                                     </h2>
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Some placeholder content for the second accordion panel. This panel is
-                                        hidden by
-                                        default.
+                                        <?= Yii::t('main', 'type_trans_ans') ?>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="headingThree">
                                     <h2 class="mb-0">
-                                        <a class="btn color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
                                            data-target="#collapseThree" aria-expanded="false"
                                            aria-controls="collapseThree">
-                                            Add commonly asked questions here
+                                            <?= Yii::t('main', 'locate_cargo') ?>
+
                                         </a>
                                     </h2>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        And lastly, the placeholder content for the third and final accordion panel.
-                                        This panel
-                                        is hidden by
-                                        default.
+                                        <?= Yii::t('main', 'locate_cargo_ans') ?>
+
                                     </div>
                                 </div>
                             </div>

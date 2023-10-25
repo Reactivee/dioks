@@ -14,6 +14,7 @@
 .color_gray {
     color: #b6b9ce !important;
 }
+
 .color_black {
     color: black !important;
 }
@@ -74,7 +75,8 @@ header {
     font-size: 14px;
     color: white;
 }
-.lang_link{
+
+.lang_link {
     margin-left: 35px;
 }
 
@@ -82,9 +84,11 @@ header {
 .nav_items a:hover {
     color: #9fcbee;
 }
-.lang_link:hover{
+
+.lang_link:hover {
     color: black;
 }
+
 .main_recommends {
     margin-top: 140px;
 }
@@ -233,12 +237,15 @@ header {
 .dropdown-menu {
     background-color: #9FCBEE;
 }
-.dropdown-menu  a {
+
+.dropdown-menu a {
     color: black;;
 }
-.logo img{
+
+.logo img {
     width: 160px;
 }
+
 /* Check wrapper */
 .check_order {
     padding: 70px 0;
@@ -560,6 +567,29 @@ header {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+
+/*about*/
+.about {
+    padding: 60px 0 120px 0;
+    background: url("/images/banner/about.png");
+}
+
+.col-item-about {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.about_figure {
+    font-size: 128px;
+}
+
+.about_figure_text {
+    margin-top: -39px;
+    font-size: 32px;
+
+}
+
 
 /* footer */
 footer {

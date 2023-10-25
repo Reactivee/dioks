@@ -32,6 +32,8 @@ AppAsset::register($this);
         <meta property="og:title" content="DIOKS">
         <meta property="og:locale" content="uz">
         <?php $this->head() ?>
+        <script src="//code.jivosite.com/widget/AhFpK4LiBM" async></script>
+
     </head>
     <body class="d-flex flex-column h-100">
     <?php $this->beginBody() ?>

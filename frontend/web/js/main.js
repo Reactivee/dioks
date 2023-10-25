@@ -37,3 +37,8 @@ nav_items_footer_link.addEventListener("click", function () {
     mobile_menu.classList.toggle("show");
     overlay.style = 'display:none'
 });
+
+$('.js-preloader').preloadinator({
+    scroll: false,
+    minTime: 100000
+});

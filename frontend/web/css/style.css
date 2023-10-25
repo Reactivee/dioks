@@ -246,6 +246,10 @@ header {
     width: 160px;
 }
 
+.logo_pre img {
+    width: 260px;
+}
+
 /* Check wrapper */
 .check_order {
     padding: 70px 0;

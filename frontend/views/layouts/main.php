@@ -42,9 +42,9 @@ AppAsset::register($this);
 
         <div class="dots d-flex flex-column">
 
-            <a class="navbar-brand mr-auto">
-                <div class=" logo">
-                    <img src="images/icons/logo_footer.svg" alt="logo">
+            <a class="navbar-brand ">
+                <div class="logo_pre text-center">
+                    <img src="images/icons/logo.png" alt="logo">
                 </div>
             </a>
 
@@ -52,6 +52,7 @@ AppAsset::register($this);
                 <div class="dot dot_yel"></div>
                 <div class="dot dot_blue"></div>
                 <div class="dot dot_yel"></div>
+                <div class="dot dot_blue"></div>
                 <div class="dot dot_blue"></div>
             </div>
         </div>

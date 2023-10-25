@@ -28,7 +28,7 @@ return [
     'City' => 'Shahar:',
     'time' => 'Taxminiy yetkazish vaqti:',
     'cargo_id' => 'Yetkazma ID raqami',
-    'cargo_id_type' => 'Yetkazma ID raqamini kiriting',
+    'cargo_id_type' => "Yetkazma ID raqamini kiriting",
     'search' => 'Qidirish',
 
     //    guaranty

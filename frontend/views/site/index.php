@@ -28,7 +28,7 @@ $this->title = 'DIOKS';
                         <div class="check_order_label mb-3"><?= Yii::t('main', 'cargo_id') ?></div>
                         <div class="  d-flex align-items-center">
                             <input type="text" name="truck" class="w-100 check_order_input"
-                                   placeholder=<?= Yii::t('main', 'cargo_id_type') ?>>
+                                   placeholder="<?= Yii::t('main', 'cargo_id_type') ?>">
                             <button type="submit" class="btn check_order_btn"> <?= Yii::t('main', 'search') ?></button>
                         </div>
                         <!--                        <span class="check_info">Актуальная информация о статусе вашего груза и городе его-->

@@ -90,14 +90,15 @@ class SiteController extends Controller
 //            'showSeparator' => true,
 //            'body' => 'This is a successful growling alert.'
 //        ]);
+        $lang = Yii::$app->language;
 
         $order = new Order();
         $city = Country::find()->where(['not', ['parent_id' => null]])->all();
-        $city = ArrayHelper::map($city, 'id', 'name_ru');
+        $city = ArrayHelper::map($city, 'id', 'name_' . $lang);
 
         $transport = TypeTransport::find()->all();
         if ($transport)
-            $transport = ArrayHelper::map($transport, 'id', 'name_ru');
+            $transport = ArrayHelper::map($transport, 'id', 'name_' . $lang);
 
 
         if (Yii::$app->request->post()) {

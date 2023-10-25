@@ -124,7 +124,9 @@
         font-size: 32px;
 
     }
-
+    .title_service{
+        font-size: 17px;
+    }
     footer {
         margin: 0 !important;
     }

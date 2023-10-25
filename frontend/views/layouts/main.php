@@ -85,7 +85,11 @@ AppAsset::register($this);
 
             ]); ?>
             <div class="social d-flex align-items-center">
-                <img src="images/icons/Button (1).svg" alt="">
+                <a href="https://t.me/oksachi">
+                                <span class="social_round">
+                                <img src="images/icons/tg.svg" alt="">
+                                </span>
+                </a>
                 <img class="mx-3" src="images/icons/Button (2).svg" alt="">
                 <img src="images/icons/Button.svg" alt="">
             </div>

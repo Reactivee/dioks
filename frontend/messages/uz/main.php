@@ -67,8 +67,8 @@ return [
     //  service
     'Services' => 'Xizmatlarimiz',
     'Services_text' => 'Biz yetkazib berilayotgan yuk xavfsizligini ta\'minlaymiz hamda yuklash jarayonida qo\'llab-quvvatlaymiz',
-    'faq' => 'Frequently Asked Questions',
-    'full_address' => 'Адрес и Время работы',
+    'faq' => 'Ko\'p Beriladigan Savollar',
+    'full_address' => 'Manzil va ish vaqti',
     'text_address' => "Toshkent shahri Mirobod tumani, A. Fitrat ko'chasi 2/1 uy, Dushanbadan Jumaga qadar, soat 9:00 dan 18:00 gacha",
     'address_info' => 'DIOKS DREAM LOGISTICS quyidagi manzilda  sizga yordam berishga tayyor:',
 

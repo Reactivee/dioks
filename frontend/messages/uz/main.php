@@ -29,7 +29,7 @@ return [
     'time' => 'Taxminiy yetkazish vaqti:',
     'cargo_id' => 'Yetkazma ID raqami',
     'cargo_id_type' => 'Yetkazma ID raqamini kiriting',
-    'search'=>'Qidirish',
+    'search' => 'Qidirish',
 
     //    guaranty
     'guaranty' => 'Kafolatlarimiz',
@@ -69,11 +69,8 @@ return [
     'Services_text' => 'Biz yetkazib berilayotgan yuk xavfsizligini ta\'minlaymiz hamda yuklash jarayonida qo\'llab-quvvatlaymiz',
     'faq' => 'Frequently Asked Questions',
     'full_address' => 'Адрес и Время работы',
-    'text_address' => '  г. Ташкент Мирабадский район, ул. А.
-                            Фитрат
-                            дом-2/1 с 9:00 до 18:00 с Понедельника по Пятницу',
-    'address_info' => 'DIOKS DREAM LOGISTICS готов помочь вам при транспортировке
-                            вашего груза по адресу:',
+    'text_address' => "Toshkent shahri Mirobod tumani, A. Fitrat ko'chasi 2/1 uy, Dushanbadan Jumaga qadar, soat 9:00 dan 18:00 gacha",
+    'address_info' => 'DIOKS DREAM LOGISTICS quyidagi manzilda  sizga yordam berishga tayyor:',
 
     'Liquid cargo' => 'Quyiladigan yuk',
     'Dangerous cargo' => 'Xavfli yuk',

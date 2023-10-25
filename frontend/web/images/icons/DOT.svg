@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="14.3926mm" height="14.3926mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 77.53 77.53"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:url(#id0)}
+   ]]>
+  </style>
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.989562 -0 -0 0.989562 0 0)" cx="38.76" cy="38.76" r="8.98" fx="38.76" fy="38.76">
+   <stop offset="0" style="stop-opacity:1; stop-color:#A8FEFF"/>
+   <stop offset="0.129412" style="stop-opacity:1; stop-color:#7DF2FF"/>
+   <stop offset="0.258824" style="stop-opacity:1; stop-color:#42E0FF"/>
+   <stop offset="0.411765" style="stop-opacity:0.847059; stop-color:#37AAED"/>
+   <stop offset="0.588235" style="stop-opacity:0.419608; stop-color:#0972EF"/>
+   <stop offset="0.780392" style="stop-opacity:0.227451; stop-color:#0146FB"/>
+   <stop offset="0.901961" style="stop-opacity:0.117647; stop-color:#013FF4"/>
+   <stop offset="1" style="stop-opacity:0; stop-color:#0139EE"/>
+  </radialGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="38.76" cy="38.76" r="38.76"/>
+ </g>
+</svg>

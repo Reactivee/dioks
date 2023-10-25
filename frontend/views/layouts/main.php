@@ -78,13 +78,13 @@ AppAsset::register($this);
     <header class="d-flex align-items-center">
         <div class="back_map">
             <div class="rus">
-                <!--                <img src="/images/icons/dot1.svg" alt="">-->
-                <!--                <img src="/images/icons/dot2.svg" alt="">-->
-                <!--                <img src="/images/icons/dot3.svg" alt="">-->
-                <!--                <img src="/images/icons/dot4.svg" alt="">-->
-                <!--                <img src="/images/icons/dot5.svg" alt="">-->
-                <!--                <img src="/images/icons/dot6.svg" alt="">-->
-                <!--                <img style="color: red" src="/images/icons/light1.svg" alt="">-->
+<!--                                <img src="/images/icons/dot1.svg" alt="">-->
+                                <img src="/images/icons/DOT.svg
+" alt="">
+<!--                                <img src="/images/icons/dot3.svg" alt="">-->
+<!--                                <img src="/images/icons/dot4.svg" alt="">-->
+<!--                                <img src="/images/icons/dot5.svg" alt="">-->
+<!--                                <img src="/images/icons/dot6.svg" alt="">-->
 
             </div>
             <img class="all_map" src="images/banner/map 1.png" alt="">

@@ -29,6 +29,8 @@ return [
     'time' => 'Примерное время доставки:',
     'cargo_id' => 'ID-номер перевозки',
     'cargo_id_type' => 'Введите ID-номер вашего груза',
+    'search'=>'Поиск',
+
 
     //    guaranty
     'guaranty' => 'Наши Гарантии',
@@ -78,7 +80,7 @@ return [
     'Fragile cargo' => 'Хрупкий груз',
     'Bulk cargo' => 'Сыпучий груз',
     'Fruit and vegetables' => 'Овощи и фрукты',
-    'Food ' => 'Пищевая продукция',
+    'Food' => 'Пищевая продукция',
     'Gaseous substances' => 'Газообразные вещества',
     'Metal' => 'Металлы',
 

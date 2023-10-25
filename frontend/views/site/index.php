@@ -28,8 +28,8 @@ $this->title = 'DIOKS';
                         <div class="check_order_label mb-3"><?= Yii::t('main', 'cargo_id') ?></div>
                         <div class="  d-flex align-items-center">
                             <input type="text" name="truck" class="w-100 check_order_input"
-                                   placeholder="Введите трек-номер вашего груза">
-                            <button type="submit" class="btn check_order_btn"> Поиск</button>
+                                   placeholder=<?= Yii::t('main', 'cargo_id_type') ?>>
+                            <button type="submit" class="btn check_order_btn"> <?= Yii::t('main', 'search') ?></button>
                         </div>
                         <!--                        <span class="check_info">Актуальная информация о статусе вашего груза и городе его-->
                         <!--                                расположения</span>-->
@@ -221,7 +221,7 @@ $this->title = 'DIOKS';
                 <label for="how" class="form_label text-uppercase"><?= Yii::t('main', 'cargo_name') ?></label>
                 <?= $form->field($order, 'name_ru')->textInput(['maxlength' => true,
                     'class' => 'form-control form_calculate',
-                    'placeholder' => 'Введите наименование груза'])->label(false) ?>
+                    'placeholder' => Yii::t('main', 'enter_name')])->label(false) ?>
 
             </div>
 
@@ -294,7 +294,7 @@ $this->title = 'DIOKS';
                         <?= $form->field($order, 'email')->textInput(['maxlength' => true,
                             'id' => '',
                             'class' => 'form-control form_calculate',
-                            'placeholder' => 'Введите ваш email'])->label(false) ?>
+                            'placeholder' => Yii::t('main', 'email')])->label(false) ?>
                     </div>
 
                 </div>
@@ -315,7 +315,7 @@ $this->title = 'DIOKS';
             <h2 class="color_blue"><?= Yii::t('main', 'Services') ?></h2>
         </div>
         <div class="title_guaranty_text text-center ">
-                <span class="color_gray"><?= Yii::t('main', 'Services_text') ?></span>
+            <span class="color_gray"><?= Yii::t('main', 'Services_text') ?></span>
         </div>
         <div class="row justify-content-between mt-5 flex-wrap">
 

@@ -29,6 +29,8 @@ return [
     'time' => 'Approximate delivery time:',
     'cargo_id' => 'Cargo ID',
     'cargo_id_type' => 'Please, type in Cargo-ID',
+    'search'=>'Search',
+
 
     //    guaranty
     'guaranty' => 'Our Guarantees',
@@ -79,7 +81,7 @@ return [
     'Fragile cargo' => 'Fragile cargo',
     'Bulk cargo' => 'Bulk cargo',
     'Fruit and vegetables' => 'Fruit and vegetables',
-    'Food ' => 'Food',
+    'Food' => 'Food',
     'Gaseous substances' => 'Gaseous substances',
     'Metal' => 'Metal',
 

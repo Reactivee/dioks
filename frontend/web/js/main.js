@@ -40,5 +40,5 @@ nav_items_footer_link.addEventListener("click", function () {
 
 $('.js-preloader').preloadinator({
     scroll: false,
-    minTime: 100000
+    minTime: 1000
 });

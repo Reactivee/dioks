@@ -44,10 +44,57 @@ header {
     filter: opacity(0.3);
 }
 
-.rus {
+.start {
     position: absolute;
-    top: 0;
     z-index: 100;
+
+}
+
+.rus {
+    top: 28px;
+    left: 48px;
+}
+
+.rus2 {
+    right: 216px;
+    z-index: 100;
+    top: 81px
+
+}
+
+.rus3 {
+    top: 87px;
+    left: 115px;
+}
+
+.rus4 {
+    bottom: 87px;
+    left: 215px;
+}
+
+.rus5 {
+    bottom: 136px;
+    left: 189px;
+}
+.rus6 {
+    bottom: 123px;
+    left: 415px;
+}
+.rus7 {
+    bottom: 94px;
+    right: 99px
+}
+.rus8 {
+    bottom: 60px;
+    right: 90px;
+}
+.rus9 {
+    top: 77px;
+    right: 398px;
+}
+.rus10 {
+    bottom: 205px;
+    left: 340px
 }
 
 .rus img {

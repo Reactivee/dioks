@@ -98,16 +98,48 @@ AppAsset::register($this);
 
     <header class="d-flex align-items-center">
         <div class="back_map">
-            <div class="rus">
+            <div class="rus start">
                 <!--                                <img src="/images/icons/dot1.svg" alt="">-->
-                <img src="/images/icons/DOT.svg
-" alt="">
+                <img src="/images/icons/DOT.svg" alt="">
                 <!--                                <img src="/images/icons/dot3.svg" alt="">-->
                 <!--                                <img src="/images/icons/dot4.svg" alt="">-->
                 <!--                                <img src="/images/icons/dot5.svg" alt="">-->
                 <!--                                <img src="/images/icons/dot6.svg" alt="">-->
 
             </div>
+            <div class="rus2 start">
+                <img src="/images/icons/DOT.svg" alt="">
+
+            </div>
+            <div class="rus3 start">
+                <img src="/images/icons/DOT.svg" alt="">
+
+            </div>
+            <div class="rus4 start">
+                <img src="/images/icons/DOT.svg" alt="">
+
+            </div>
+            <div class="rus5 start">
+                <img src="/images/icons/DOT.svg" alt="">
+
+            </div>
+            <div class="rus6 start">
+                <img src="/images/icons/DOT.svg" alt="">
+
+            </div>
+            <div class="rus7 start">
+                <img src="/images/icons/DOT.svg" alt="">
+            </div>
+            <div class="rus8 start">
+                <img src="/images/icons/DOT.svg" alt="">
+            </div>
+            <div class="rus9 start">
+                <img src="/images/icons/DOT.svg" alt="">
+            </div>
+            <div class="rus10 start">
+                <img src="/images/icons/DOT.svg" alt="">
+            </div>
+
             <img class="all_map" src="images/banner/map 1.png" alt="">
         </div>
         <div class="nav">

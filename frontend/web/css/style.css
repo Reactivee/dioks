@@ -572,6 +572,8 @@ header {
 .about {
     padding: 60px 0 120px 0;
     background: url("/images/banner/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .col-item-about {

@@ -318,9 +318,16 @@ AppAsset::register($this);
                                    href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
-                            <img src="images/icons/Button (1).svg" alt="">
-                            <img class="mx-3" src="images/icons/Button (2).svg" alt="">
-                            <img src="images/icons/Button.svg" alt="">
+                            <a href="#">
+                                <img src="images/icons/Button (1).svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="mx-3" src="images/icons/Button (2).svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/Button.svg" alt="">
+                            </a>
+
                         </div>
                     </div>
                 </div>

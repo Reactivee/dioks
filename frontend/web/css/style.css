@@ -689,3 +689,13 @@ footer .card {
     background-color: #00165f;
     margin-top: 70px;
 }
+
+.social_round {
+    background: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

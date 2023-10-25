@@ -427,7 +427,7 @@ $this->title = 'DIOKS';
             </div>
             <div class="col-md-4">
                 <div class="col-item-about text-center">
-                    <div class="about_figure">15+</div>
+                    <div class="about_figure">1000+</div>
                     <div class="about_figure_text"><?= Yii::t('main', 'miles') ?></div>
                 </div>
             </div>

@@ -38,6 +38,24 @@ AppAsset::register($this);
 
 
     <div class="overlay"></div>
+    <div class="preloader  js-preloader flex-center">
+
+        <div class="dots d-flex flex-column">
+
+            <a class="navbar-brand mr-auto">
+                <div class=" logo">
+                    <img src="images/icons/logo_footer.svg" alt="logo">
+                </div>
+            </a>
+
+            <div class="d-flex flex-row mt-4">
+                <div class="dot dot_yel"></div>
+                <div class="dot dot_blue"></div>
+                <div class="dot dot_yel"></div>
+                <div class="dot dot_blue"></div>
+            </div>
+        </div>
+    </div>
     <div class="mobile_menu">
         <div class="row justify-content-between">
             <div class="col-9">
@@ -78,13 +96,13 @@ AppAsset::register($this);
     <header class="d-flex align-items-center">
         <div class="back_map">
             <div class="rus">
-<!--                                <img src="/images/icons/dot1.svg" alt="">-->
-                                <img src="/images/icons/DOT.svg
+                <!--                                <img src="/images/icons/dot1.svg" alt="">-->
+                <img src="/images/icons/DOT.svg
 " alt="">
-<!--                                <img src="/images/icons/dot3.svg" alt="">-->
-<!--                                <img src="/images/icons/dot4.svg" alt="">-->
-<!--                                <img src="/images/icons/dot5.svg" alt="">-->
-<!--                                <img src="/images/icons/dot6.svg" alt="">-->
+                <!--                                <img src="/images/icons/dot3.svg" alt="">-->
+                <!--                                <img src="/images/icons/dot4.svg" alt="">-->
+                <!--                                <img src="/images/icons/dot5.svg" alt="">-->
+                <!--                                <img src="/images/icons/dot6.svg" alt="">-->
 
             </div>
             <img class="all_map" src="images/banner/map 1.png" alt="">
@@ -190,7 +208,8 @@ AppAsset::register($this);
                             <div class="card" id="headingOne">
                                 <div class="card-header">
                                     <h2 class="mb-0">
-                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
                                            data-target="#collapseOne" aria-expanded="true"
                                            aria-controls="collapseOne">
                                             <?= Yii::t('main', 'type_cargo') ?>
@@ -210,7 +229,8 @@ AppAsset::register($this);
                             <div class="card">
                                 <div class="card-header" id="headingTwo">
                                     <h2 class="mb-0">
-                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
                                            data-target="#collapseTwo" aria-expanded="false"
                                            aria-controls="collapseTwo">
                                             <?= Yii::t('main', 'type_trans') ?>
@@ -229,7 +249,8 @@ AppAsset::register($this);
                             <div class="card">
                                 <div class="card-header" id="headingThree">
                                     <h2 class="mb-0">
-                                        <a class="text-decoration-none color_blue btn_collapse" type="button" data-toggle="collapse"
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
                                            data-target="#collapseThree" aria-expanded="false"
                                            aria-controls="collapseThree">
                                             <?= Yii::t('main', 'locate_cargo') ?>

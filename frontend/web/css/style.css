@@ -490,7 +490,7 @@ header {
 
 .col-item-gua:hover .add_icon {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .col-item-gua:hover .col-item-gua_label {

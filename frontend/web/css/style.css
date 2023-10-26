@@ -563,7 +563,7 @@ header {
 }
 
 /* calculation */
-#add_city{
+#add_city,#add_city_to{
     display: none;
 }
 .calculation {

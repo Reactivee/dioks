@@ -95,8 +95,13 @@ class SiteController extends Controller
         $order = new Order();
         $city = Country::find()->where(['not', ['parent_id' => null]])->all();
         $city = ArrayHelper::map($city, 'id', 'name_' . $lang);
-        array_push($city, 'Select');
-//        dd($city);
+//        if ($lang == 'uz')
+//            array_push($city, 'Boshqa...');
+//        if ($lang == 'ru')
+//            array_push($city, 'Другой...');
+//        if ($lang == 'en')
+//            array_push($city, 'Other...');
+
         $transport = TypeTransport::find()->all();
         if ($transport)
             $transport = ArrayHelper::map($transport, 'id', 'name_' . $lang);
@@ -174,6 +179,7 @@ class SiteController extends Controller
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
             } else {
@@ -303,11 +309,10 @@ class SiteController extends Controller
     public function actionGetOrder()
     {
 //        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-//        dd(Yii::$app->request->post());
+
         $order = new Order();
 
-        if (Yii::$app->request->post() && $order->load(Yii::$app->request->post())) {
-
+        if (Yii::$app->request->get() && $order->load(Yii::$app->request->get())) {
 
 //            $req_order = Yii::$app->request->post();
 ////            $generateDoc_Code = Yii::$app->security->generateRandomString(5);

@@ -182,7 +182,7 @@ $this->title = 'DIOKS';
 
         <!-- form send order-->
         <? $form = ActiveForm::begin([
-            'method' => 'POST',
+            'method' => 'GET',
             'action' => '/site/get-order',
             'options' => ['autocomplete' => 'off']]) ?>
 
@@ -191,9 +191,10 @@ $this->title = 'DIOKS';
 
                 <label for="from" class="form_label text-uppercase"><?= Yii::t('main', 'from') ?></label>
 
-                <?= $form->field($order, 'cargo_from_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control', 'id' => 'my_country'])->label(false) ?>
+                <?= $form->field($order, 'cargo_from_location')->dropDownList($city,
+                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country'])->label(false) ?>
 
-<!--                --><?//= $form->field($order, 'additional')->textInput([
+<!--                --><?//= $form->field($order, 'additional_from')->textInput([
 //                    'id' => 'add_city',
 //                    'maxlength' => true,
 //                    'class' => 'form-control form_calculate',
@@ -210,7 +211,15 @@ $this->title = 'DIOKS';
             </div>
             <div class="col-md-5">
                 <label for="from_to" class="form_label text-uppercase"><?= Yii::t('main', 'to') ?></label>
-                <?= $form->field($order, 'cargo_to_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
+                <?= $form->field($order, 'cargo_to_location')->dropDownList($city,
+                    ['class' => 'form_calculate_drop form-control','id' => 'my_country_to'])->label(false) ?>
+
+<!--                --><?//= $form->field($order, 'additional_to')->textInput([
+//                    'id' => 'add_city_to',
+//                    'maxlength' => true,
+//                    'class' => 'form-control form_calculate',
+//                    'placeholder' => Yii::t('main', 'to')])->label(false) ?>
+
                 <!---->
                 <!--                <select name="from_to" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">-->
                 <!--                    --><? // foreach ($city as $key => $item) { ?>

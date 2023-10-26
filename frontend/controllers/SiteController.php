@@ -342,20 +342,19 @@ class SiteController extends Controller
 
     public function actionGetCity($q = null, $id = null)
     {
+        $lang = Yii::$app->language;
+
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-//        $out = ['results' => ['id' => '', 'text' => '']];
-//        if (!is_null($q)) {
-//            $query = new Country();
-//            $query->select('id, name_ru AS text')
-//                ->where(['like', 'name_ru', $q])
-//                ->limit(20);
-//            $command = $query->createCommand();
-//            $data = $command->queryAll();
-//            $out['results'] = array_values($data);
-//        } elseif ($id > 0) {
-//            $out['results'] = ['id' => $id, 'text' => Country::find($id)->name];
-//        }
-        return 'AS';
+        $out = ['results' => ['id' => '', 'text' => '']];
+        if (!is_null($q)) {
+            $query = Country::find()
+                ->select('id, name_' . $lang . ' AS text')
+                ->where(['like', 'name_' . $lang, $q])
+                ->asArray()
+                ->all();
+            $out['results'] = $query;
+        }
+        return $out;
     }
 
 

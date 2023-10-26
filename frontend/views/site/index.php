@@ -195,12 +195,20 @@ $this->title = 'DIOKS';
 
                 echo $form->field($order, 'cargo_from_location')->widget(Select2::classname(), [
                     'data' => $city,
+                    'theme' => Select2::THEME_BOOTSTRAP,
                     'options' => ['class' => 'form-control form_calculate',
                         'placeholder' => Yii::t('main', 'from')],
                     'pluginOptions' => [
                         'allowClear' => true,
                         'minimumInputLength' => 2,
 
+                        'ajax' => [
+                            'url' => \yii\helpers\Url::to([
+                                'get-city'
+                            ]),
+                            'dataType' => 'json',
+                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
+                        ],
                     ],
                 ])->label(false); ?>
 
@@ -228,18 +236,27 @@ $this->title = 'DIOKS';
                 <?
                 echo $form->field($order, 'cargo_to_location')->widget(Select2::classname(), [
                     'data' => $city,
+                    'theme' => Select2::THEME_BOOTSTRAP,
+
                     'options' => ['class' => 'form-control form_calculate',
                         'placeholder' => Yii::t('main', 'to')],
                     'pluginOptions' => [
                         'allowClear' => true,
                         'minimumInputLength' => 2,
+                        'ajax' => [
+                            'url' => \yii\helpers\Url::to([
+                                'get-city'
+                            ]),
+                            'dataType' => 'json',
+                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
+                        ],
 
                     ],
                 ])->label(false); ?>
 
-<!---->
-<!--                --><?//= $form->field($order, 'cargo_to_location')->dropDownList($city,
-//                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country_to'])->label(false) ?>
+                <!---->
+                <!--                --><? //= $form->field($order, 'cargo_to_location')->dropDownList($city,
+                //                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country_to'])->label(false) ?>
 
                 <!--                --><? //= $form->field($order, 'additional_to')->textInput([
                 //                    'id' => 'add_city_to',

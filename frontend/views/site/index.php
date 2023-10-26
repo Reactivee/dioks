@@ -200,7 +200,7 @@ $this->title = 'DIOKS';
                         'placeholder' => Yii::t('main', 'from')],
                     'pluginOptions' => [
                         'allowClear' => true,
-                        'minimumInputLength' => 2,
+//                        'minimumInputLength' => 2,
 
                         'ajax' => [
                             'url' => \yii\helpers\Url::to([
@@ -242,7 +242,7 @@ $this->title = 'DIOKS';
                         'placeholder' => Yii::t('main', 'to')],
                     'pluginOptions' => [
                         'allowClear' => true,
-                        'minimumInputLength' => 2,
+//                        'minimumInputLength' => 2,
                         'ajax' => [
                             'url' => \yii\helpers\Url::to([
                                 'get-city'

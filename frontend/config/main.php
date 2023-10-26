@@ -61,12 +61,13 @@ return [
                 ],
             ],
         ],
+
         'request' => [
             'csrfParam' => 'dioks-frontend',
             'baseUrl' => '',
-//            'parsers' => [
-//                'application/json' => 'yii\web\JsonParser',
-//            ],
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
             'enableCsrfValidation' => false,
 
         ],
@@ -120,5 +121,6 @@ return [
         ],
 
     ],
+    'params' => $params,
 
 ];

@@ -3,6 +3,8 @@
     scroll-behavior: smooth;
 }
 
+
+
 .color_hover {
     color: #9fcbee;
 }
@@ -76,22 +78,27 @@ header {
     bottom: 136px;
     left: 189px;
 }
+
 .rus6 {
     bottom: 123px;
     left: 415px;
 }
+
 .rus7 {
     bottom: 94px;
     right: 99px
 }
+
 .rus8 {
     bottom: 60px;
     right: 90px;
 }
+
 .rus9 {
     top: 77px;
     right: 398px;
 }
+
 .rus10 {
     bottom: 205px;
     left: 340px
@@ -372,6 +379,8 @@ header {
     margin-bottom: 11px;
     padding-left: 15px;
     color: #7b80a4;
+    font-size: 16px;
+
 }
 
 .res_title {
@@ -563,9 +572,10 @@ header {
 }
 
 /* calculation */
-#add_city,#add_city_to{
+#add_city, #add_city_to {
     display: none;
 }
+
 .calculation {
     padding: 60px 0;
 }

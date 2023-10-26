@@ -4,6 +4,7 @@
 
 use kartik\select2\Select2;
 use voime\GoogleMaps\Map;
+use yii\web\JsExpression;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 
@@ -190,15 +191,28 @@ $this->title = 'DIOKS';
             <div class="col-md-5">
 
                 <label for="from" class="form_label text-uppercase"><?= Yii::t('main', 'from') ?></label>
+                <?
 
-                <?= $form->field($order, 'cargo_from_location')->dropDownList($city,
-                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country'])->label(false) ?>
+                echo $form->field($order, 'cargo_from_location')->widget(Select2::classname(), [
+                    'data' => $city,
+                    'options' => ['class' => 'form-control form_calculate',
+                        'placeholder' => Yii::t('main', 'from')],
+                    'pluginOptions' => [
+                        'allowClear' => true,
+                        'minimumInputLength' => 2,
 
-<!--                --><?//= $form->field($order, 'additional_from')->textInput([
-//                    'id' => 'add_city',
-//                    'maxlength' => true,
-//                    'class' => 'form-control form_calculate',
-//                    'placeholder' => Yii::t('main', 'from')])->label(false) ?>
+                    ],
+                ])->label(false); ?>
+
+
+                <!--                --><? //= $form->field($order, 'cargo_from_location')->dropDownList($city,
+                //                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country'])->label(false) ?>
+
+                <!--                --><? //= $form->field($order, 'additional_from')->textInput([
+                //                    'id' => 'add_city',
+                //                    'maxlength' => true,
+                //                    'class' => 'form-control form_calculate',
+                //                    'placeholder' => Yii::t('main', 'from')])->label(false) ?>
 
                 <!--                <input type="text" name="from" class="form-control form_calculate" placeholder="Город отправки">-->
 
@@ -211,14 +225,27 @@ $this->title = 'DIOKS';
             </div>
             <div class="col-md-5">
                 <label for="from_to" class="form_label text-uppercase"><?= Yii::t('main', 'to') ?></label>
-                <?= $form->field($order, 'cargo_to_location')->dropDownList($city,
-                    ['class' => 'form_calculate_drop form-control','id' => 'my_country_to'])->label(false) ?>
+                <?
+                echo $form->field($order, 'cargo_to_location')->widget(Select2::classname(), [
+                    'data' => $city,
+                    'options' => ['class' => 'form-control form_calculate',
+                        'placeholder' => Yii::t('main', 'to')],
+                    'pluginOptions' => [
+                        'allowClear' => true,
+                        'minimumInputLength' => 2,
 
-<!--                --><?//= $form->field($order, 'additional_to')->textInput([
-//                    'id' => 'add_city_to',
-//                    'maxlength' => true,
-//                    'class' => 'form-control form_calculate',
-//                    'placeholder' => Yii::t('main', 'to')])->label(false) ?>
+                    ],
+                ])->label(false); ?>
+
+<!---->
+<!--                --><?//= $form->field($order, 'cargo_to_location')->dropDownList($city,
+//                    ['class' => 'form_calculate_drop form-control', 'id' => 'my_country_to'])->label(false) ?>
+
+                <!--                --><? //= $form->field($order, 'additional_to')->textInput([
+                //                    'id' => 'add_city_to',
+                //                    'maxlength' => true,
+                //                    'class' => 'form-control form_calculate',
+                //                    'placeholder' => Yii::t('main', 'to')])->label(false) ?>
 
                 <!---->
                 <!--                <select name="from_to" class="form-control form_calculate_drop" placeholder="Выбрать город отправки">-->

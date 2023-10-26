@@ -12,6 +12,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+
         'fonts/stylesheet.css',
         'https://unpkg.com/aos@2.3.1/dist/aos.css',
         'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css',

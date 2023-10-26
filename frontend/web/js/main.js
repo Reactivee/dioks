@@ -1,3 +1,5 @@
+AOS.init();
+
 function myEmail() {
     // Get the checkbox
     var checkBox = document.getElementById("myCheck");
@@ -42,3 +44,14 @@ $('.js-preloader').preloadinator({
     scroll: false,
     minTime: 1000
 });
+
+//
+// document.getElementById('my_country').addEventListener('change', function () {
+//     const add_city = document.getElementById('add_city');
+//     if (!this.value) {
+//         add_city.style = 'display:block'
+//     }
+//     var num = $('#my_country option').length;
+//     console.log(num)
+//     console.log('You selected: ', this.value);
+// });

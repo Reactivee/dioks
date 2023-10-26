@@ -563,6 +563,9 @@ header {
 }
 
 /* calculation */
+#add_city{
+    display: none;
+}
 .calculation {
     padding: 60px 0;
 }

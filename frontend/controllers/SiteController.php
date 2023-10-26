@@ -95,7 +95,8 @@ class SiteController extends Controller
         $order = new Order();
         $city = Country::find()->where(['not', ['parent_id' => null]])->all();
         $city = ArrayHelper::map($city, 'id', 'name_' . $lang);
-
+        array_push($city, 'Select');
+//        dd($city);
         $transport = TypeTransport::find()->all();
         if ($transport)
             $transport = ArrayHelper::map($transport, 'id', 'name_' . $lang);

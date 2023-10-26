@@ -24,7 +24,7 @@ $this->title = 'DIOKS';
                 <div class="check_wrapper overflow-hidden h-100">
                     <div class="check_wrapper_title"><?= Yii::t('main', 'check_cargo') ?> </div>
                     <div class="check_wrapper_time font-weight-bold">24/7</div>
-                    <div class="check_form  ">
+                    <div class="check_form">
                         <div class="check_order_label mb-3"><?= Yii::t('main', 'cargo_id') ?></div>
                         <div class="  d-flex align-items-center">
                             <input type="text" name="truck" class="w-100 check_order_input"
@@ -121,7 +121,7 @@ $this->title = 'DIOKS';
             <span> <?= Yii::t('main', 'provide') ?></span>
         </div>
         <div class="row justify-content-center mt-5">
-            <div class="col-md-4">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-4">
                 <div class="col-item-gua text-center">
                     <div class="col-item-gua_img">
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
@@ -136,7 +136,7 @@ $this->title = 'DIOKS';
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div data-aos="fade-up" data-aos-delay="400" class="col-md-4">
                 <div class="col-item-gua  text-center">
                     <div class="col-item-gua_img">
                         <div class="col-item-gua_border_left"></div>
@@ -153,7 +153,7 @@ $this->title = 'DIOKS';
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div data-aos="fade-up" data-aos-delay="500" class="col-md-4">
                 <div class="col-item-gua text-center">
                     <div class="col-item-gua_img">
                         <img class="round_icon" src="images/icons/Круги 2.svg" alt="">
@@ -191,10 +191,16 @@ $this->title = 'DIOKS';
 
                 <label for="from" class="form_label text-uppercase"><?= Yii::t('main', 'from') ?></label>
 
-                <?= $form->field($order, 'cargo_from_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control'])->label(false) ?>
+                <?= $form->field($order, 'cargo_from_location')->dropDownList($city, ['class' => 'form_calculate_drop form-control', 'id' => 'my_country'])->label(false) ?>
 
+<!--                --><?//= $form->field($order, 'additional')->textInput([
+//                    'id' => 'add_city',
+//                    'maxlength' => true,
+//                    'class' => 'form-control form_calculate',
+//                    'placeholder' => Yii::t('main', 'from')])->label(false) ?>
 
-                <!--                <input type="text" name="from" class="form-control form_calculate" placeholder="Выбрать город отправки">-->
+                <!--                <input type="text" name="from" class="form-control form_calculate" placeholder="Город отправки">-->
+
             </div>
             <div class="col-md-2 text-center">
                 <div class="arrow d-flex flex-column justify-content-center align-items-center">
@@ -319,7 +325,7 @@ $this->title = 'DIOKS';
         </div>
         <div class="row justify-content-between mt-5 flex-wrap">
 
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(6).svg" alt="">
@@ -327,7 +333,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Liquid cargo') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(7).svg" alt="">
@@ -335,7 +341,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Dangerous cargo') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(8).svg" alt="">
@@ -343,7 +349,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Flammable cargo') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(9).svg" alt="">
@@ -351,7 +357,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Plants') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(10).svg" alt="">
@@ -359,7 +365,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Fragile cargo') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(11).svg" alt="">
@@ -367,7 +373,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Bulk cargo') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/🦆%20icon%20_Carrot_.svg" alt="">
@@ -375,7 +381,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Fruit and vegetables') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(13).svg" alt="">
@@ -383,7 +389,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Food') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(14).svg" alt="">
@@ -391,7 +397,7 @@ $this->title = 'DIOKS';
                     <h3 class="title_service color_blue font-weight-bold"><?= Yii::t('main', 'Gaseous substances') ?></h3>
                 </div>
             </div>
-            <div class="col-md-service">
+            <div data-aos="fade-up" data-aos-delay="300" class="col-md-service">
                 <div class="col-item-gua text-center d-flex flex-column align-items-center">
                     <div class="col-item-gua_img">
                         <img class="" src="/images/icons/Vector%20(15).svg" alt="">
@@ -413,19 +419,19 @@ $this->title = 'DIOKS';
             <span> <?= Yii::t('main', 'about_text') ?></span>
         </div>
         <div class="row justify-content-center mt-5">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="col-item-about text-center">
-                        <div class="about_figure">15+</div>
-                        <div class="about_figure_text"><?= Yii::t('main', 'about_year') ?></div>
+                    <div class="about_figure">15+</div>
+                    <div class="about_figure_text"><?= Yii::t('main', 'about_year') ?></div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="col-item-about text-center">
                     <div class="about_figure">100+</div>
                     <div class="about_figure_text"><?= Yii::t('main', 'about_country') ?></div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="col-item-about text-center">
                     <div class="about_figure">1000+</div>
                     <div class="about_figure_text"><?= Yii::t('main', 'miles') ?></div>

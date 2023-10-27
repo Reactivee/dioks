@@ -91,8 +91,8 @@ class Order extends \yii\db\ActiveRecord
             'mass' => 'Объем/размеры',
             'price' => 'Стоимость',
             'order_code' => 'Код заказа',
-            'additional_to' => 'Доп адрес откуда',
-            'additional_from' => 'Доп адрес куда',
+            'additional_to' => 'Доп адрес куда',
+            'additional_from' => 'Доп адрес откуда',
 
         ];
     }

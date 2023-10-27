@@ -57,7 +57,8 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'updated_by', 'created_at', 'updated_at', 'cargo_from_location', 'cargo_to_location'], 'integer'],
+            [['status', 'updated_by', 'created_at', 'updated_at'], 'integer'],
+            [['cargo_from_location', 'cargo_to_location'], 'safe'],
             [['cargo_type', 'client_name', 'phone', 'code', 'mass', 'name_ru', 'cargo_from_location', 'cargo_to_location'], 'required', 'message' => 'Обязательное поле !'],
             [['cargo_type',
                 'name_uz', 'name_ru', 'name_en', 'delivery_time', 'currently_location',

@@ -340,14 +340,14 @@ class SiteController extends Controller
                 ->where(['name_' . $lang => $order->cargo_from_location])
                 ->one();
             if ($country) {
-                $order->cargo_from_location = $country->id;
+                $order->cargo_from_location =  $country->id;
             } else {
 
                 $order->additional_from = $order->cargo_from_location;
                 $order->cargo_from_location = 0;
 
             }
-//            dd($order);
+
             $country = Country::find()
                 ->where(['name_' . $lang => $order->cargo_to_location])
                 ->one();

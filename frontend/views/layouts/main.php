@@ -307,7 +307,7 @@ AppAsset::register($this);
                             </div>
                         </div>
                     </div>
-                    <img class="w-100 px-5 mt-5" src="images/icons/logo_footer.svg" alt="">
+                    <img class="w-100 px-5 mt-5" src="images/icons/logo.png" alt="">
                 </div>
                 <div class="col-md-5">
                     <div class="map">

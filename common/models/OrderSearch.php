@@ -18,7 +18,9 @@ class OrderSearch extends Order
     {
         return [
             [['id', 'status'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'cargo_type', 'cargo_from_location', 'cargo_to_location', 'currently_location', 'delivery_time', 'created_at', 'updated_at', 'whom', 'how', 'mass', 'order_code'], 'safe'],
+            [['name_uz', 'name_ru', 'name_en', 'cargo_type',
+                'cargo_from_location', 'cargo_to_location', 'currently_location',
+                'delivery_time', 'created_at', 'updated_at', 'whom', 'how', 'mass', 'order_code','phone','client_name','code'], 'safe'],
         ];
     }
 
@@ -66,6 +68,8 @@ class OrderSearch extends Order
             ->andFilterWhere(['like', 'name_ru', $this->name_ru])
             ->andFilterWhere(['like', 'name_en', $this->name_en])
             ->andFilterWhere(['like', 'cargo_type', $this->cargo_type])
+            ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'client_name', $this->client_name])
             ->andFilterWhere(['like', 'cargo_from_location', $this->cargo_from_location])
             ->andFilterWhere(['like', 'cargo_to_location', $this->cargo_to_location])
             ->andFilterWhere(['like', 'currently_location', $this->currently_location])
@@ -75,6 +79,7 @@ class OrderSearch extends Order
             ->andFilterWhere(['like', 'whom', $this->whom])
             ->andFilterWhere(['like', 'how', $this->how])
             ->andFilterWhere(['like', 'mass', $this->mass])
+            ->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'order_code', $this->order_code]);
 
         return $dataProvider;

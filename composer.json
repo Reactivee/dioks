@@ -39,7 +39,10 @@
     "google/apiclient": "^2.0",
     "kartik-v/yii2-widget-datepicker": "*",
     "voime/yii2-google-maps": "*",
-    "kartik-v/yii2-widget-growl": "*"
+    "kartik-v/yii2-widget-growl": "*",
+    "2amigos/yii2-selectize-widget": "~1.0",
+    "kartik-v/yii2-widget-typeahead": "dev-master",
+    "kartik-v/yii2-export": "dev-master"
 
   },
   "require-dev": {

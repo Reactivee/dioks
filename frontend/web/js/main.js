@@ -46,16 +46,17 @@ $('.js-preloader').preloadinator({
 });
 
 //
-// document.getElementById('my_country').addEventListener('change', function () {
-//     const add_city = document.getElementById('add_city');
-//     var num = $('#my_country option').length;
-//     var last_id = $('#my_country option:last').val();
-//
-//     if (last_id == this.value) {
-//         add_city.style = 'display:block'
-//     }
-//
-// });
+document.getElementById('order-cargo_from_location').addEventListener('change', function () {
+    // const add_city = document.getElementById('add_city');
+    var num = $('#order-cargo_from_location option').length;
+    var last_id = $('#order-cargo_from_location option:last').val();
+
+    console.log(last_id, num)
+    // if (last_id == this.value) {
+    //     add_city.style = 'display:block'
+    // }
+
+});
 // document.getElementById('my_country_to').addEventListener('change', function () {
 //     const add_city = document.getElementById('add_city_to');
 //     var last_id = $('#my_country_to option:last').val();

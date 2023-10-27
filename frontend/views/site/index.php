@@ -3,7 +3,9 @@
 /** @var yii\web\View $this */
 
 use kartik\select2\Select2;
+use kartik\typeahead\Typeahead;
 use voime\GoogleMaps\Map;
+use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
@@ -193,24 +195,36 @@ $this->title = 'DIOKS';
                 <label for="from" class="form_label text-uppercase"><?= Yii::t('main', 'from') ?></label>
                 <?
 
-                echo $form->field($order, 'cargo_from_location')->widget(Select2::classname(), [
-                    'data' => $city,
-                    'theme' => Select2::THEME_BOOTSTRAP,
-                    'options' => ['class' => 'form-control form_calculate',
-                        'placeholder' => Yii::t('main', 'from')],
-                    'pluginOptions' => [
-                        'allowClear' => true,
-//                        'minimumInputLength' => 2,
+                echo $form->field($order, 'cargo_from_location')->widget(Typeahead::classname(), [
+                    'options' => ['placeholder' => Yii::t('main', 'from'), 'class' => 'form-control form_calculate',],
+                    'pluginOptions' => ['highlight' => true],
+                    'dataset' => [
+                        [
+                            'local' => $city,
+                            'limit' => 20
+                        ]
+                    ]
+                ])->label(false);
 
-                        'ajax' => [
-                            'url' => \yii\helpers\Url::to([
-                                'get-city'
-                            ]),
-                            'dataType' => 'json',
-                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
-                        ],
-                    ],
-                ])->label(false); ?>
+                //                echo $form->field($order, 'cargo_from_location')->widget(Select2::classname(), [
+                //                    'data' => $city,
+                //                    'theme' => Select2::THEME_BOOTSTRAP,
+                //                    'options' => ['class' => 'form-control form_calculate',
+                //                        'placeholder' => Yii::t('main', 'from')],
+                //                    'pluginOptions' => [
+                //                        'allowClear' => true,
+                ////                        'minimumInputLength' => 2,
+                //
+                //                        'ajax' => [
+                //                            'url' => \yii\helpers\Url::to([
+                //                                'get-city'
+                //                            ]),
+                //                            'dataType' => 'json',
+                //                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
+                //                        ],
+                //                    ],
+                //                ])->label(false);
+                ?>
 
 
                 <!--                --><? //= $form->field($order, 'cargo_from_location')->dropDownList($city,
@@ -234,25 +248,36 @@ $this->title = 'DIOKS';
             <div class="col-md-5">
                 <label for="from_to" class="form_label text-uppercase"><?= Yii::t('main', 'to') ?></label>
                 <?
-                echo $form->field($order, 'cargo_to_location')->widget(Select2::classname(), [
-                    'data' => $city,
-                    'theme' => Select2::THEME_BOOTSTRAP,
-
-                    'options' => ['class' => 'form-control form_calculate',
-                        'placeholder' => Yii::t('main', 'to')],
-                    'pluginOptions' => [
-                        'allowClear' => true,
-//                        'minimumInputLength' => 2,
-                        'ajax' => [
-                            'url' => \yii\helpers\Url::to([
-                                'get-city'
-                            ]),
-                            'dataType' => 'json',
-                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
-                        ],
-
-                    ],
-                ])->label(false); ?>
+                echo $form->field($order, 'cargo_to_location')->widget(Typeahead::classname(), [
+                    'options' => ['placeholder' => Yii::t('main', 'to'),'class' => 'form-control form_calculate',],
+                    'pluginOptions' => ['highlight' => true],
+                    'dataset' => [
+                        [
+                            'local' => $city,
+                            'limit' => 20
+                        ]
+                    ]
+                ])->label(false);
+                //                echo $form->field($order, 'cargo_to_location')->widget(Select2::classname(), [
+                //                    'data' => $city,
+                //                    'theme' => Select2::THEME_BOOTSTRAP,
+                //
+                //                    'options' => ['class' => 'form-control form_calculate',
+                //                        'placeholder' => Yii::t('main', 'to')],
+                //                    'pluginOptions' => [
+                //                        'allowClear' => true,
+                ////                        'minimumInputLength' => 2,
+                //                        'ajax' => [
+                //                            'url' => \yii\helpers\Url::to([
+                //                                'get-city'
+                //                            ]),
+                //                            'dataType' => 'json',
+                //                            'data' => new JsExpression('function(params) { return {q:params.term}; }')
+                //                        ],
+                //
+                //                    ],
+                //                ])->label(false);
+                ?>
 
                 <!---->
                 <!--                --><? //= $form->field($order, 'cargo_to_location')->dropDownList($city,

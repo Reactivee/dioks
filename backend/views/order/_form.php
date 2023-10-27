@@ -76,8 +76,10 @@ use yii\widgets\ActiveForm;
     ?>
 
     <?= $form->field($model, 'status')->dropDownList(\common\models\Order::getAllStatus()) ?>
-
-
+    <hr>
+    <?= $form->field($model, 'additional_to')->textInput() ?>
+    <?= $form->field($model, 'additional_from')->textInput() ?>
+    <hr>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

@@ -57,12 +57,12 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'updated_by', 'created_at', 'updated_at',], 'integer'],
+            [['status', 'updated_by', 'created_at', 'updated_at', 'cargo_from_location', 'cargo_to_location'], 'integer'],
             [['cargo_type', 'client_name', 'phone', 'code', 'mass', 'name_ru', 'cargo_from_location', 'cargo_to_location'], 'required', 'message' => 'Обязательное поле !'],
-            [['cargo_type', 'cargo_from_location', 'cargo_to_location',
+            [['cargo_type',
                 'name_uz', 'name_ru', 'name_en', 'delivery_time', 'currently_location',
                 'whom', 'how', 'mass', 'order_code',
-                'phone', 'email', 'doc', 'client_name', 'price', 'code'], 'string', 'max' => 255],
+                'phone', 'email', 'doc', 'client_name', 'price', 'code', 'additional_from', 'additional_to'], 'string', 'max' => 255],
         ];
     }
 
@@ -90,6 +90,8 @@ class Order extends \yii\db\ActiveRecord
             'mass' => 'Объем/размеры',
             'price' => 'Стоимость',
             'order_code' => 'Код заказа',
+            'additional_to' => 'Доп адрес откуда',
+            'additional_from' => 'Доп адрес куда',
 
         ];
     }
@@ -168,6 +170,24 @@ class Order extends \yii\db\ActiveRecord
         }
     }
 
+    public static function getAllCity()
+    {
+
+        $transport = Country::find()->all();
+        $transport = ArrayHelper::map($transport, 'id', 'name_ru');
+        return $transport;
+
+    }
+
+    public static function getAllTypeTrans()
+    {
+
+        $transport = TypeTransport::find()->all();
+        $transport = ArrayHelper::map($transport, 'id', 'name_ru');
+        return $transport;
+
+    }
+
 
     public function getCurrently()
     {
@@ -200,11 +220,13 @@ class Order extends \yii\db\ActiveRecord
             $this->status = Order::NEW;
 
         }
+        if ($this->delivery_time) {
+            $mydate = strtotime($this->delivery_time);
 
-        $mydate = strtotime($this->delivery_time);
+            if ($mydate) {
+                $this->delivery_time = $mydate;
+            }
 
-        if ($mydate) {
-            $this->delivery_time = $mydate;
         }
 
         if ($this->status == Order::NEW && $this->price && $this->delivery_time) {

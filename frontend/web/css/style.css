@@ -48,59 +48,63 @@ header {
 .start {
     position: absolute;
     z-index: 100;
+}
+.start img{
+    width: 200px;
 
 }
-
 .rus {
-    top: 28px;
-    left: 48px;
+    top: -26px;
+    left: 25px
 }
 
 .rus2 {
-    right: 216px;
+    right: 149px;
     z-index: 100;
-    top: 81px
+    top: 22px
 
 }
 
 .rus3 {
-    top: 87px;
-    left: 115px;
+    top: 55px;
+    left: -3px;
 }
 
 .rus4 {
-    bottom: 87px;
-    left: 215px;
+    bottom: 22px;
+    left: 123px
 }
 
 .rus5 {
-    bottom: 136px;
-    left: 189px;
+    bottom: 118px;
+    left: 262px;
 }
 
 .rus6 {
-    bottom: 123px;
-    left: 415px;
+    bottom: 55px;
+    left: 349px
 }
 
 .rus7 {
-    bottom: 94px;
-    right: 99px
+    bottom: -6px;
+    right: 7px
 }
 
 .rus8 {
-    bottom: 60px;
-    right: 90px;
+    bottom: 129px;
+    right: 109px;
+
 }
 
 .rus9 {
-    top: 77px;
-    right: 398px;
+    top: -9px;
+    right: 275px;
+
 }
 
 .rus10 {
-    bottom: 205px;
-    left: 340px
+    bottom: 188px;
+    left: 463px;
 }
 
 .rus img {

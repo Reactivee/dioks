@@ -15,7 +15,8 @@ return [
     'road' => 'avtomobilda yetkazish',
     'rail' => 'temir yo\'lda yetkazish',
     'multi' => 'multimodal yetkazish',
-    'cargo' => 'DUNYO BO\'YLAB YUKNI YETKAZISH',
+    'cargo' => 'DUNYO BO\'YLAB',
+    'cargo_cont' => ' YUKNI YETKAZISH',
     // btn
     'check' => 'YETKAZMANI TEKSHIRISH',
     'submit' => 'ARIZA QOLDIRISH',

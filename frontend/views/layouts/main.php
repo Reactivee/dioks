@@ -118,6 +118,14 @@ AppAsset::register($this);
             </div>
             <div class="rus7 start">
             </div>
+            <div class="rus8 start">
+            </div>
+            <div class="rus9 start">
+            </div>
+            <div class="rus10 start">
+            </div>
+            <div class="rus11 start">
+            </div>
 
 
             <img class="all_map" src="images/banner/map 1.png" alt="">
@@ -125,7 +133,7 @@ AppAsset::register($this);
         <div class="nav">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-4 logo">
+                    <div class="col-md-3 col-lg-4  logo">
                         <a href="/">
                             <img src="images/icons/logo_footer.svg" alt="">
                         </a>
@@ -133,7 +141,7 @@ AppAsset::register($this);
                             <img src="images/icons/menu.svg" alt="">
                         </div>
                     </div>
-                    <div class="col-md-8 text-right">
+                    <div class="col-md-9 col-lg-8 text-right">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items">
                             <!--                            <li><a href="/" class="text-uppercase">-->
                             <?//= Yii::t('main', 'main') ?><!-- </a></li>-->
@@ -161,7 +169,7 @@ AppAsset::register($this);
         <div class="main_recommends w-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8 col-lg-6 ">
                         <div class="main_recommends_title">
                             <h2> <?= Yii::t('main', 'slogan') ?></h2>
                         </div>
@@ -193,7 +201,9 @@ AppAsset::register($this);
                         </div>
 
                         <div class="main_text">
-                            <h2><?= Yii::t('main', 'cargo') ?><span class="font-weight-bold"> </span>
+                            <h2><?= Yii::t('main', 'cargo') ?><span class="font-weight-bold">
+                                <?= Yii::t('main', 'cargo_cont') ?>
+                                </span>
                             </h2>
                         </div>
                         <div class="header_btns d-flex">
@@ -214,7 +224,7 @@ AppAsset::register($this);
         <div class="container">
 
             <div id="contact" class="row">
-                <div class="col-md-7">
+                <div class="col-md-12 col-lg-7">
                     <div class="title_footer ">
                         <h2 class="color_blue font-weight-bold"><?= Yii::t('main', 'faq') ?></h2>
                     </div>
@@ -285,7 +295,7 @@ AppAsset::register($this);
                     </div>
                     <img class="w-100 px-5 mt-5" src="images/icons/logo.png" alt="">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-12 col-lg-5">
                     <div class="map">
                         <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"
                                 width="100%" height="421" frameborder="0"></iframe>
@@ -314,13 +324,13 @@ AppAsset::register($this);
         <div class="nav_footer py-4">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-5 logo_footer d-flex justify-content-between align-items-center">
+                    <div class="col-md-12 col-lg-5  logo_footer d-flex justify-content-between align-items-center">
                         <span class="color_white mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics</span>
                         <a href="#" class="px-4">
                             <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
                         </a>
                     </div>
-                    <div class="col-md-7 text-right d-flex align-items-center justify-content-end footer_nav_social">
+                    <div class="col-lg-7 mt-md-4 col-md-12 text-right d-flex align-items-center  justify-content-end    footer_nav_social">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
 
                             <li><a class="nav_items_footer_link text-decoration-none"

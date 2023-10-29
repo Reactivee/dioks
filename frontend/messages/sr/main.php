@@ -15,7 +15,8 @@ return [
     'road' => 'road transportation',
     'rail' => 'rail transportation',
     'multi' => 'multimodal transportation',
-    'cargo' => 'CARGO TRANSPORTATION ALL AROUND THE WORLD',
+    'cargo' => 'CARGO TRANSPORTATION',
+    'cargo_cont' => ' ALL AROUND THE WORLD',
     // btn
     'check' => 'CHECK CARGO',
     'submit' => 'SUBMIT APPLICATION',

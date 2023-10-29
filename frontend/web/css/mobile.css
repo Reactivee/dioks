@@ -20,7 +20,7 @@
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     .burger {
         display: block;
     }
@@ -30,6 +30,9 @@
         transition: 0.4s all;
         opacity: 1;
         transform: translateX(0%)
+    }
+    .mobile_menu .nav_items_footer_link{
+        font-size: 26px;
     }
 
     .main_recommends {
@@ -112,7 +115,7 @@
     }
 
     .col-item-about {
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
 
     .about_figure {
@@ -124,13 +127,23 @@
         font-size: 32px;
 
     }
-    .title_service{
+
+    .title_service {
         font-size: 17px;
     }
-    .address h3{
-        font-size: 23px;
 
+    .address h3 {
+        font-size: 23px;
     }
+
+    .map {
+        margin-top: 40px;
+    }
+
+    .service {
+        padding: 50px 0 65px 0;
+    }
+
     footer {
         margin: 0 !important;
     }

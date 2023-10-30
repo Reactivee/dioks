@@ -62,7 +62,7 @@ $settings = \common\models\Settings::find()->one();
             </div>
         </div>
     </div>
-    <div class="mobile_menu">
+    <div class="mobile_menu overflow-hidden">
         <div class="row justify-content-between">
             <div class="col-9">
                 <!--                <span class="color_logo_blue m-menu">Меню</span>-->
@@ -88,13 +88,17 @@ $settings = \common\models\Settings::find()->one();
 
             ]); ?>
             <div class="social d-flex align-items-center">
-                <a href="https://t.me/oksachi">
+                <a href="<?= $settings->tg ?>">
                                 <span class="social_round">
                                 <img src="images/icons/tg.svg" alt="">
                                 </span>
                 </a>
-                <img class="mx-3" src="images/icons/Button (2).svg" alt="">
-                <img src="images/icons/Button.svg" alt="">
+                <a href="<?= $settings->instagram ?>">
+                    <img class="mx-3" src="images/icons/Button (2).svg" alt="">
+                </a>
+                <a href="<?= $settings->facebook ?>">
+                    <img src="images/icons/Button.svg" alt="">
+                </a>
             </div>
         </div>
 
@@ -350,15 +354,15 @@ $settings = \common\models\Settings::find()->one();
                                    href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
-                            <a href="https://t.me/oksachi">
+                            <a href="<?= $settings->tg ?>">
                                 <span class="social_round">
                                 <img src="images/icons/tg.svg" alt="">
                                 </span>
                             </a>
-                            <a href="#">
+                            <a href="<?= $settings->instagram ?>">
                                 <img class="mx-3" src="images/icons/Button (2).svg" alt="">
                             </a>
-                            <a href="#">
+                            <a href="<?= $settings->facebook ?>">
                                 <img src="images/icons/Button.svg" alt="">
                             </a>
 

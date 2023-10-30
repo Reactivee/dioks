@@ -6,7 +6,7 @@
 
 .mobile_menu {
     background-color: white;
-    width: 80%;
+    width: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -14,10 +14,10 @@
     height: 100%;
     padding: 30px 25px;
     z-index: 99999;
-    transform: translateX(100%);
+    /*transform: translateX(100%);*/
     transition: 0.4s all;
     opacity: 0;
-    display: none;
+    /*display: none;*/
 }
 
 @media (max-width: 800px) {
@@ -26,10 +26,12 @@
     }
 
     .mobile_menu.show {
-        display: block;
+        /*display: block;*/
         transition: 0.4s all;
         opacity: 1;
-        transform: translateX(0%)
+        width: 80%;
+
+        /*transform: translateX(0%)*/
     }
     .mobile_menu .nav_items_footer_link{
         font-size: 26px;

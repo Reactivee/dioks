@@ -41,7 +41,7 @@ return [
     'payment' => 'To\'lov kafolatlari',
     'ser_guaranty' => 'Xizmat kafolatlari',
     'detail' => 'Xizmatlar narxi barcha tafsilotlari bilan tijorat taklifi ko\'rinishida taqdim etiladi',
-    'tech_support' => 'Technical support during cargo transportation and online tracking',
+    'tech_support' => 'Yetkazma jarayonida qo\'llab-quvvatlash va onlayn trekking',
     'present' => 'Kompaniya taqdimoti',
     'offer' => 'Tijorat taklifi',
     'location' => 'Yuk manzili',

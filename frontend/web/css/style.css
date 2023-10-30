@@ -48,78 +48,88 @@ header {
 .start {
     position: absolute;
     z-index: 100;
+    width: 124px;
+    height: 118px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s all;
 }
-
-.start {
+.start:hover{
+    opacity: 1;
+}
+.start:after {
+    content: '';
     box-shadow: 0px 1px 25px 13px #2850e6;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #3087e4;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rus {
-    top: 99px;
-    left: 115px
+    top: 46px;
+    left: 61px;
 }
-
-.rus2 {
-    right: 366px;
-    top: 70px;
-}
-
 .rus1 {
-    right: 245px;
-    top: 100px
-
+    right: 184px;
+    top: 54px;
 }
+.rus2 {
+    right: 310px;
+    top: 16px
+}
+
+
 
 .rus3 {
-    top: 132px;
-    right: 331px
+    top: 152px;
+    right: 387px;
 }
 
 .rus4 {
-    bottom: 125px;
-    left: 215px
+    bottom: 73px;
+    left: 160px;
 }
 
 .rus5 {
-    bottom: 179px;
-    left: 179px;
+    bottom: 126px;
+    left: 121px;
 }
 
 .rus6 {
-    top: 197px;
-    left: 360px
+    top: 144px;
+    left: 302px;
 }
 
 .rus7 {
-    bottom: 83px;
-    right: 90px;
+    bottom: 33px;
+    right: 36px;
 }
 
 .rus8 {
-    bottom: 129px;
-    right: 109px;
-
+    bottom: 78px;
+    right: 56px
 }
 
 .rus9 {
-    bottom: 147px;
-    left: 438px
-
+    bottom: 96px;
+    left: 381px;
 }
 
 .rus10 {
-    bottom: 219px;
-    left: 452px;
+    bottom: 239px;
+    left: 510px;
 }
 
 .rus11 {
-    top: 45px;
-    left: 229px;
+    top: 13px;
+    left: 175px;
 }
 
 .start {
@@ -130,7 +140,11 @@ header {
 .start:hover {
     opacity: 1;
 }
-
+.north_usa{
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
 .nav {
     position: absolute;
     top: 20px;

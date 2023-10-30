@@ -1,25 +1,24 @@
 <?php
 
-use common\models\Country;
+use common\models\Settings;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-
 /** @var yii\web\View $this */
-/** @var common\models\CountrySearch $searchModel */
+/** @var common\models\SettingsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Страны';
+$this->title = 'Settings';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="country-index">
+<div class="settings-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Создать Страны', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Settings', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -31,23 +30,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'name_ru',
-            'name_en',
-            [
-                'attribute' => 'parent_id',
-                'label' => 'Parent country',
-                'value' => function ($model) {
-
-                    return $model->parent->name_ru ?? '';
-                }
-            ],
+            'id',
+            'key_uz:ntext',
+            'key_ru:ntext',
+            'key_en:ntext',
+            'site_name_uz:ntext',
+            //'site_name_ru:ntext',
+            //'site_name_en:ntext',
+            //'desc_uz:ntext',
+            //'desc_en:ntext',
+            //'desc_ru:ntext',
+            //'tg:ntext',
+            //'facebook:ntext',
+            //'instagram:ntext',
             [
                 'class' => ActionColumn::className(),
                 'template' => '{update}',
-
-                'urlCreator' => function ($action, Country $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Settings $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                }
+                 }
             ],
         ],
     ]); ?>

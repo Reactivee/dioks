@@ -10,7 +10,8 @@ use frontend\widgets\LanguagePicker;
 use yii\bootstrap4\Html;
 
 AppAsset::register($this);
-//dd(Yii::$app->language);
+$settings = \common\models\Settings::find()->one();
+
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -19,18 +20,20 @@ AppAsset::register($this);
         <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <?php $this->registerCsrfMetaTags() ?>
+        <meta name="description"
+              content="<?= $settings['desc_' . Yii::$app->language] ?>">
+        <meta name="keywords" content="<?= $settings['key_' . Yii::$app->language] ?>">
         <?= Html::csrfMetaTags() ?>
-        <!--        <link rel="preconnect" href="https://fonts.googleapis.com">-->
-        <!--        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-        <title>DIOKS</title>
+        <title><?= $settings['site_name_' . Yii::$app->language] ?></title>
+        <link rel="canonical" href="https://dioks.uz/">
         <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-s">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon.png">
         <link rel="mask-icon" href="images/icons/favicon.svg">
-        <meta property="og:site_name" content="DIOKS">
-        <meta property="og:title" content="DIOKS">
-        <meta property="og:locale" content="uz">
+        <meta property="og:site_name" content="<?= $settings['site_name_' . Yii::$app->language] ?>">
+        <meta property="og:title" content="<?= $settings['site_name_' . Yii::$app->language] ?>">
+        <meta property="og:locale" content=<?= Yii::$app->language ?>>
         <?php $this->head() ?>
         <script src="//code.jivosite.com/widget/AhFpK4LiBM" async></script>
 
@@ -102,6 +105,11 @@ AppAsset::register($this);
 
     <header class="d-flex align-items-center">
         <div class="back_map">
+            <div class="south_usa"></div>
+            <div class="north_usa"></div>
+            <div class="aust"></div>
+            <div class="asia"></div>
+            <div class="africa"></div>
             <div class="rus start">
             </div>
             <div class="rus1 start">

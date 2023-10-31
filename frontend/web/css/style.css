@@ -489,6 +489,7 @@ header {
     opacity: 0;
     transform: translateY(-30px);
     transition: 0.3s all;
+    font-size: 22px;
 }
 
 .col-item-gua_img {

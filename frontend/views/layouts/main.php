@@ -337,10 +337,13 @@ $settings = \common\models\Settings::find()->one();
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-12 col-lg-5  logo_footer d-flex justify-content-between align-items-center">
-                        <span class="color_white mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics</span>
+                        <span class="color_white mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics
+                        </span>
+                        
                         <a href="#" class="px-4">
                             <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
                         </a>
+                        
                     </div>
                     <div class="col-lg-7 mt-md-4 col-md-12 text-right d-flex align-items-center  justify-content-end    footer_nav_social">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
@@ -365,9 +368,10 @@ $settings = \common\models\Settings::find()->one();
                             <a href="<?= $settings->facebook ?>">
                                 <img src="images/icons/Button.svg" alt="">
                             </a>
-
                         </div>
                     </div>
+                    <a class='text-decoration-none text-white  ml-3' href="https://alfatechno.uz/">Alfa Technologies</a>
+
                 </div>
 
             </div>

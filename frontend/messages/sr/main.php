@@ -9,7 +9,7 @@ return [
     'Address' => 'Address',
 
     //header
-    'slogan' => 'DIOKS DREAM LOGISTICS',
+    'slogan' => 'Sherxon Logistics',
     'slogan_text' => 'provides transportation services for different types of cargo',
     'air' => 'air transportation',
     'road' => 'road transportation',
@@ -70,7 +70,7 @@ return [
     'faq' => 'Frequently Asked Questions',
     'full_address' => 'Address and Opening hours',
     'text_address' => 'Tashkent, Mirabad district, A. Fitrat str. 2/1 from 9:00 to 18:00 Monday to Friday',
-    'address_info' => 'DIOKS DREAM LOGISTICS is ready to help you with the transportation of your cargo in:',
+    'address_info' => 'Sherxon Logistics is ready to help you with the transportation of your cargo in:',
 
     'Liquid cargo' => 'Liquid cargo',
     'Dangerous cargo' => 'Dangerous cargo',

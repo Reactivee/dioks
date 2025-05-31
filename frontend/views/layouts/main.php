@@ -44,9 +44,7 @@ $settings = \common\models\Settings::find()->one();
 
     <div class="overlay"></div>
     <div class="preloader  js-preloader flex-center">
-
         <div class="dots d-flex flex-column">
-
             <a class="navbar-brand ">
                 <div class="logo_pre text-center">
                     <img src="images/icons/logo.png" alt="logo">
@@ -62,6 +60,7 @@ $settings = \common\models\Settings::find()->one();
             </div>
         </div>
     </div>
+
     <div class="mobile_menu overflow-hidden">
         <div class="row justify-content-between">
             <div class="col-9">
@@ -147,7 +146,7 @@ $settings = \common\models\Settings::find()->one();
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-3 col-lg-4  logo">
                         <a href="/">
-                            <img src="images/icons/logo_footer.svg" alt="">
+                            <img  src="images/icons/Logo_Silver.svg" alt="logo">
                         </a>
                         <div class="burger">
                             <img src="images/icons/menu.svg" alt="">
@@ -240,7 +239,7 @@ $settings = \common\models\Settings::find()->one();
                     <div class="title_footer ">
                         <h2 class="color_blue font-weight-bold"><?= Yii::t('main', 'faq') ?></h2>
                     </div>
-                    <div class="accordion_wrapper mt-5">
+                    <div class="accordion_wrapper  mt-5">
                         <div class="" id="accordionExample">
                             <div class="card" id="headingOne">
                                 <div class="card-header">
@@ -305,7 +304,9 @@ $settings = \common\models\Settings::find()->one();
                             </div>
                         </div>
                     </div>
-                    <img class="w-100 px-5 mt-5" src="images/icons/logo.png" alt="">
+                                        <div class='text-center'>
+                    <img  class="w-50  mt-5" src="images/icons/logo.png" alt="logo">
+                    </div>
                 </div>
                 <div class="col-md-12 col-lg-5">
                     <div class="map">
@@ -322,13 +323,11 @@ $settings = \common\models\Settings::find()->one();
                         </p>
                     </div>
                     <div class="phones text-right">
-                        <a class="color_blue" href="">(+99899) <span class="font-weight-bold"> 880-03-45</span> </a>
+                        <a class="color_blue" href="">(+99899) <span class="font-weight-bold"> 880 03 45</span> </a>
                         <br>
-                        <a href="" class="color_blue">(+99894) <span class="font-weight-bold">618-10-06</span> </a>
+
                     </div>
-                    <div class="email text-right">
-                        <a class="color_blue" href="">info@dioks.uz</a>
-                    </div>
+
                 </div>
             </div>
 
@@ -337,15 +336,13 @@ $settings = \common\models\Settings::find()->one();
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-12 col-lg-5  logo_footer d-flex justify-content-between align-items-center">
-                        <span class="color_white mt-3 mt-md-0">Copyright ©2023 Dioks Dream Logistics
+                        <span class="color_white mt-3 mt-md-0">Copyright ©2025 Sherxon Logistics
                         </span>
-                        
-                        <a href="#" class="px-4">
-                            <img style="width: 162px" class="" src="images/icons/logo_footer.png" alt="">
+                                                <a href="/" class="px-4">
+                            <img style="width: 60px" class="" src="images/icons/Logo_Silver.svg" alt="logo">
                         </a>
-                        
-                    </div>
-                    <div class="col-lg-7 mt-md-4 col-md-12 text-right d-flex align-items-center  justify-content-end    footer_nav_social">
+                                            </div>
+                    <div class="col-lg-7  col-md-12 text-right d-flex align-items-center  justify-content-end    footer_nav_social">
                         <ul class="list-unstyled p-0 m-0 d-flex align-items-center justify-content-end nav_items_footer">
 
                             <li><a class="nav_items_footer_link text-decoration-none"

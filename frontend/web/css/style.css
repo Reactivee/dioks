@@ -9,7 +9,7 @@
 }
 
 .color_blue {
-    color: #00165f !important;
+    color: #001333 !important;
 }
 
 .color_gray {
@@ -31,7 +31,7 @@
 /* Header */
 header {
     /* height: 100vh; */
-    background-color: #011751;
+    background-color: #001333;
     position: relative;
     padding: 60px 0;
 }
@@ -330,11 +330,11 @@ header {
 }
 
 .logo img {
-    width: 160px;
+    width: 80px;
 }
 
 .logo_pre img {
-    width: 260px;
+    width: 150px;
 }
 
 /* Check wrapper */
@@ -357,7 +357,7 @@ header {
 .check_wrapper_time {
     text-align: center;
     font-size: 50px;
-    color: #00165f;
+    color: #001333   ;
 }
 
 .check_wrapper_time {
@@ -365,7 +365,7 @@ header {
 }
 
 .check_order_label {
-    color: #00165f;
+    color: #001333;
 
     font-weight: 600;
 }
@@ -373,7 +373,7 @@ header {
 .check_order_btn {
     color: white;
     padding: 15px 70px;
-    background-color: #00165f;
+    background-color:#001333;
     margin-left: 16px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -501,10 +501,11 @@ header {
 }
 
 .col-md-service .col-item-gua_img {
-    background-color: #002996;
+    background-color: #001333;
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    cursor: pointer;
 }
 
 .col-item-gua_img img {
@@ -513,7 +514,7 @@ header {
 }
 
 .col-md-service .col-item-gua:hover .col-item-gua_img {
-    background-color: #012270;
+    background-color: #C0C0C0     ;
 }
 
 .col-md-service .col-item-gua:hover img {
@@ -632,7 +633,7 @@ header {
 }
 
 .form_label {
-    color: #00165f;
+    color: #001333;
     font-size: 16px;
     font-weight: 700;
     margin-left: 20px;
@@ -657,7 +658,7 @@ header {
 }
 
 .send_form button {
-    background-color: #00165f;
+    background-color: #001333;
     padding: 10px 50px;
     border-radius: 15px;
     font-size: 24px;
@@ -781,7 +782,7 @@ footer .card {
 }
 
 .nav_footer {
-    background-color: #00165f;
+    background-color: #001333   ;
     margin-top: 70px;
 }
 

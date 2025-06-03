@@ -310,8 +310,8 @@ $settings = \common\models\Settings::find()->one();
                 </div>
                 <div class="col-md-12 col-lg-5">
                     <div class="map">
-                        <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"
-                                width="100%" height="421" frameborder="0"></iframe>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1057.461189332887!2d69.29998537023324!3d41.275361760837185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef559c3c707db%3A0x6a8a4aa67175cad2!2sTalimarjon%20Street%2012%2C%20100005%2C%20Tashkent%2C%20Uzbekistan!5e1!3m2!1sen!2slv!4v1748957886299!5m2!1sen!2slv" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="address text-center mt-4">
                         <h3 class="color_blue font-weight-bold"><?= Yii::t('main', 'full_address') ?></h3>

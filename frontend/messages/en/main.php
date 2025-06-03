@@ -72,7 +72,7 @@ return [
     'Services_text' => 'We ensure the safety of the transported cargo and  loading support',
     'faq' => 'Frequently Asked Questions',
     'full_address' => 'Address and Opening hours',
-    'text_address' => 'Tashkent, Mirabad district, A. Fitrat str. 2/1 from 9:00 to 18:00 Monday to Friday',
+    'text_address' => '12 Talimarjon st., Mirabad district, Tashkent, Uzbekistan from 9:00 to 18:00 Monday to Friday',
     'address_info' => 'Sherxon Logistics is ready to help you with the transportation of your cargo in:',
 
     'Liquid cargo' => 'Liquid cargo',

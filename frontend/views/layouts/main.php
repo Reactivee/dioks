@@ -353,15 +353,15 @@ $settings = \common\models\Settings::find()->one();
                                    href="#contact"><?= Yii::t('main', 'Address') ?> </a></li>
                         </ul>
                         <div class="social d-flex align-items-center">
-                            <a href="<?= $settings->tg ?>">
+                            <a target='_blank' href="<?= $settings->tg ?>">
                                 <span class="social_round">
                                 <img src="images/icons/tg.svg" alt="">
                                 </span>
                             </a>
-                            <a href="<?= $settings->instagram ?>">
+                            <a target='_blank' href="<?= $settings->instagram ?>">
                                 <img class="mx-3" src="images/icons/Button (2).svg" alt="">
                             </a>
-                            <a href="<?= $settings->facebook ?>">
+                            <a target='_blank' href="<?= $settings->facebook ?>">
                                 <img src="images/icons/Button.svg" alt="">
                             </a>
                         </div>

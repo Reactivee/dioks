@@ -25,7 +25,7 @@ $settings = \common\models\Settings::find()->one();
         <meta name="keywords" content="<?= $settings['key_' . Yii::$app->language] ?>">
         <?= Html::csrfMetaTags() ?>
         <title><?= $settings['site_name_' . Yii::$app->language] ?></title>
-        <link rel="canonical" href="https://dioks.uz/">
+        <link rel="canonical" href="https://sherxonlogistics.uz/">
         <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-s">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon.png">
@@ -40,7 +40,6 @@ $settings = \common\models\Settings::find()->one();
     </head>
     <body class="d-flex flex-column h-100">
     <?php $this->beginBody() ?>
-
 
     <div class="overlay"></div>
     <div class="preloader  js-preloader flex-center">

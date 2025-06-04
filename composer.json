@@ -35,7 +35,7 @@
     "yiisoft/yii2-httpclient": "~2.0.0",
     "kartik-v/yii2-widget-datetimepicker": "dev-master",
     "tugmaks/yii2-google-maps": "@dev",
-    "phpoffice/phpword": "dev-master",
+
     "google/apiclient": "^2.0",
     "kartik-v/yii2-widget-datepicker": "*",
     "voime/yii2-google-maps": "*",

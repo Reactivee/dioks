@@ -754,6 +754,7 @@ footer .card {
 .email a {
     font-size: 32px;
     text-align: right;
+    text-decoration: none;
 }
 
 .gray_logo,

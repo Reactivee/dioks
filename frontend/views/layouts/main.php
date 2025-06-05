@@ -322,9 +322,10 @@ $settings = \common\models\Settings::find()->one();
                         </p>
                     </div>
                     <div class="phones text-right">
-                        <a class="color_blue" href="">(+99899) <span class="font-weight-bold"> 880 03 45</span> </a>
+                        <a class="color_blue" href="tel:+998998800345">(+99899) <span class="font-weight-bold"> 880 03 45</span> </a>
                         <br>
-
+                          <a class="color_blue" href="tel:+998947773525">(+99894) <span class="font-weight-bold"> 777 35 25</span> </a>
+                        <br>
                     </div>
 
                 </div>

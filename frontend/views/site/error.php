@@ -13,7 +13,7 @@ $this->title = $name;
 
 
     <?=
-    $this->render('../layouts/header/navbar');
+    $this->render('../layouts/Header/navbar');
     ?>
 
 

@@ -330,7 +330,7 @@ header {
 }
 
 .logo img {
-    width: 80px;
+    width: 65px;
 }
 
 .logo_pre img {
@@ -694,9 +694,7 @@ header {
 
 
 /* footer */
-footer {
-    margin-top: 60px;
-}
+
 
 .title_footer h2 {
     font-size: 60px;
@@ -784,7 +782,7 @@ footer .card {
 
 .nav_footer {
     background-color: #001333   ;
-    margin-top: 70px;
+
 }
 
 .social_round {

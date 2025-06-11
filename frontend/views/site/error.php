@@ -9,9 +9,25 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
+<header class="d-flex align-items-center">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?=
+    $this->render('../layouts/header/navbar');
+    ?>
+
+
+
+</header>
+
+<div class="container ">
+    <div class="d-flex flex-column justify-content-center text-center">
+
+   <img  style="max-width: 80%" class="mx-auto"  src="<?= Yii::getAlias('@web') ?>/images/notfound.avif" alt="logo">
+
+    </div>
+
+    <!-- <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="alert alert-danger">
         <?= nl2br(Html::encode($message)) ?>
@@ -22,6 +38,6 @@ $this->title = $name;
     </p>
     <p>
         Please contact us if you think this is a server error. Thank you.
-    </p>
+    </p> -->
 
 </div>

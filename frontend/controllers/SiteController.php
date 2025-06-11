@@ -84,13 +84,14 @@ class SiteController extends Controller
     {
 
 
-//        echo Growl::widget([
-//            'type' => Growl::TYPE_SUCCESS,
-//            'icon' => 'glyphicon glyphicon-ok-sign',
-//            'title' => 'Note',
-//            'showSeparator' => true,
-//            'body' => 'This is a successful growling alert.'
-//        ]);
+        //        echo Growl::widget([
+        //            'type' => Growl::TYPE_SUCCESS,
+        //            'icon' => 'glyphicon glyphicon-ok-sign',
+        //            'title' => 'Note',
+        //            'showSeparator' => true,
+        //            'body' => 'This is a successful growling alert.'
+        //        ]);
+
         $lang = Yii::$app->language;
         $out = [];
         $order = new Order();
@@ -99,14 +100,14 @@ class SiteController extends Controller
         foreach ($city as $item) {
             $out[] = $item;
         }
-//        dd($out);
-//        dd($out);
-//        if ($lang == 'uz')
-//            array_push($city, 'Boshqa...');
-//        if ($lang == 'ru')
-//            array_push($city, 'Другой...');
-//        if ($lang == 'en')
-//            array_push($city, 'Other...');
+        //        dd($out);
+        //        dd($out);
+        //        if ($lang == 'uz')
+        //            array_push($city, 'Boshqa...');
+        //        if ($lang == 'ru')
+        //            array_push($city, 'Другой...');
+        //        if ($lang == 'en')
+        //            array_push($city, 'Other...');
 
         $transport = TypeTransport::find()->all();
         if ($transport)
@@ -131,7 +132,6 @@ class SiteController extends Controller
                     'mapType' => Map::MAP_TYPE_ROADMAP,
                 ]);
             }
-
         }
         return $this->render('index', [
             'order' => $order,
@@ -314,27 +314,27 @@ class SiteController extends Controller
 
     public function actionGetOrder()
     {
-//        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        //        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
         $order = new Order();
 
         if (Yii::$app->request->get() && $order->load(Yii::$app->request->get())) {
             $lang = Yii::$app->language;
-//            $req_order = Yii::$app->request->post();
-////            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
-//
-//            $order->cargo_from_location = $req_order['from'];
-//            $order->cargo_to_location = $req_order['from_to'];
-//
-//            $order->mass = $req_order['mass'];
-//            $order->cargo_type = $req_order['cargo_name'];
-//            $order->client_name = $req_order['name'];
-//            $order->phone = $req_order['phone'];
-//            $order->code = $req_order['code'];
-//            $order->name_ru = $req_order['name_ru'];
-//                dd($req_order);
-//            if ($req_order['email'])
-//                $order->email = $req_order['email'];
+            //            $req_order = Yii::$app->request->post();
+            ////            $generateDoc_Code = Yii::$app->security->generateRandomString(5);
+            //
+            //            $order->cargo_from_location = $req_order['from'];
+            //            $order->cargo_to_location = $req_order['from_to'];
+            //
+            //            $order->mass = $req_order['mass'];
+            //            $order->cargo_type = $req_order['cargo_name'];
+            //            $order->client_name = $req_order['name'];
+            //            $order->phone = $req_order['phone'];
+            //            $order->code = $req_order['code'];
+            //            $order->name_ru = $req_order['name_ru'];
+            //                dd($req_order);
+            //            if ($req_order['email'])
+            //                $order->email = $req_order['email'];
 
             $country = Country::find()
                 ->where(['name_' . $lang => $order->cargo_from_location])
@@ -345,7 +345,6 @@ class SiteController extends Controller
 
                 $order->additional_from = $order->cargo_from_location;
                 $order->cargo_from_location = 0;
-
             }
 
             $country = Country::find()
@@ -356,7 +355,6 @@ class SiteController extends Controller
             } else {
                 $order->additional_to = $order->cargo_to_location;
                 $order->cargo_to_location = 0;
-
             }
 
 
@@ -366,7 +364,6 @@ class SiteController extends Controller
                 Yii::$app->session->addFlash('success', 'Order has been sent');
                 return $this->redirect(Yii::$app->request->referrer);
             }
-
         }
     }
 
@@ -386,10 +383,22 @@ class SiteController extends Controller
             foreach ($query as $d) {
                 $out[] = ['value' => $d['text']];
             }
-//            echo Json::encode($out);
+            //            echo Json::encode($out);
         }
         return $out;
     }
 
+    public function actionError()
+    {
+        $exception = Yii::$app->errorHandler->exception;
 
+        if ($exception !== null) {
+            if ($exception instanceof \yii\web\HttpException && $exception->statusCode === 404) {
+                // You can redirect to a custom Not Found page or render a view
+                return $this->render('not-found'); // Views/site/not-found.php
+            }
+
+            return $this->render('error', ['exception' => $exception]);
+        }
+    }
 }

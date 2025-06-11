@@ -9,10 +9,18 @@ use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
+use frontend\widgets\LanguagePicker;
 
 $this->title = 'DIOKS';
 
 ?>
+
+ 
+    
+                <?=
+                  $this->render('../layouts/header');
+                ?>
+  
 <section id="check_order" class="check_order ">
     <div class="container">
 
@@ -102,8 +110,7 @@ $this->title = 'DIOKS';
 
                     }
                     ?>
-                    <!--                    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A8771966f064672b1228893a04d4cde6c25ce6ea46c0d91efdec5276ad3e0e8d2&amp;source=constructor"-->
-                    <!--                            width="100%" height="321" frameborder="0"></iframe>-->
+                  
                 </div>
 
             </div>
@@ -520,6 +527,105 @@ $this->title = 'DIOKS';
         </div>
     </div>
 </section>
+<section class="container pt-5">
+            <div id="contact" class="row">
+                <div class="col-md-12 col-lg-7">
+                    <div class="title_footer ">
+                        <h2 class="color_blue font-weight-bold"><?= Yii::t('main', 'faq') ?></h2>
+                    </div>
+                    <div class="accordion_wrapper  mt-5">
+                        <div class="" id="accordionExample">
+                            <div class="card" id="headingOne">
+                                <div class="card-header">
+                                    <h2 class="mb-0">
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
+                                           data-target="#collapseOne" aria-expanded="true"
+                                           aria-controls="collapseOne">
+                                            <?= Yii::t('main', 'type_cargo') ?>
+                                        </a>
+                                    </h2>
+                                </div>
 
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <?= Yii::t('main', 'type_cargo_ans') ?>
 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
+                                           data-target="#collapseTwo" aria-expanded="false"
+                                           aria-controls="collapseTwo">
+                                            <?= Yii::t('main', 'type_trans') ?>
+
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <?= Yii::t('main', 'type_trans_ans') ?>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <a class="text-decoration-none color_blue btn_collapse" type="button"
+                                           data-toggle="collapse"
+                                           data-target="#collapseThree" aria-expanded="false"
+                                           aria-controls="collapseThree">
+                                            <?= Yii::t('main', 'locate_cargo') ?>
+
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <?= Yii::t('main', 'locate_cargo_ans') ?>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class='text-center'>
+                    <img  class="w-50  mt-5" src="images/icons/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="map">
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1057.461189332887!2d69.29998537023324!3d41.275361760837185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef559c3c707db%3A0x6a8a4aa67175cad2!2sTalimarjon%20Street%2012%2C%20100005%2C%20Tashkent%2C%20Uzbekistan!5e1!3m2!1sen!2slv!4v1748957886299!5m2!1sen!2slv" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address text-center mt-4">
+                        <h3 class="color_blue font-weight-bold"><?= Yii::t('main', 'full_address') ?></h3>
+                    </div>
+                    <div class="add_address">
+                        <p class="color_gray text-right"><?= Yii::t('main', 'address_info') ?></p>
+                        <p class="color_blue font-weight-bold text-right">
+                            <?= Yii::t('main', 'text_address') ?>
+                        </p>
+                    </div>
+                    <div class="phones text-right">
+                        <a class="color_blue" href="tel:+998998800345">(+99899) <span class="font-weight-bold"> 880 03 45</span> </a>
+                        <br>
+                          <a class="color_blue" href="tel:+998947773525">(+99894) <span class="font-weight-bold"> 777 35 25</span> </a>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+</section>
+
+ 
 

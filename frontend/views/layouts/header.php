@@ -48,11 +48,11 @@ $settings = \common\models\Settings::find()->one();
 
 
     <?=
-    $this->render('../header/navbar');
+    $this->render('./Header/navbar');
     ?>
 
     <?=
-    $this->render('../header/hero');
+    $this->render('./Header/hero');
     ?>
 
 

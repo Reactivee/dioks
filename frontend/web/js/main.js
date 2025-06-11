@@ -32,7 +32,7 @@ if (burger && mobile_menu) {
   });
 }
 
-if (close_btn)
+if (close_btn && mobile_menu)
   close_btn.addEventListener("click", function () {
     mobile_menu.classList.toggle("show");
     overlay.style = "display:none";

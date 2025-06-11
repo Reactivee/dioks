@@ -1,4 +1,4 @@
-   <?=
+   <?
 $settings = \common\models\Settings::find()->one();
    
    ?>

@@ -1,6 +1,7 @@
 <?php
 
 use frontend\widgets\LanguagePicker;
+$settings = \common\models\Settings::find()->one();
 
 ?>
 

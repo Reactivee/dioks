@@ -1,3 +1,8 @@
+   <?=
+$settings = \common\models\Settings::find()->one();
+   
+   ?>
+   
    <footer class="pt-5">     
         <div class="nav_footer py-4">
             <div class="container">

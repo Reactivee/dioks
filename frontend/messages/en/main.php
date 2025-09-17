@@ -87,7 +87,7 @@ return [
     'Metal' => 'Metal',
     //    about
     'about' => 'About us',
-    'about_text' => 'DIOKS-DREAM LOGISTICS is a guarantee of safe and on-time cargo transportation, which is provided by a combination of years of experience,
+    'about_text' => 'SHERXON LOGISTICS is a guarantee of safe and on-time cargo transportation, which is provided by a combination of years of experience,
 high qualified and skilled specialists and high technologies. ',
     'about_year' => 'years of experience',
     'about_country' => 'countries of transportation',

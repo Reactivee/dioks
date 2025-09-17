@@ -12,7 +12,7 @@ use yii\helpers\Html;
 -->
     <div class="logo">
         <a href="#" class="simple-text logo-normal">
-           DIOKS
+           SHERXON LOGISTICS
         </a>
     </div>
     <div class="sidebar-wrapper">

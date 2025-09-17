@@ -86,7 +86,7 @@ return [
 
     //    about
     'about' => 'Kompaniya haqida',
-    'about_text' => "DIOKS-DREAM LOGISTICS — bu malakali mutaxassislar, ko'p yillik tajriba va yuqori texnologiyalar birligi asosida kafolatlangan sifatli yetkazish xizmati.  ",
+    'about_text' => "SHERXON LOGISTICS — bu malakali mutaxassislar, ko'p yillik tajriba va yuqori texnologiyalar birligi asosida kafolatlangan sifatli yetkazish xizmati.  ",
     'about_year' => 'yillik tajriba',
     'about_country' => 'yetkazish mamlakatlari',
     'miles' => 'yetkazishlar',
